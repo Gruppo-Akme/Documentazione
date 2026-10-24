@@ -8,6 +8,15 @@
   "Discord": "Piattaforma di comunicazione vocale, video e testuale impiegata per i meeting di gruppo telematici e le sessioni di allineamento.",
   "WhatsApp": "Applicazione di messaggistica istantanea utilizzata dal gruppo per comunicazioni brevi, urgenti e coordinamento rapido quotidiano.",
   "Glossario": "Documento e sezione informativa del sito web contenente le definizioni formali dei termini tecnici o ambigui utilizzati nella documentazione di progetto.",
-  "CI": "Continuous Integration: pratica di sviluppo software che prevede l'integrazione frequente del codice e l'esecuzione automatizzata di verifiche e build."
+  "CI": "Continuous Integration: pratica di sviluppo software che prevede l'integrazione frequente del codice e l'esecuzione automatizzata di verifiche e build.",
+  "Workflow" : "Insieme di pattern di attività ripetibili organizzati in maniera sistematica e deterministica",
+  "Shopify" : "Piattaforma e-commerce che offre strumenti, servizi e per rivenditori online",
+  "PoC" : "Proof of Concept è dimostratore eseguibile, una prova di fattibilità che attesta l'adeguatezza rispetto ai requisiti ",
+  "RLS" : " è una feature di controllo e gestione di un database che limita quali righe possano essere visualizzate/modificate basandosi sull'ID dell'utente",
+  "Saas": "Software-as-a-Service è una struttura tecnologica che permette a un'applicazione di essere ospitata sul cloud e resa disponibile a più clienti (chiamati tenant) tramite un comune browser web o un client leggero",
+  "PostgreSQL": "è un DBMS di tipo open source, cioè un database management system orientato agli oggetti",
+  "SupaBase": "piattaforma open-source di tipo BaaS costruita su un database relazionale SQL",
+  "Rule Engine": "compontente software che esegue una logica predefinita, policies e if-then conditions separatamente dal core application code"
+
 }
 

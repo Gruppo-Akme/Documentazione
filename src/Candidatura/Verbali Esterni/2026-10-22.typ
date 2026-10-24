@@ -31,12 +31,12 @@
   verificatore-interno: "Pietro Giulio Bassi",
   left-signature: "firma-Bassi.jpeg",
   verificatore-esterno: "Valentino Baraldo (Halue S.r.l. SB)",
-  right-signature: "firma-Baraldo.jpeg",
+ // right-signature: "firma-Baraldo.jpeg",
   tipo-verbale: "Esterno",
 )
 
 = Introduzione
-Il presente verbale attesta lo svolgimento dell'incontro di chiarimento ed approfondimento tenutosi in data *22 Ottobre 2026*, dalle ore 15:30 alle ore 16:15, in modalità telematica via videoconferenza (Google Meet). La riunione è stata organizzata per discutere i dettagli tecnici, architetturali e metodologici relativi al *Capitolato C8: Sonar - Documentazione vivente di uno store Shopify*, proposto dall'azienda *Halue S.r.l. Società Benefit* (Viale Mentana 41, Parma) nell'ambito del corso di Ingegneria del Software (A.A. 2026/2027) del Corso di Laurea in Informatica presso l'Università degli Studi di Padova.
+Il presente verbale attesta lo svolgimento dell'incontro di chiarimento ed approfondimento tenutosi in data *22 Ottobre 2026*, dalle ore 15:30 alle ore 16:15, in modalità telematica via videoconferenza (Google Meet). La riunione è stata organizzata per discutere i dettagli tecnici, architetturali e metodologici relativi al *Capitolato C8: Sonar - Documentazione vivente di uno store Shopify#super[G]*, proposto dall'azienda *Halue S.r.l. Società Benefit* (Viale Mentana 41, Parma) nell'ambito del corso di Ingegneria del Software (A.A. 2026/2027) del Corso di Laurea in Informatica presso l'Università degli Studi di Padova.
 
 All'incontro hanno preso parte:
 - *Valentino Baraldo* (Amministratore e Product Owner, Halue S.r.l. SB) - Referente Aziendale Proponente;
@@ -47,24 +47,24 @@ All'incontro hanno preso parte:
   - DaXin Chen
 
 = Preparazione all'Incontro
-In preparazione alla riunione, il gruppo di lavoro si è riunito per analizzare nel dettaglio il documento di capitolato fornito dall'azienda e fare emergere i dubbi principali inerenti all'architettura di riferimento (Vercel Workflows, Supabase RLS), all'integrazione con le API di Shopify, al parsing dei temi Liquid/JSON e ai confini dell'Intelligenza Artificiale. Le prime 4 domande sono state formalizzate e trasmesse preventivamente all'azienda via email per consentire un confronto fluido ed efficace durante la sessione sincrona.
+In preparazione alla riunione, il gruppo di lavoro si è riunito per analizzare nel dettaglio il documento di capitolato fornito dall'azienda e fare emergere i dubbi principali inerenti all'architettura di riferimento (Vercel Workflows, Supabase#super[G] RLS#super[G]), all'integrazione con le API di Shopify, al parsing dei temi Liquid/JSON e ai confini dell'Intelligenza Artificiale. Le prime 4 domande sono state formalizzate e trasmesse preventivamente all'azienda via email per consentire un confronto fluido ed efficace durante la sessione sincrona.
 
 = Resoconto della Riunione
 Di seguito viene fornita la rendicontazione puntuale di tutti i quesiti trattati durante la riunione. Le prime quattro domande corrispondono esattamente a quelle inviate preventivamente via email, mentre i quesiti 3.5 e 3.6 rappresentano gli interventi e i chiarimenti aggiuntivi emersi durante la discussione diretta con il referente aziendale.
 
 == Gestione delle Scansioni Prolungate e Durabilità con Vercel Workflows
 - *Quesito / Domanda Posta:* \
-  _"Tenendo conto del modello a punti delle Admin API di Shopify[G] e della necessità di gestire scansioni lunghe senza incorrere in blocchi di throttling, in che modo l'utilizzo dei Vercel Workflows (use workflow[G], use step) garantisce la ripresa automatica in seguito a un deploy o a un errore di rete?"_
+  _"Tenendo conto del modello a punti delle Admin API di Shopify e della necessità di gestire scansioni lunghe senza incorrere in blocchi di throttling, in che modo l'utilizzo dei Vercel Workflows (use workflow#super[G], use step) garantisce la ripresa automatica in seguito a un deploy o a un errore di rete?"_
 - *Sintesi della Risposta (Halue S.r.l. SB):*
   - *Concetto di Durable Execution e Vercel Workflows:* Valentino Baraldo spiega che l'orchestrazione delle scansioni dello store richiede la gestione di processi a lunga esecuzione e suscettibili a interruzioni, rate limiting a punti delle Admin API di Shopify o riavvii dei container. L'uso dei Vercel Workflows (ispirati a standard industriali come Temporal) garantisce la proprietà di "durabilità" (_durable execution_).
   - *Persistenza dello Stato e Resilienza:* Suddividendo il flusso di acquisizione in step atomici (`use step`), il sistema salva automaticamente lo stato al termine di ciascuna fase. In caso di errore di rete, deploy dell'applicazione o sospensione per rate limit, l'esecuzione non riparte da zero ma riprende esattamente dall'ultimo step completato, preservando la consistenza dei dati.
-  - *Flessibilità di Adozione per PoC e MVP:* Il proponente evidenzia la flessibilità dell'approccio: per la prima fase di Proof of Concept[G] (PoC) il gruppo può scegliere di iniziare con job più semplici e introdurre i Vercel Workflows per l'MVP finale, o concordare insieme la struttura più idonea.
+  - *Flessibilità di Adozione per PoC#super[G] e MVP:* Il proponente evidenzia la flessibilità dell'approccio: per la prima fase di Proof of Concept (PoC) il gruppo può scegliere di iniziare con job più semplici e introdurre i Vercel Workflows per l'MVP finale, o concordare insieme la struttura più idonea.
 
 == Isolamento Multi-Tenant tramite Row Level Security (RLS) e Negoziabilità Requisiti
 - *Quesito / Domanda Posta:* \
-  _"Viene richiesto che l'isolamento tra organizzazioni sia imposto direttamente tramite Row Level Security[G] (RLS) di PostgreSQL. Avete particolari raccomandazioni su come strutturare le policy RLS in Supabase per gestire in modo efficiente il grafo delle entità e delle dipendenze?"_
+  _"Viene richiesto che l'isolamento tra organizzazioni sia imposto direttamente tramite Row Level Security (RLS) di PostgreSQL#super[G]. Avete particolari raccomandazioni su come strutturare le policy RLS in Supabase per gestire in modo efficiente il grafo delle entità e delle dipendenze?"_
 - *Sintesi della Risposta (Halue S.r.l. SB):*
-  - *Sicurezza Multi-Tenant a Livello Database:* In un'architettura SaaS condivisa, i dati di molteplici tenant risiedono in un database comune. La Row Level Security (RLS) di PostgreSQL[G] e Supabase[G] assicura che l'isolamento sia applicato a livello di singola riga dal database stesso tramite ID utente/tenant, proteggendo i dati anche in caso di bug o vulnerabilità della logica applicativa superiore.
+  - *Sicurezza Multi-Tenant a Livello Database:* In un'architettura SaaS#super[G] condivisa, i dati di molteplici tenant risiedono in un database comune. La Row Level Security (RLS) di PostgreSQL e Supabase assicura che l'isolamento sia applicato a livello di singola riga dal database stesso tramite ID utente/tenant, proteggendo i dati anche in caso di bug o vulnerabilità della logica applicativa superiore.
   - *Negoziabilità e Rescoping dei Requisiti:* Il proponente fa una precisazione fondamentale: tutti i requisiti del capitolato sono pienamente *NEGOZIABILI*. L'obiettivo del progetto didattico è verificare la fattibilità dell'idea. Se l'impostazione delle RLS sul grafo dovesse risultare troppo complessa per la fase di PoC, può essere rimandata all'MVP o ridimensionata previo accordo tra le parti.
 
 == Tolleranza nell'Analisi Statica e Parsing dei Temi Liquid/JSON
@@ -72,14 +72,14 @@ Di seguito viene fornita la rendicontazione puntuale di tutti i quesiti trattati
   _"Per l'analisi dei file Liquid/JSON dei temi Shopify e il parsing di codice non fidato all'interno di Vercel Sandbox, quale livello di tolleranza è richiesto in presenza di codice non perfettamente formato o script di terze parti offuscati?"_
 - *Sintesi della Risposta (Halue S.r.l. SB):*
   - *Caratteristiche di Liquid e Script Esterni:* Liquid è un linguaggio di templating interpretabile e non compilato (M-V-C dove la vista accede a oggetti come `product.description`). Gli script JavaScript o CSS di terze parti provenienti da domini esterni sono asset già compilati e non devono essere analizzati internamente.
-  - *Principio dell'Analisi Onesta:* Non si richiede un parser sintattico perfetto per ogni codice malformato od ostile. L'obiettivo è un'ispezione "onesta": il sistema deve riconoscere i riferimenti trasparenti a campi e sezioni e dichiarare esplicitamente ciò che non riesce ad analizzare, senza bloccare la scansione.
+  - *Principio dell'Analisi Onesta:* Non si richiede un parser sintattico perfetto per ogni codice malformato od ostile. L'obiettivo è un'ispezione "onesta": il sistema deve riconoscere i riferimenti trasparenti a campi e sezioni e dichiarare esplicitamente ci#super[G]ò che non riesce ad analizzare, senza bloccare la scansione.
 
 == Motore di Regole Deterministico ed Estendibilità Programmatica
 - *Quesito / Domanda Posta:* \
   _"Il capitolato specifica che i modelli linguistici (tramite AI Gateway e AI SDK) possono essere usati solo per generare descrizioni in linguaggio naturale o normalizzare i nomi, ma mai per decidere se un'entità è orfana. Come strutturare il motore di regole affinché rimanga rigorosamente deterministico e indipendente dai componenti di IA?"_
 - *Sintesi della Risposta (Halue S.r.l. SB):*
   - *Decisioni Deterministiche vs IA:* La determinazione di un'entità orfana o codice morto deve basarsi *ESCLUSIVAMENTE* su regole statiche certe (es. assenza di riferimenti nel manifest o nel grafo delle dipendenze). L'IA non interviene mai nel processo decisionale.
-  - *Design Semplice ed Estendibile:* Non è richiesto un complesso Rule Engine[G] di letteratura (es. Drools/ruine). L'estendibilità del motore di regole può essere realizzata programmaticamente definendo un'interfaccia comune (es. `Rule`) e implementandola in file/classi separate per ogni regola. Per aggiungere una nuova regola sarà sufficiente creare un nuovo file estendendo tale interfaccia.
+  - *Design Semplice ed Estendibile:* Non è richiesto un complesso Rule Engine#super[G] di letteratura (es. Drools/ruine). L'estendibilità del motore di regole può essere realizzata programmaticamente definendo un'interfaccia comune (es. `Rule`) e implementandola in file/classi separate per ogni regola. Per aggiungere una nuova regola sarà sufficiente creare un nuovo file estendendo tale interfaccia.
 
 == Dimensionamento e Popolamento dello Store Shopify di Test
 - *Quesito / Domanda Posta:* \

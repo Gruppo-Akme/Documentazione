@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'src/**'
+      - 'output/**'
       - 'website/**'
       - 'compile.sh'
       - 'scripts/**'

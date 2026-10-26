@@ -18,7 +18,8 @@
   tipo-documento: "Documento interno",
   stato: "Bozza",
   registro-modifiche: (
-    ("0.1", "26/10/2026", "Nome Autore", "Nome Verificatore", "Creazione e stesura documento"),
+    ("0.2.0", "26/10/2026", "Roberto Piovesan", "Davide Loparco", "Valutazione dei capitolati C3, C4 e C5"),
+    ("0.1.0", "25/10/2026", "Marco Giacon", "Roberto Piovesan", "Creazione e prima stesura documento"),
   ),
 )
 
@@ -147,7 +148,7 @@ Il dominio è l'e-commerce su piattaforma Shopify (Shopify Plus) e in particolar
 - *Nessun incontro in presenza e nessun canale di messaggistica condiviso:* la comunicazione è affidata a videoconferenze e a una casella di posta.
 
 === Conclusioni
-Il capitolato C8 è stato valutato come la nostra terza scelta: è ben strutturato e offre un buon margine di negoziazione, ma lo stack vincolante, l'ampiezza dei requisiti obbligatori e la necessità di costruire autonomamente l'ambiente di lavoro ci#super[G] hanno portato a preferire i capitolati C2 e C0.
+Il capitolato C8 è stato valutato come la nostra terza scelta: è ben strutturato e offre un buon margine di negoziazione, ma lo stack vincolante, l'ampiezza dei requisiti obbligatori e la necessità di costruire autonomamente l'ambiente di lavoro sono stati determinanti nella nostra decisione di preferire i capitolati C2 e C0.
 
 = Altri Capitolati Valutati
 == Capitolato C1 – AURA
@@ -175,3 +176,69 @@ Il progetto comprende tre componenti obbligatori: un'infrastruttura Cloud-ready 
 - *Molti prodotti attesi:* oltre al codice sono richiesti documentazione con modello C4, analisi tecnica con stima dei costi AWS, documentazione del server e del client, manuale di installazione, video dimostrativo e report dei test.
 - *Ambito meno incentrato sull'AI:* la parte di intelligenza artificiale è affidata a servizi esterni commerciali, quindi il gruppo lavora più sull'integrazione che sull'AI stessa.
 - *Incontri in presenza obbligatori:* sono richiesti almeno due incontri in presenza presso la sede di Padova.
+
+== Capitolato C3 – FossDot
+=== Descrizione
+*Proponente:* Uranion EMEA Ltd \ 
+Il capitolato C3, proposto da Uranion EMEA Ltd, richiede di progettare e realizzare Fossdot, uno smart speaker vocale open source, estensibile e orientato alla privacy. L'obiettivo principale è superare i limiti dei dispositivi commerciali tradizionali (come Amazon Echo, Google Nest o Apple HomePod), affrancando l'utente da cloud proprietari opachi e vincoli di lock-in, consentendo la libera scelta e configurazione del provider di intelligenza artificiale (in cloud o locale) e la cooperazione tra più dispositivi domestici.
+
+L'infrastruttura richiesta comprende quattro componenti chiave: la selezione e validazione dell'hardware di riferimento con distinta base, il firmware embedded per la gestione audio e il rilevamento della wake word, il servizio server di bridging con pipeline STT --> LLM --> TTS e integrazione MCP, e un'applicazione web per la registrazione e gestione dei dispositivi. Il capitolato distingue una consegna minima (MVP) con la dimostrazione del flusso end-to-end su hardware fisico e un unico provider, e una consegna completa estesa a più provider, agenti/skills vocali e opzioni di privacy interamente locali.
+
+=== Punti di forza
+- *Adozione di tecnologie emergenti e di interesse:* l'integrazione del Model Context Protocol (MCP) e l'impiego di framework moderni (come Rust embedded, Embassy e Axum) offrono un bagaglio di competenze innovative e spendibili sul mercato.
+- *Proprietà e valorizzazione Open Source:* l'intero progetto è rilasciato con licenza permissiva (Apache 2.0 o MIT) e la proprietà intellettuale del codice rimane al gruppo, arricchendo il portfolio pubblico degli studenti.
+- *Indipendenza tecnologica e assenza di lock-in:* la struttura del servizio di bridging permette di alternare liberamente modelli LLM in cloud (es. OpenAI, Anthropic) e soluzioni locali on-premise (es. Ollama).
+- *Attenzione alla privacy e conformità GDPR:* il sistema affronta la riservatezza delle conversazioni permettendo, come evoluzione, l'esecuzione di STT e TTS interamente in locale senza trasmettere audio verso server esterni.
+- *Supporto tecnico e formazione specializzata:* Uranion mette a disposizione SAL bisettimanali e sessioni di approfondimento ("tech dive") con software architect, estesi anche a metodologie di agentic coding.
+- *Ampia letteratura e prior art di riferimento:* il capitolato suggerisce progetti e strumenti open source consolidati a cui ispirarsi (es. Willow, Rhasspy, openWakeWord, Silero VAD, faster-whisper, Piper).
+- *Ripartizione chiara tra MVP e prodotto completo:* la distinzione tra requisiti minimi dimostrabili ed estensioni evolutive garantisce una gestione graduale e controllata dell'ambito di progetto.
+
+=== Criticità riscontrate
+- *Stack tecnologico molto ampio ed eterogeneo:* il progetto copre l'intera catena del valore (hardware, firmware embedded, server di bridging, app web e AI generativa), richiedendo al gruppo competenze multidisciplinari estese.
+- *Complessità dello sviluppo su hardware fisico:* la gestione dell'audio in tempo reale, lo streaming dal microcontrollore e il rilevamento della wake word comportano sfide sistemistiche impegnative e un testing su hardware più complesso da automatizzare.
+- *Nessun kit fisico o dataset fornito dal proponente:* a differenza di altri capitolati, Uranion non fornisce hardware pre-assemblato o dataset proprietari; la selezione dei componenti e l'approvvigionamento spettano al gruppo.
+- *Gestione della latenza nella pipeline vocale:* l'integrazione di più fasi sequenziali richiede un'accurata ottimizzazione per garantire tempi di risposta accettabili nell'interazione vocale.
+- *Curva di apprendimento per Rust in ambito embedded:* l'impiego di Rust per il firmware, pur costituendo un punto di forza, può richiedere uno sforzo iniziale significativo per chi non ha esperienza specifica.
+- *Requisiti di test e documentazione elevati:* per il backend e l'interfaccia web è richiesta una copertura di test superiore all'80% corredata da report dedicati e documentazione delle scelte architetturali.
+
+== Capitolato C4 – GVSPV
+=== Descrizione 
+*Proponente:* M31 S.r.l. \ 
+Il capitolato C4, proposto da M31 S.r.l., richiede di progettare e realizzare una piattaforma software distribuita per la gestione dei veicoli e dei servizi post-vendita (GVSPV) nell'ambito automotive. Il sistema mira a centralizzare e coordinare i flussi informativi tra tre attori principali: la casa automobilistica (Central Management Layer), le concessionarie o centri di assistenza (Operations Layer) e i proprietari finali dei veicoli (Customer & Vehicle Services Layer). 
+
+L'architettura deve supportare la gestione dei modelli e dei singoli veicoli, la registrazione delle vendite, le richieste di manutenzione e appuntamenti, le campagne di richiamo e l'invio di notifiche evento-dipendenti, combinando comunicazioni sincrone via API e comunicazioni asincrone a eventi. Il progetto non richiede l'integrazione di hardware fisici o centraline reali, basandosi su dati veicolari simulati, mentre il percorso di rilascio prevede lo sviluppo graduale di un'analisi dello stato dell'arte, un Proof of Concept (PoC) ed un Minimum Viable Product (MVP) basato su servizi containerizzati.
+
+=== Punti di forza
+- *Architettura distribuita di livello enterprise:* la combinazione di microservizi, comunicazioni event-driven (es. NATS o Kafka) e orchestrazione con Kubernetes offre una solida formazione su pattern architetturali altamente richiesti nel mercato industriale. 
+- *Assenza di dipendenze hardware fisiche:* lo sviluppo si basa interamente su software e dati veicolari simulati, eliminando i rischi di ritardi o colli di bottiglia legati all'approvvigionamento o alla gestione di componenti fisici. 
+- *Stack tecnologico moderno e ben definito:* il capitolato suggerisce un ecosistema di riferimento chiaro ma non vincolante (Node.js/NestJS, TypeScript, Go, Angular, PostgreSQL, MongoDB, GCP), lasciando al gruppo la flessibilità di motivare eventuali alternative.
+- *Chiara articolazione delle responsabilità e dei domini:* la separazione nei tre livelli logici (casa madre, concessionaria, cliente) facilita la suddivisione dei compiti all'interno del gruppo di lavoro.
+
+=== Criticità riscontrate
+- *Elevata complessità architetturale e sistemistica:* la gestione di un'architettura distribuita a microservizi con comunicazione mista sincrona/asincrona e deployment orchestrato su Kubernetes richiede forti competenze di ingegneria del software e DevOps.
+- *Molteplicità delle interfacce utente:* la piattaforma richiede lo sviluppo di tre interfacce web distinte (Single Page Application in Angular) per i tre diversi ruoli di utente, comportando un notevole carico di lavoro sul fronte front-end.
+- *Rigorosi requisiti di sicurezza e segregazione dei dati:* il sistema deve garantire un controllo degli accessi basato sui ruoli (RBAC) e l'isolamento completo dei dati tra differenti concessionarie e proprietari.
+- *Elevati standard di test e validazione:* M31 richiede la stesura di un "Test Book" esaustivo e l'implementazione di test unitari, di integrazione, end-to-end, di segregazione dei dati e di scalabilità sotto carico.
+- *Significativo onere documentale:* oltre al codice, è richiesta una documentazione strutturata e approfondita con diagrammi architetturali (C4 Model e Mermaid), documentazione API, manuale dei test e manuali utente/amministratore.
+
+== Capitolato C5 – RareCare
+=== Descrizione 
+*Proponente:* Miriade S.r.l. \
+Il capitolato C5, proposto da Miriade S.r.l., richiede di progettare e realizzare RareCare Navigator, una piattaforma digitale e assistente virtuale basato su intelligenza artificiale per il supporto alla gestione delle malattie rare e complesse, focalizzata inizialmente sulla Sindrome di Sanfilippo (MPS III). Il sistema mira ad abbattere l'isolamento delle famiglie e la frammentazione dei servizi affiancando la figura del Care Navigator e connettendo in sicurezza centri clinici, medici, terapisti, strutture scolastiche ed enti amministrativi.
+
+La piattaforma integra un assistente conversazionale basato su architettura RAG per l'interpretazione di protocolli e pratiche burocratiche basato su fonti ufficiali, un hub di coordinamento multilivello con permessi granulari, un motore per la gestione di scadenze e checklist di cura dinamiche e un archivio documentale cifrato. L'architettura è concepita secondo un modello modulare a "Disease Pack" (plugin per estendere il sistema ad altre patologie senza modificare il core), raccomandando un'infrastruttura cloud-native serverless (AWS Lambda, Bedrock, API Gateway) e un'applicazione mobile/web sviluppata in Flutter o React Native.
+
+=== Punti di forza
+- *Elevato impatto sociale e applicazione reale dell'AI:* il progetto applica soluzioni di GenAI, RAG e NLP a un contesto sanitario ed etico di forte rilievo, in diretta collaborazione con l'associazione Sanfilippo Fighters e con validazione sul campo.
+- *Architettura modulare basata su "Disease Pack":* la netta separazione tra la logica generale della piattaforma e i moduli specifici per patologia rende il sistema altamente riusabile ed estendibile senza dover riscrivere il codice base.
+- *Stack tecnologico serverless e cross-platform professionale:* l'impiego di tecnologie cloud-native su AWS e di framework come Flutter o React Native consente di acquisire competenze di alto livello ed estremamente spendibili sul mercato.
+- *Integrazione di GenAI affidabile tramite RAG e guardrail:* l'uso del Retrieval-Augmented Generation e di filtri di sicurezza garantisce che l'assistente risponda basandosi esclusivamente su fonti verificate, minimizzando il rischio di allucinazioni.
+- *Eccellente supporto, mentorship e formazione del proponente:* Miriade garantisce referenti dedicati per architettura cloud, sviluppo full-stack/AI e UX/UI, oltre a una formazione iniziale specifica sul dominio clinico e sulla privacy dei dati sanitari.
+- *Flessibilità nella definizione dell'ambito di progetto:* Miriade si dichiara disponibile a discutere e concordare con il gruppo un perimetro di lavoro proporzionato ed equilibrato rispetto alle risorse disponibili.
+
+=== Criticità riscontrate
+- *Elevati vincoli di sicurezza, privacy e conformità GDPR:* trattando dati sanitari appartenenti a categorie particolari (art. 9 GDPR) relativi a soggetti fragili o minori, il sistema impone la cifratura dei dati in transito e a riposo, autenticazione forte (MFA), tracciamento degli accessi (audit) e una valutazione d'impatto (DPIA).
+- *Gestione complessa dei permessi e degli accessi:* il controllo basato sui soli ruoli (RBAC) risulta insufficiente, richiedendo la modellazione di regole basate anche sulla relazione specifica con il paziente e sul contesto.
+- *Responsabilità etico-clinica e validazione dell'AI:* l'impiego di modelli generativi in ambito sanitario richiede l'introduzione di meccanismi di revisione umana ("human-in-the-loop") per la conferma dei dati estratti.
+- *Adattamento delle pipeline AI alla lingua italiana:* alcuni servizi clinici nativi in cloud (es. Amazon Comprehend Medical) sono disponibili solo in inglese, imponendo al gruppo la progettazione di pipeline alternative per l'estrazione di entità da testi in italiano.
+- *Elevata articolazione funzionale e integrazione dei moduli:* la convivenza di assistente RAG, motore di workflow per le scadenze, gestione documentale e comunicazioni richiede un'attenta coordinazione dei servizi cloud asincroni e degli eventi.

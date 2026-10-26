@@ -80,7 +80,7 @@ Sintesi finale: il capitolato C2 offre un buon equilibrio tra novità tecnologic
 == Capitolato C0 – AIRA
 === Descrizione
 *Proponente:* San Marco SPA \
-Il capitolato C0 propone lo sviluppo di *AIRA* (AI Requests Automation), un tool multimodale basato su Intelligenza Artificiale che riceve richieste da canali eterogenei (e-mail con allegati, note vocali WhatsApp, immagini, cartelle del filesystem), ne estrae il significato e le trasforma in dati strutturati, come JSON o record di database. Le informazioni vengono poi inoltrate in automatico ai sistemi aziendali (portali B2B, ERP, CRM, ticketing) tramite API REST, oppure notificate via e-mail, eliminando i passaggi manuali.
+Il capitolato C0 propone lo sviluppo di *AIRA* (AI Requests Automation), un tool multimodale basato su Intelligenza Artificiale che riceve richieste da canali eterogenei (e-mail con allegati, note vocali WhatsApp#super[G], immagini, cartelle del filesystem), ne estrae il significato e le trasforma in dati strutturati, come JSON o record di database. Le informazioni vengono poi inoltrate in automatico ai sistemi aziendali (portali B2B, ERP, CRM, ticketing) tramite API REST, oppure notificate via e-mail, eliminando i passaggi manuali.
 
 Le funzionalità richieste comprendono il monitoraggio continuo dei canali, un filtro sui dati in ingresso per evitare accessi non autorizzati o commistione di informazioni, l'elaborazione semantica con LLM, l'avvio automatico di azioni e un'interfaccia amministrativa per configurazione, log e persistenza dei dati. Sono opzionali una dashboard analitica e l'invio autonomo di risposte al mittente.
 
@@ -147,7 +147,7 @@ Il dominio è l'e-commerce su piattaforma Shopify (Shopify Plus) e in particolar
 - *Nessun incontro in presenza e nessun canale di messaggistica condiviso:* la comunicazione è affidata a videoconferenze e a una casella di posta.
 
 === Conclusioni
-Il capitolato C8 è stato valutato come la nostra terza scelta: è ben strutturato e offre un buon margine di negoziazione, ma lo stack vincolante, l'ampiezza dei requisiti obbligatori e la necessità di costruire autonomamente l'ambiente di lavoro ci hanno portato a preferire i capitolati C2 e C0.
+Il capitolato C8 è stato valutato come la nostra terza scelta: è ben strutturato e offre un buon margine di negoziazione, ma lo stack vincolante, l'ampiezza dei requisiti obbligatori e la necessità di costruire autonomamente l'ambiente di lavoro ci#super[G] hanno portato a preferire i capitolati C2 e C0.
 
 = Altri Capitolati Valutati
 == Capitolato C1 – AURA
@@ -162,7 +162,7 @@ Il progetto comprende tre componenti obbligatori: un'infrastruttura Cloud-ready 
 - *Kit fisico fornito da Vimar:* ogni gruppo riceve un kit portatile con gateway, attuatori per luci e porta, comando tapparelle, sensori di presenza, termostato e pulsante allarme, oltre all'accesso alle API KNX IoT.
 - *Supporto del proponente:* sono previsti SAL bisettimanali, referenti Vimar contattabili via e-mail e incontri di approfondimento su Docker, KNX IoT, MCP e sviluppo con strumenti di AI.
 - *Risorse Cloud messe a disposizione:* Vimar fornisce, se richiesto, servizi e spazio su AWS, compresi i servizi AI e LLM.
-- *Libertà sullo stack:* i vincoli tecnologici sono pochi (Docker, KNX IoT, OAuth2, Git e licenza open source); è consigliato Python con FastMCP, ma sono ammessi anche TypeScript e Java.
+- *Libertà sullo stack:* i vincoli tecnologici sono pochi (Docker, KNX IoT, OAuth2, Git#super[G] e licenza open source); è consigliato Python con FastMCP, ma sono ammessi anche TypeScript e Java.
 - *Casi d'uso chiari:* il capitolato elenca esempi concreti di interazione, base e avanzati, con le risposte attese, e distingue requisiti obbligatori, opzionali e nice-to-have.
 - *Nessuna interfaccia AI da sviluppare:* l'assistente è un servizio esterno già esistente, quindi il lavoro si concentra sull'integrazione e non sulla costruzione di un chatbot.
 

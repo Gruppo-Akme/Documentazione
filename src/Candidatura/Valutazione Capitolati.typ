@@ -18,6 +18,7 @@
   tipo-documento: "Documento interno",
   stato: "Bozza",
   registro-modifiche: (
+    ("0.3.0", "27/10/2026", "Mattia Cadamuro", "Roberto Piovesan", "Davide Loparco", "Aggiunta valutazione dei capitolati C6, C7 e C9"),
     ("0.2.0", "26/10/2026", "Roberto Piovesan", "Davide Loparco", "Valutazione dei capitolati C3, C4 e C5"),
     ("0.1.0", "25/10/2026", "Marco Giacon", "Roberto Piovesan", "Creazione e prima stesura documento"),
   ),
@@ -242,3 +243,66 @@ La piattaforma integra un assistente conversazionale basato su architettura RAG 
 - *Responsabilità etico-clinica e validazione dell'AI:* l'impiego di modelli generativi in ambito sanitario richiede l'introduzione di meccanismi di revisione umana ("human-in-the-loop") per la conferma dei dati estratti.
 - *Adattamento delle pipeline AI alla lingua italiana:* alcuni servizi clinici nativi in cloud (es. Amazon Comprehend Medical) sono disponibili solo in inglese, imponendo al gruppo la progettazione di pipeline alternative per l'estrazione di entità da testi in italiano.
 - *Elevata articolazione funzionale e integrazione dei moduli:* la convivenza di assistente RAG, motore di workflow per le scadenze, gestione documentale e comunicazioni richiede un'attenta coordinazione dei servizi cloud asincroni e degli eventi.
+
+== Capitolato C6 – Caching Semantico e Dashboard FinOps
+=== Descrizione
+*Proponente:* Var Group \
+Il capitolato C6, proposto da Var Group, richiede di estendere il proxy open source *LiteLLM* attraverso lo sviluppo di due componenti originali volte a ottimizzare l'uso dei modelli di intelligenza artificiale generativa in contesti aziendali: un sistema di caching semantico e una dashboard FinOps. 
+
+Il primo componente implementa un livello di cache basato su embedding e ricerca per similarità semantica, in grado di riconoscere richieste equivalenti, restituire risposte pre-salvate e tracciare il risparmio di token e latenza, gestendo soglie di similarità configurabili, invalidazione tramite TTL/versioning e persistenza su Redis o Vector DB. Il secondo componente consiste in un servizio separato per il tracciamento dei costi (FinOps), con aggregazione dei consumi per team, progetto e utente, calcolo del risparmio generato dalla cache, gestione di budget, avvisi e previsioni di spesa mensili con supporto al multi-tenancy e aggiornamento in tempo quasi reale.
+
+=== Punti di forza
+- *Architettura di partenza consolidata:* l'adozione di LiteLLM come proxy/orchestratore fornisce una base solida già operante in produzione, evitando di reinventare componenti di routing e gestione credenziali e permettendo di focalizzarsi sulle estensioni richieste.
+- *Risoluzione di problemi reali di produzione:* sia il caching semantico che la gestione dei costi (FinOps) rispondono a esigenze concrete del mercato enterprise per il contenimento dell'esplosione dei costi di inferenza.
+- *Stack tecnologico moderno e flessibile:* la libertà di scelta per gli embedding (OpenAI, sentence-transformers) e i database (Redis, Qdrant, pgvector, PostgreSQL) consente di adattare lo stack alle competenze del team.
+- *Eccellente supporto e processo del proponente:* Var Group offre sessioni di design thinking, User Story Mapping, formazione tecnologica, standup periodici e review condivise.
+- *Modularità del sistema:* la netta separazione tra il middleware di caching e il servizio per la dashboard FinOps facilita la suddivisione del lavoro tra i componenti del gruppo.
+
+=== Criticità riscontrate
+- *Complessità del caching semantico:* tarare la soglia di similarità coseno e gestire correttamente l'invalidazione della cache (TTL e versioning dei modelli) sono compiti complessi per evitare di servire risposte obsolete o semanticamente scorrette.
+- *Difficoltà nella validazione e testing dei modelli:* il vincolo di copertura test $\ge 70\%$ richiede la netta separazione tra test deterministici e valutazione probabilistica delle similarità degli embedding.
+- *Gestione del multi-tenancy e isolamento dei dati:* garantire la segregazione rigorosa delle metriche e dei dati tra differenti team/progetti nella dashboard FinOps aumenta la complessità architetturale.
+- *Aggregazione dei dati in quasi real-time:* la componente FinOps richiede la raccolta e l'elaborazione continua e performante degli audit log e dei token senza introdurre latenza nell'instradamento delle richieste LLM.
+
+== Capitolato C7 – SmartDashboard
+=== Descrizione
+*Proponente:* Ergon Informatica Srl[cite: 24, 25] \
+Il capitolato C7, proposto da Ergon Informatica Srl[cite: 24, 25], richiede lo sviluppo di *SmartDashboard*, una piattaforma di Business Intelligence self-service potenziata dall'intelligenza artificiale, progettata per consentire agli utenti aziendali di consultare, analizzare e interpretare autonomamente i dati provenienti dai sistemi gestionali (ERP)[cite: 23, 25, 26]. 
+
+L'architettura di riferimento prevede un Raw Data Store per i dati grezzi, un Data Warehouse basato su un modello dimensionale (star schema) ottimizzato tramite un motore analitico OLAP come DuckDB, e una Web App responsive dotata di dashboard builder drag & drop, libreria di widget interattivi e un assistente AI integrato[cite: 28, 29, 33, 34]. Il layer di intelligenza artificiale funge da interprete per generare visualizzazioni in linguaggio naturale, produrre insight automatici, suggerire widget e spiegare le variazioni degli indicatori, protetto da rigorosi controlli di sicurezza e guardrail[cite: 30, 31].
+
+=== Punti di forza
+- *Utilità aziendale concreta:* il progetto risponde a un'esigenza reale delle imprese, riducendo la dipendenza dal reparto IT per la produzione di reportistica e portando l'analisi dei dati direttamente ai decisori aziendali[cite: 26].
+- *Integrazione avanzata dell'IA generativa:* l'assistente conversazionale traduce richieste in linguaggio naturale in query e visualizzazioni analitiche contestualizzate, andando oltre la semplice generazione di testo[cite: 30].
+- *Stack tecnologico moderno e performante:* l'adozione consigliata di DuckDB come motore analitico colonnare in-process offre elevate prestazioni di calcolo OLAP su dataset consistenti[cite: 33, 34].
+- *Approccio di sviluppo incrementale:* la suddivisione del lavoro in fasi ben distinte (dalla piattaforma BI di base fino alle estensioni avanzate dell'AI) consente una gestione graduale e flessibile delle priorità[cite: 35].
+- *Supporto strutturato del proponente:* Ergon garantisce SAL quindicinali, supporto tecnico costante e la potenziale fornitura di dati reali da casi di studio aziendali[cite: 36].
+
+=== Criticità riscontrate
+- *Ampiezza e complessità complessiva:* la realizzazione congiunta di una pipeline ETL, di un data warehouse dimensionale, di un'interfaccia web self-service avanzata e di un layer AI richiede un impegno sistemistico notevole[cite: 28, 29, 35].
+- *Gestione dell'ambiguità e affidabilità dell'AI:* le richieste in linguaggio naturale possono essere ambigue e presentano il rischio di generare risultati errati ma plausibili (es. join scorretti, doppi conteggi o filtri mancanti)[cite: 31].
+- *Implementazione di rigidi guardrail di sicurezza:* l'interazione con l'AI richiede meccanismi di protezione robusti, come l'uso di whitelist di tabelle e colonne, l'assenza di esecuzione di SQL libero e la limitazione delle risorse[cite: 31].
+- *Progettazione del modello dimensionale:* la corretta modellazione dei dati aziendali in uno schema a stella richiede competenze specifiche di data warehousing per evitare inefficienze nelle aggregazioni[cite: 29, 34].
+
+== Capitolato C9 – SpecCheck
+=== Descrizione
+*Proponente:* Zucchetti Academy \
+Il capitolato C9, proposto da Zucchetti Academy, richiede lo sviluppo di *SpecCheck*, un validatore automatizzato progettato per l'agente di harness _OpenCode_. Il progetto risponde alla nuova sfida dello sviluppo software guidato dall'intelligenza artificiale (Vibe Coding), in cui l'IA automatizza la scrittura del codice e sorge un nuovo collo di bottiglia: il controllo di qualità e la coerenza progettuale tra le specifiche e l'implementazione reale.
+
+Il sistema si articola principalmente in due fasi:
+- *Fase 1 (Casi d'Uso -> Specifiche):* parsing dei diagrammi (Mermaid, XMI, immagini) e documenti Markdown per verificare che ogni caso d'uso sia tradotto correttamente nei requisiti di progetto;
+- *Fase 2 (Specifiche -> Codice):* analisi comportamentale del codice sorgente da parte dell'LLM per verificare la reale implementazione delle funzionalità richieste.
+
+Il progetto comprende inoltre la realizzazione di una dashboard integrata (eseguita via plugin) per mostrare lo stato di copertura e dei test con evidenza immediata delle discrepanze, e un installer completo per l'integrazione in OpenCode tramite script di installazione automatizzati (Bash o PowerShell).
+
+=== Punti di forza
+- *Tematica all'avanguardia:* il progetto affronta direttamente i paradigmi più moderni dell'ingegneria del software basata su LLM, focalizzandosi sull'harness engineering, sulla validazione automatica e sul controllo della coerenza progettuale.
+- *Forte rilevanza industriale e formativa:* proposto da Zucchetti Academy, offre l'opportunità di confrontarsi con problemi reali legati all'automazione del controllo qualità in ambienti di sviluppo assistiti da intelligenza artificiale.
+- *Chiara definizione delle fasi e degli obiettivi:* il perimetro di lavoro è suddiviso in moduli logici ben definiti (parsing dei diagrammi, analisi comportamentale, dashboard integrata e pacchetto di installazione).
+- *Supporto di un proponente strutturato:* l'affiancamento da parte di Zucchetti garantisce un contesto di riferimento solido, orientato alla condivisione di best practices e metodologie di sviluppo innovative.
+
+=== Criticità riscontrate
+- *Complessità dell'analisi semantica e comportamentale:* interpretare in modo automatizzato diagrammi eterogenei (immagini, XMI, Mermaid) e analizzare il comportamento del codice sorgente tramite LLM richiede una gestione accurata per evitare falsi positivi o valutazioni imprecise.
+- *Integrazione profonda con l'ecosistema OpenCode:* lo sviluppo di plugin, skill, comandi e tool dedicati all'estensione di OpenCode richiede un forte sforzo di comprensione architetturale della piattaforma di riferimento.
+- *Gestione dei test e della robustezza del validatore:* trattandosi di un tool di controllo qualità, il sistema stesso deve garantire elevati standard di affidabilità, precisione e copertura di test.
+- *Novità concettuale dell'Harness Engineering:* la curva di apprendimento iniziale per comprendere a fondo le dinamiche e i pattern dell'harness engineering e della programmazione in linguaggio naturale può richiedere un impegno di studio significativo.

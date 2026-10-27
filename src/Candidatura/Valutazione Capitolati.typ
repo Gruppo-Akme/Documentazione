@@ -18,7 +18,7 @@
   tipo-documento: "Documento interno",
   stato: "Bozza",
   registro-modifiche: (
-    ("0.3.0", "27/10/2026", "Mattia Cadamuro", "Roberto Piovesan", "Davide Loparco", "Aggiunta valutazione dei capitolati C6, C7 e C9"),
+    ("0.3.0", "27/10/2026", "Mattia Cadamuro", "Roberto Piovesan, Davide Loparco", "Aggiunta valutazione dei capitolati C6, C7 e C9"),
     ("0.2.0", "26/10/2026", "Roberto Piovesan", "Davide Loparco", "Valutazione dei capitolati C3, C4 e C5"),
     ("0.1.0", "25/10/2026", "Marco Giacon", "Roberto Piovesan", "Creazione e prima stesura documento"),
   ),

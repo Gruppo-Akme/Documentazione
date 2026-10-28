@@ -85,8 +85,8 @@ def annotate_content(content, terms, first_only=True):
     already_annotated = set()
     for term in terms:
         check_pattern = rf"\b{re.escape(term)}\b(?:\*|_)?#(?:super|sub)\[G\]|#gloss\([\"']?{re.escape(term)}[\"']?\)"
-        if re.search(check_pattern, content, flags=re.IGNORECASE):
-            already_annotated.add(term.lower())
+        if re.search(check_pattern, content):
+            already_annotated.add(term)
 
     protected = []
 
@@ -96,7 +96,7 @@ def annotate_content(content, terms, first_only=True):
 
     # Proteggi elementi da NON toccare:
     # 1. Termini già annotati con apice/pedice G
-    body = re.sub(r"\b[A-Za-z0-9_\s\-]+\b#(?:super|sub)\[G\]", protect, body)
+    body = re.sub(r"(?:\*|_)?\b[A-Za-z0-9_\s\-]+\b(?:\*|_)?#(?:super|sub)\[G\]", protect, body)
     body = re.sub(r"#gloss\([^)]+\)", protect, body)
 
     # 2. Blocchi di codice e stringhe raw
@@ -116,7 +116,7 @@ def annotate_content(content, terms, first_only=True):
     applied_terms = []
 
     for term in terms:
-        if first_only and term.lower() in already_annotated:
+        if first_only and term in already_annotated:
             continue
 
         pattern = rf"(?<![a-zA-Z0-9_])(?P<t>{re.escape(term)})(?![a-zA-Z0-9_])"
@@ -135,11 +135,11 @@ def annotate_content(content, terms, first_only=True):
             return f"__PROT_{len(protected)-1}__"
 
         count = 1 if first_only else 0
-        body = re.sub(pattern, repl, body, count=count, flags=re.IGNORECASE)
+        body = re.sub(pattern, repl, body, count=count)
 
         if replaced:
             applied_terms.append(term)
-            already_annotated.add(term.lower())
+            already_annotated.add(term)
 
     # Ripristina token protetti in ordine inverso
     for i in range(len(protected) - 1, -1, -1):

@@ -131,9 +131,13 @@ Il gruppo di lavoro esprime un sincero ringraziamento all'azienda *Eggon S.r.l.*
     #v(0.2cm)
     Firma del revisore interno
   ],
-  /*  FIRMA FERRARIN DA INSERIRE
   [
-    #image("/src/shared/firme/firma-Ferrarin.jpeg", width: 80%)
+    *Gianpaolo Ferrarin (Eggon S.r.l.)* \
+    /*FIRMA FERRARIN DA INSERIRE
+    #image("/src/shared/firme/firma-Ferrarin.jpeg", width: 80%)*/
+    #line(length: 80%, stroke: 0.5pt + black)
+    #v(0.2cm)
+    Firma del revisore esterno
   ],
-  */
+  
 )

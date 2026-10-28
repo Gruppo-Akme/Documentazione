@@ -16,8 +16,9 @@
 #show: report.with(
   titolo: "Valutazione dei Capitolati d'Appalto",
   tipo-documento: "Documento interno",
-  stato: "Bozza",
+  stato: "Approvato",
   registro-modifiche: (
+    ("1.0.0", "28/10/2026", "Davide Loparco", "-", "Revisione con correzioni e approvazione finale del documento"),
     ("0.3.0", "27/10/2026", "Mattia Cadamuro", "Roberto Piovesan, Davide Loparco", "Aggiunta valutazione dei capitolati C6, C7 e C9"),
     ("0.2.0", "26/10/2026", "Roberto Piovesan", "Davide Loparco", "Valutazione dei capitolati C3, C4 e C5"),
     ("0.1.0", "25/10/2026", "Marco Giacon", "Roberto Piovesan", "Creazione e prima stesura documento"),
@@ -303,3 +304,4 @@ Il progetto comprende inoltre la realizzazione di una dashboard integrata (esegu
 - *Integrazione profonda con l'ecosistema OpenCode:* lo sviluppo di plugin, skill, comandi e tool dedicati all'estensione di OpenCode richiede un forte sforzo di comprensione architetturale della piattaforma di riferimento.
 - *Gestione dei test e della robustezza del validatore:* trattandosi di un tool di controllo qualità, il sistema stesso deve garantire elevati standard di affidabilità, precisione e copertura di test.
 - *Novità concettuale dell'Harness Engineering:* la curva di apprendimento iniziale per comprendere a fondo le dinamiche e i pattern dell'harness engineering e della programmazione in linguaggio naturale può richiedere un impegno di studio significativo.
+

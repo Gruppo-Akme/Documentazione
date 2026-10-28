@@ -8,6 +8,28 @@
   "Discord": "Piattaforma di comunicazione vocale, video e testuale impiegata per i meeting di gruppo telematici e le sessioni di allineamento.",
   "WhatsApp": "Applicazione di messaggistica istantanea utilizzata dal gruppo per comunicazioni brevi, urgenti e coordinamento rapido quotidiano.",
   "Glossario": "Documento e sezione informativa del sito web contenente le definizioni formali dei termini tecnici o ambigui utilizzati nella documentazione di progetto.",
-  "CI": "Continuous Integration: pratica di sviluppo software che prevede l'integrazione frequente del codice e l'esecuzione automatizzata di verifiche e build."
+  "CI": "Continuous Integration: pratica di sviluppo software che prevede l'integrazione frequente del codice e l'esecuzione automatizzata di verifiche e build.",
+  "Workflow" : "Insieme di pattern di attività ripetibili organizzati in maniera sistematica e deterministica",
+  "Shopify" : "Piattaforma e-commerce che offre strumenti, servizi e per rivenditori online",
+  "PoC" : "Proof of Concept è dimostratore eseguibile, una prova di fattibilità che attesta l'adeguatezza rispetto ai requisiti ",
+  "RLS" : " è una feature di controllo e gestione di un database che limita quali righe possano essere visualizzate/modificate basandosi sull'ID dell'utente",
+  "Saas": "Software-as-a-Service è una struttura tecnologica che permette a un'applicazione di essere ospitata sul cloud e resa disponibile a più clienti (chiamati tenant) tramite un comune browser web o un client leggero",
+  "PostgreSQL": "è un DBMS di tipo open source, cioè un database management system orientato agli oggetti",
+  "SupaBase": "piattaforma open-source di tipo BaaS costruita su un database relazionale SQL",
+  "Rule Engine": "compontente software che esegue una logica predefinita, policies e if-then conditions separatamente dal core application code",
+  "Vercel Workflows": "Framework per l'orchestrazione di processi aziendali e flussi ad alta durabilità (durable execution) suddivisi in step atomici riprendibili in caso di interruzione.",
+  "Durable Execution": "Paradigma di programmazione in cui lo stato di un workflow viene salvato al termine di ogni fase, garantendo la ripresa automatica del processo dopo errori di rete, riavvii o limiti di frequenza.",
+  "Liquid": "Linguaggio di templating open source creato da Shopify utilizzato per la generazione e il rendering dinamico delle viste e delle sezioni nei temi e-commerce.",
+  "Vercel Sandbox": "Ambiente di esecuzione isolato e sicuro per eseguire codice non fidato, parsing di script esterni o analisi statica di file privi di garanzie di correttezza sintattica.",
+  "Vercel Blob": "Servizio di archiviazione di oggetti (object storage) per file e contenuti statici, utilizzato per la persistenza e il recupero di snapshot ed esportazioni.",
+  "AI Gateway": "Componente architetturale che funge da punto di ingresso unico per l'orchestrazione, l'instradamento e il monitoraggio delle chiamate verso modelli linguistici e servizi di IA.",
+  "AI SDK": "Insieme di librerie e strumenti di sviluppo software progettati per integrare facilmente modelli linguistici (LLM) ed interazioni generatrici di testo nelle applicazioni.",
+  "Multi-Tenant": "Architettura software in cui un'unica istanza di un'applicazione serve più clienti distinti (tenant), garantendo la separazione logica e la sicurezza dei dati riservati di ciascuno.",
+  "Snapshot del Grafo": "Rappresentazione completa ed immutabile delle entità e delle loro relazioni in un dato istante di tempo, salvata ed archiviata per scopi di tracciamento e storico.",
+  "Diff del Grafo": "Operazione di confronto analitico tra due snapshot consecutivi del grafo per identificare entità create, eliminate, orfane o modificate.",
+  "Admin API": "Insieme di interfacce di programmazione esposte da Shopify per gestire in modo programmatico le risorse dello store (prodotti, temi, metafield), soggette a un sistema di rate-limiting basato su punti.",
+  "MVP": "Minimum Viable Product: versione iniziale e funzionale di un prodotto software dotata delle funzionalità essenziali per soddisfare i requisiti minimi e validare l'architettura con l'utente."
 }
+
+
 

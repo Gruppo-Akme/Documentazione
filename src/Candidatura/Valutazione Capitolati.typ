@@ -48,7 +48,7 @@ Vengono illustrate le motivazioni che hanno portato alla candidatura per il capi
 *Proponente:* Eggon s.r.l. \
 Il capitolato C2 richiede lo sviluppo di *NEXUM Concierge*, un assistente conversazionale da inserire nella PWA della piattaforma NEXUM, dedicata alla comunicazione aziendale e alla gestione dei servizi HR. Tramite una chat testuale, il personale può trovare informazioni, comprendere procedure e accedere ai servizi aziendali usando il linguaggio naturale.
 
-Il Concierge collega la conoscenza aziendale alle funzioni operative della piattaforma. L'MVP è limitato all'area *ferie e permessi* e deve dimostrare quattro capacità:
+Il Concierge collega la conoscenza aziendale alle funzioni operative della piattaforma. L'MVP#super[G] è limitato all'area *ferie e permessi* e deve dimostrare quattro capacità:
 - rispondere a domande sui regolamenti aziendali, usando fonti caricate dal backoffice;
 - spiegare l'uso delle funzioni di NEXUM sulla base dei manuali del prodotto;
 - recuperare e presentare i dati personali su ferie e permessi;
@@ -94,7 +94,7 @@ Il dominio è l'automazione dei processi commerciali e di assistenza in ambito B
 - integrazione con applicativi esterni tramite API REST;
 - un'interfaccia web amministrativa e un database relazionale interno.
 
-Le tecnologie consigliate sono Java con Spring Boot, LangChain4j, Angular e TypeScript, Whisper, Tesseract ed EasyOCR, con persistenza su SQLite, MariaDB o PostgreSQL.
+Le tecnologie consigliate sono Java con Spring Boot, LangChain4j, Angular e TypeScript, Whisper, Tesseract ed EasyOCR, con persistenza su SQLite, MariaDB o PostgreSQL#super[G].
 
 
 === Punti di forza
@@ -118,7 +118,7 @@ Il capitolato C0 è stato valutato come la nostra seconda scelta: offre un ambit
 == Capitolato C8 – Sonar
 === Descrizione
 *Proponente:* Halue S.r.l. Società Benefit \
-Il capitolato C8 richiede lo sviluppo di *Sonar*, un'applicazione web che si collega a uno store Shopify di grandi dimensioni, ne interroga sistematicamente configurazioni e codice, e ricostruisce la mappa di cosa esiste, di cosa dipende da cosa e di cosa non serve più. Il problema nasce dalla stratificazione degli store nel tempo: app dimenticate ma ancora fatturate, webhook verso fornitori non più attivi, campi personalizzati (metafield) mai letti e codice di tema non più referenziato, con una conoscenza che non è scritta da nessuna parte.
+Il capitolato C8 richiede lo sviluppo di *Sonar*, un'applicazione web che si collega a uno store Shopify#super[G] di grandi dimensioni, ne interroga sistematicamente configurazioni e codice, e ricostruisce la mappa di cosa esiste, di cosa dipende da cosa e di cosa non serve più. Il problema nasce dalla stratificazione degli store nel tempo: app dimenticate ma ancora fatturate, webhook verso fornitori non più attivi, campi personalizzati (metafield) mai letti e codice di tema non più referenziato, con una conoscenza che non è scritta da nessuna parte.
 
 Il sistema deve produrre due risultati: una *documentazione sempre aggiornata* dello store, consultabile via web ed esportabile in Markdown o HTML, e un *rapporto di igiene tecnica* che segnala orfani e codice morto, con una motivazione esplicita per ogni segnalazione. Le funzioni principali sono la scansione durevole dello store, la costruzione di un modello a grafo delle entità e delle dipendenze, l'analisi statica del tema, un motore di regole estensibile, il confronto tra snapshot e l'esportazione della documentazione. Sonar è di sola lettura e non modifica lo store.
 
@@ -126,7 +126,7 @@ Il sistema deve produrre due risultati: una *documentazione sempre aggiornata* d
 Il dominio è l'e-commerce su piattaforma Shopify (Shopify Plus) e in particolare la documentazione e la manutenzione di store enterprise: passaggi di consegne tra agenzie, onboarding di nuovi team, audit di spesa sulle app e valutazione di migrazioni (replatforming#sub[G]). Dal punto di vista tecnico il progetto riguarda:
 - acquisizione dati dalle Admin GraphQL API di Shopify, con gestione del rate limiting#sub[G] e scansioni lunghe, ripartibili e osservabili;
 - normalizzazione dei dati in un grafo di entità e dipendenze, con fonte dell'evidenza e livello di confidenza (accertato, probabile, ipotizzato);
-- analisi statica del codice di tema (Liquid, JSON, JavaScript, CSS);
+- analisi statica del codice di tema (Liquid#super[G], JSON, JavaScript, CSS);
 - campionamento statistico per misurare l'uso reale dei campi personalizzati;
 - tecnologie vincolanti: Next.js e Vercel (Workflows, Cron Jobs), Supabase (PostgreSQL con Row Level Security e autenticazione Google) e TypeScript.
 
@@ -140,12 +140,12 @@ Il dominio è l'e-commerce su piattaforma Shopify (Shopify Plus) e in particolar
 - *Competenze spendibili:* grafi, API reali, esecuzione durevole e analisi statica sono temi formativi di alto livello.
 
 === Criticità riscontrate
-- *Stack tecnologico vincolante:* Next.js su Vercel, Vercel Workflows, Supabase e TypeScript sono obbligatori; richiedere una deroga è possibile solo entro la fase di analisi dei requisiti.
+- *Stack tecnologico vincolante:* Next.js su Vercel, Vercel Workflows#super[G], Supabase e TypeScript sono obbligatori; richiedere una deroga è possibile solo entro la fase di analisi dei requisiti.
 - *Molti requisiti obbligatori:* sono previsti venti requisiti funzionali obbligatori, sette di qualità e sicurezza e sette non funzionali, e l'ambito è ampio rispetto al tempo disponibile.
 - *Criteri di accettazione stringenti:* richiedono almeno il 95% di test superati, copertura di almeno il 70%, tasso di falsi positivi sulle segnalazioni ad alta severità non superiore al 10% e una documentazione giudicata utilizzabile in un passaggio di consegne reale.
 - *Dominio Shopify da apprendere:* modello a punti delle API, metafield, blocchi app e Shopify Functions richiedono tempo di studio prima di poter progettare.
 - *Ambiente di lavoro da costruire:* Halue non fornisce store, dati né infrastruttura; il gruppo deve creare e popolare da sé uno store di sviluppo con una stratificazione realistica.
-- *Limiti dei piani gratuiti:* Supabase sospende i progetti inattivi e Vercel impone soglie mensili ridotte su Workflows, Blob, Sandbox e AI Gateway, il che incide sulle ri-scansioni pianificate.
+- *Limiti dei piani gratuiti:* Supabase sospende i progetti inattivi e Vercel impone soglie mensili ridotte su Workflows, Blob, Sandbox e AI Gateway#super[G], il che incide sulle ri-scansioni pianificate.
 - *Nessun incontro in presenza e nessun canale di messaggistica condiviso:* la comunicazione è affidata a videoconferenze e a una casella di posta.
 
 === Conclusioni
@@ -207,7 +207,7 @@ L'infrastruttura richiesta comprende quattro componenti chiave: la selezione e v
 *Proponente:* M31 S.r.l. \ 
 Il capitolato C4, proposto da M31 S.r.l., richiede di progettare e realizzare una piattaforma software distribuita per la gestione dei veicoli e dei servizi post-vendita (GVSPV) nell'ambito automotive. Il sistema mira a centralizzare e coordinare i flussi informativi tra tre attori principali: la casa automobilistica (Central Management Layer), le concessionarie o centri di assistenza (Operations Layer) e i proprietari finali dei veicoli (Customer & Vehicle Services Layer). 
 
-L'architettura deve supportare la gestione dei modelli e dei singoli veicoli, la registrazione delle vendite, le richieste di manutenzione e appuntamenti, le campagne di richiamo e l'invio di notifiche evento-dipendenti, combinando comunicazioni sincrone via API e comunicazioni asincrone a eventi. Il progetto non richiede l'integrazione di hardware fisici o centraline reali, basandosi su dati veicolari simulati, mentre il percorso di rilascio prevede lo sviluppo graduale di un'analisi dello stato dell'arte, un Proof of Concept (PoC) ed un Minimum Viable Product (MVP) basato su servizi containerizzati.
+L'architettura deve supportare la gestione dei modelli e dei singoli veicoli, la registrazione delle vendite, le richieste di manutenzione e appuntamenti, le campagne di richiamo e l'invio di notifiche evento-dipendenti, combinando comunicazioni sincrone via API e comunicazioni asincrone a eventi. Il progetto non richiede l'integrazione di hardware fisici o centraline reali, basandosi su dati veicolari simulati, mentre il percorso di rilascio prevede lo sviluppo graduale di un'analisi dello stato dell'arte, un Proof of Concept (PoC#super[G]) ed un Minimum Viable Product (MVP) basato su servizi containerizzati.
 
 === Punti di forza
 - *Architettura distribuita di livello enterprise:* la combinazione di microservizi, comunicazioni event-driven (es. NATS o Kafka) e orchestrazione con Kubernetes offre una solida formazione su pattern architetturali altamente richiesti nel mercato industriale. 

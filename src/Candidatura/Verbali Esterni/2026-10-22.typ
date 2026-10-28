@@ -28,11 +28,11 @@
     "Prof. Vardanega Tullio",
     "Halue S.r.l. SB",
   ),
-  verificatore-interno: "Pietro Giulio Bassi",
-  left-signature: "firma-Bassi.jpeg",
-  verificatore-esterno: "Valentino Baraldo (Halue S.r.l. SB)",
- // right-signature: "firma-Baraldo.jpeg",
-  tipo-verbale: "Esterno",
+  verificatore-interno: "",
+  left-signature: "",
+  verificatore-esterno: "",
+  right-signature: "",
+  tipo-verbale: "",
 )
 
 = Introduzione
@@ -116,3 +116,22 @@ L'incontro si è rivelato estremamente proficuo ed illuminante per il gruppo di 
 ) <tab-decisioni-esterne>
 
 Il gruppo di lavoro esprime un sincero ringraziamento all'azienda *Halue S.r.l. Società Benefit* e al referente *Valentino Baraldo* per la grande disponibilità, chiarezza e professionalità dimostrate.
+
+#pagebreak()
+#v(1cm)
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 2cm,
+  [
+    // Firma sinistra (gestita via codice perché l'immagine non ha il nome incorporato)
+    *Pietro Giulio Bassi* \
+    #image("/src/shared/firme/firma-Bassi.jpeg", width: 80%)
+    #line(length: 80%, stroke: 0.5pt + black)
+    #v(0.2cm)
+    Firma del revisore interno
+  ],
+  [
+    // Firma destra (l'immagine di Baraldo include già nome, linea e scritta, quindi metti solo quella)
+    #image("/src/shared/firme/firma-Baraldo.jpeg", width: 80%)
+  ],
+)

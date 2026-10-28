@@ -15,14 +15,14 @@
   tipo-documento: "Dichiarazione di Impegni",
   index: "1",
   verificatore-interno: "Pietro Giulio Bassi",
- // left-signature: "firma-Bassi.jpeg",
+  left-signature: "firma-Bassi.jpeg",
   registro-modifiche: (
     (
       "1.0.0",
       "30/10/2026",
       "Akme Group",
       "Pietro Giulio Bassi",
-      "Versione finale della Dichiarazione di Impegni e Preventivo Costi per C2-Concierge"
+      "Versione iniziale della Dichiarazione di Impegni e Preventivo Costi per C2-Concierge"
     ),
   ),
   body
@@ -44,6 +44,8 @@ I ruoli all'interno del gruppo vengono definiti secondo il regolamento didattico
 - *Progettista (Progett):* Definisce l'architettura tecnica del sistema, la struttura delle Knowledge Base, le interfacce verso i modelli LLM e i Gate operativi/di lettura.
 - *Programmatore (Programm):* Implementa il codice per l'interfaccia conversazionale PWA, i servizi di backoffice per i vettori/bucket e l'integrazione delle API.
 - *Verificatore (Verif):* Esegue attività di test unitari, di integrazione, di sistema e validazione delle risposte per prevenire allucinazioni e verificare i criteri d'accettazione.
+
+#pagebreak()
 
 = Impegno Individuale e Rotazione Ruoli
 
@@ -72,6 +74,8 @@ Il gruppo è formato da 6 componenti. Ciascun componente si impegna ad erogare *
 2. *Progettazione (Progettista):* Destinate 122 ore (*21.9%*). L'architettura del Concierge richiede un design accurato dei Gate di lettura/scrittura, dei prompt per LLM e della gestione di contesto conversazionale.
 3. *Analisi dei Requisiti (Analista):* Destinate 58 ore (*10.4%*), necessarie per circoscrivere l'ambito dell'MVP alle ferie e permessi e definire i requisiti di tracciabilità e astensione.
 4. *Coordinamento e Supporto (Responsabile + Amministratore):* Assegnate 46 ore a testa (*16.5%* totale combinato) per garantire la gestione della pianificazione, incontri settimanali con Eggon e stabilità degli ambienti integrati.
+
+#pagebreak()
 
 == Grafico della Suddivisione Oraria per Ruolo
 
@@ -123,6 +127,8 @@ Il gruppo adotta un piano di rotazione periodica strutturato per massimizzare la
 - *Copertura:* Ciascun membro del gruppo, nell'arco temporale del progetto didattico, avrà l'opportunità di ricoprire tutti i ruoli previsti, garantendo piena equità formativa.
 - *Gestione dei Conflitti di Interesse:* Le regole di rotazione garantiscono in modo rigoroso l'assenza di conflitti d'interesse: nessun componente può ricoprire contemporaneamente il ruolo di programmatore/progettista e di verificatore sul medesimo artefatto, assicurando così l'indipendenza e l'oggettività delle attività di controllo di qualità.
 - *Passaggio di Consegne:* Al termine di ogni ciclo di rotazione, ogni membro si impegna a redigere un breve resoconto e a trasferire le competenze acquisite al successore, agevolando la continuità operativa del team.
+
+#pagebreak()
 
 = Preventivo Costi
 
@@ -187,6 +193,8 @@ Il calcolo del preventivo viene effettuato applicando le tariffe orarie ufficial
     ]
   )
 ]
+
+#pagebreak()
 
 = Pianificazione Temporale e Diagramma PERT
 
@@ -268,6 +276,10 @@ Il gruppo ha condotto un'attenta analisi dei rischi potenziali legati allo svilu
    - *Mitigazione:* Mantenere un canale di comunicazione diretto e costante con il proponente Eggon (tramite call periodiche e gruppo di supporto dedicato) e una rigorosa validazione dei documenti di analisi dei requisiti.
 3. *Superamento del budget orario disponibile:* Rischio di sovrastima o sottostima dell'impegno richiesto per le attività di integrazione delle API NEXUM e dei test.
    - *Mitigazione:* Monitoraggio costante dell'avanzamento tramite il cruscotto di qualità, consuntivi di periodo rigorosi e riallocazione tempestiva delle risorse durante le riunioni di retrospettiva.
+4. *Potenziali rallentamenti dovuti a periodi critici: * durante le vacanze natalizie e la
+sessione invernale gli impegni dei membri del gruppo potrebbero influire negativamente sulle
+tempistiche concordate.
+  - *Mitigazione:* tenere conto preventivamente dei periodi critici organizzando di conseguenza le attività, rispettando nei tempi prestabiliti le deadline senza procastinare e rimandare i task
 
 = Data di Consegna Prevista
 

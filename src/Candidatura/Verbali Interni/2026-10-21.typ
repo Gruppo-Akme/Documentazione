@@ -5,7 +5,7 @@
   stato: "Approvato",
   versione: "1.0.0",
   registro-modifiche: (
-    ("1.0.0", "23/10/2026", "Roberto Piovesan", "-", "Revisione del documento e approvazione finale"),
+    ("1.0.0", "23/10/2026", "Roberto Piovesan", "Roberto Piovesan", "Revisione del documento e approvazione finale"),
     ("0.1.0", "22/10/2026", "Davide Loparco", "Roberto Piovesan", "Integrazione discussione capitolati e attività"),
   ),
   odg: (

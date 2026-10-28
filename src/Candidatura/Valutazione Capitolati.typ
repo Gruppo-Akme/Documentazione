@@ -23,6 +23,9 @@
     ("0.2.0", "26/10/2026", "Roberto Piovesan", "Davide Loparco", "Valutazione dei capitolati C3, C4 e C5"),
     ("0.1.0", "25/10/2026", "Marco Giacon", "Roberto Piovesan", "Creazione e prima stesura documento"),
   ),
+
+  verificatore-interno: "Davide Loparco",
+  left-signature: "firma-Loparco.jpeg",
 )
 
 // Funzione per i capitolati valutati ma non scelti

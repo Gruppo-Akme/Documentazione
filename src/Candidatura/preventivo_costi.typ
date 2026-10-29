@@ -90,7 +90,7 @@
 
 Il gruppo *Akme Group* si impegna formalmente alla realizzazione del Capitolato *C2 - NEXUM Concierge*, proposto dall'azienda *Eggon S.r.l.*, nell'ambito del corso di Ingegneria del Software presso l'Università degli Studi di Padova (A.A. 2026/2027).
 
-Con la presente dichiarazione, i 6 membri del gruppo assumono l'impegno di svolgere con responsabilità, trasparenza e continuità tutte le attività necessarie alla consegna dell'MVP (Minimum Viable Product), rispettando le scadenze concordate, le regole del Progetto Didattico e gli standard di qualità definiti.
+Con la presente dichiarazione, i 6 membri del gruppo assumono l'impegno di svolgere con responsabilità, trasparenza e continuità tutte le attività necessarie alla consegna dell'MVP#super[G] (Minimum Viable Product), rispettando le scadenze concordate, le regole del Progetto Didattico e gli standard di qualità definiti.
 
 = Analisi dei Ruoli
 
@@ -98,9 +98,9 @@ I ruoli all'interno del gruppo vengono definiti secondo il regolamento didattico
 
 - *Responsabile (Resp):* Coordina il gruppo, gestisce la pianificazione e le risorse, pianifica le pietre miliari (milestone) e rappresenta l'interfaccia verso committente e proponente.
 - *Amministratore (Amm):* Gestisce l'infrastruttura di lavoro (repository, pipeline di CI/CD, issue tracking) e cura la manutenzione del Way of Working#sub[G].
-- *Analista (Analist):* Definisce i requisiti funzionali e non funzionali specifici del Concierge (RAG, Integrazione API NEXUM, autorizzazioni, tracciabilità).
-- *Progettista (Progett):* Definisce l'architettura tecnica del sistema, la struttura delle Knowledge Base, le interfacce verso i modelli LLM e i Gate operativi/di lettura.
-- *Programmatore (Programm):* Implementa il codice per l'interfaccia conversazionale PWA, i servizi di backoffice per i vettori/bucket e l'integrazione delle API.
+- *Analista (Analist):* Definisce i requisiti funzionali e non funzionali specifici del Concierge (RAG#super[G], Integrazione API NEXUM, autorizzazioni, tracciabilità).
+- *Progettista (Progett):* Definisce l'architettura tecnica del sistema, la struttura delle Knowledge Base, le interfacce verso i modelli LLM#super[G] e i Gate operativi/di lettura.
+- *Programmatore (Programm):* Implementa il codice per l'interfaccia conversazionale PWA#super[G], i servizi di backoffice#super[G] per i vettori/bucket e l'integrazione delle API.
 - *Verificatore (Verif):* Esegue attività di test unitari, di integrazione, di sistema e validazione delle risposte per prevenire allucinazioni e verificare i criteri d'accettazione.
 
 #pagebreak()
@@ -129,7 +129,7 @@ Il gruppo è formato da 6 componenti. Ciascun componente si impegna ad erogare *
 == Motivazione della Ripartizione Oraria
 
 1. *Sviluppo e Validazione (Programmatore + Verificatore):* Dedicate 286 ore complessive (143h + 143h), pari al *51.2%* del totale. Tale impegno garantisce un testing rigoroso sull'accuratezza delle risposte RAG, sulle chiamate API a NEXUM e sulla sicurezza delle autorizzazioni.
-2. *Progettazione (Progettista):* Destinate 122 ore (*21.9%*). L'architettura del Concierge richiede un design accurato dei Gate di lettura/scrittura, dei prompt per LLM e della gestione di contesto conversazionale.
+2. *Progettazione (Progettista):* Destinate 122 ore (*21.9%*). L'architettura del Concierge richiede un design accurato dei Gate di lettura/scrittura, dei prompt#super[G] per LLM e della gestione di contesto conversazionale.
 3. *Analisi dei Requisiti (Analista):* Destinate 58 ore (*10.4%*), necessarie per circoscrivere l'ambito dell'MVP alle ferie e permessi e definire i requisiti di tracciabilità e astensione.
 4. *Coordinamento e Supporto (Responsabile + Amministratore):* Assegnate 46 ore a testa (*16.5%* totale combinato) per garantire la gestione della pianificazione, incontri settimanali con Eggon e stabilità degli ambienti integrati.
 
@@ -304,7 +304,7 @@ Di seguito viene illustrata la rete delle dipendenze logiche e temporali tra le 
         // Fase RTB
         nodeTask("01", "Avvio & WoW Setup"), [#text(12pt)[$-->$]], nodeTask("02", "Analisi Requisiti"), [#text(12pt)[$-->$]], nodeTask("03", "Studio Tech RAG"),
         grid.cell(colspan: 5)[#v(-0.2em)],
-        nodeTask("04", "Progettazione PoC"), [#text(12pt)[$-->$]], nodeTask("05", "Sviluppo PoC"), [#text(12pt)[$-->$]], nodeMilestone("RTB", "Milestone RTB"),
+        nodeTask("04", "Progettazione PoC#super[G]"), [#text(12pt)[$-->$]], nodeTask("05", "Sviluppo PoC"), [#text(12pt)[$-->$]], nodeMilestone("RTB", "Milestone RTB"),
         
         grid.cell(colspan: 5)[#v(0.5em) #line(length: 80%, stroke: 0.5pt + luma(200)) #v(0.5em)],
         

@@ -125,7 +125,7 @@ Il gruppo di lavoro esprime un sincero ringraziamento all'azienda *Eggon S.r.l.*
   columns: (1fr, 1fr),
   gutter: 2cm,
   [
-    *Roberto Piovesan* \
+    *Chen Daxin* \
     #image("/src/shared/firme/firma-Chen.png", width: 80%)
     #line(length: 80%, stroke: 0.5pt + black)
     #v(0.2cm)

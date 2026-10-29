@@ -4,7 +4,7 @@
 #show: body => report(
   titolo: "Dichiarazione degli Impegni e Preventivo Costi - Capitolato C2 (NEXUM Concierge)",
   stato: "Approvato",
-  versione: "1.0.0",
+  versione: "1.0.1",
   distribuzione: (
     "Akme Group",
     "Prof. Cardin Riccardo",
@@ -18,15 +18,22 @@
   left-signature: "firma-Bassi.jpeg",
   registro-modifiche: (
     (
+      "1.0.1",
+      "29/10/2026",
+      "Davide Loparco",
+      "-",
+      "Correzioni minori"
+    ),
+    (
       "1.0.0",
-      "27/10/2026",
+      "29/10/2026",
       "Pietro Giulio Bassi",
       "-",
       "Revisione finale documento"
     ),
     (
       "0.7.0",
-      "27/10/2026",
+      "28/10/2026",
       "Mattia Cadamuro",
       "Daxin Chen",
       "Diagramma PERT e Analisi dei rischi"
@@ -34,7 +41,7 @@
     ),
     (
       "0.6.0",
-      "27/10/2026",
+      "28/10/2026",
       "Daxin Chen",
       "Pietro Giulio Bassi",
       "Grafico distribuzione costi"
@@ -42,7 +49,7 @@
     ),
     (
       "0.5.0",
-      "27/10/2026",
+      "28/10/2026",
       "Roberto Piovesan	",
       "Daxin Chen",
       "Calcoli preventivo costi e tabella corrispettiva"
@@ -59,7 +66,7 @@
     (
       "0.3.0",
       "27/10/2026",
-      "Davide	Loparco",
+      "Davide Loparco",
       "Marco Giacon",
       "Stesura suddivisione oraria dei ruoli e tabella corrispettiva"
 
@@ -68,7 +75,7 @@
       "0.2.0",
       "27/10/2026",
       "Mattia Cadamuro",
-      "Davide	Loparco",
+      "Davide Loparco",
       "Stesura analisi dei ruoli"
 
     ),
@@ -96,8 +103,8 @@ Con la presente dichiarazione, i 6 membri del gruppo assumono l'impegno di svolg
 
 I ruoli all'interno del gruppo vengono definiti secondo il regolamento didattico per garantire copertura funzionale, responsabilità chiare e verifica indipendente:
 
-- *Responsabile (Resp):* Coordina il gruppo, gestisce la pianificazione e le risorse, pianifica le pietre miliari (milestone) e rappresenta l'interfaccia verso committente e proponente.
-- *Amministratore (Amm):* Gestisce l'infrastruttura di lavoro (repository, pipeline di CI/CD, issue tracking) e cura la manutenzione del Way of Working#sub[G].
+- *Responsabile (Resp):* Coordina il gruppo, gestisce la pianificazione e le risorse, pianifica le milestone e rappresenta l'interfaccia verso committente e proponente.
+- *Amministratore (Amm):* Gestisce l'infrastruttura di lavoro (repository, pipeline di CI/CD, issue tracking) e cura la manutenzione del Way of Working#super[G].
 - *Analista (Analist):* Definisce i requisiti funzionali e non funzionali specifici del Concierge (RAG#super[G], Integrazione API NEXUM, autorizzazioni, tracciabilità).
 - *Progettista (Progett):* Definisce l'architettura tecnica del sistema, la struttura delle Knowledge Base, le interfacce verso i modelli LLM#super[G] e i Gate operativi/di lettura.
 - *Programmatore (Programm):* Implementa il codice per l'interfaccia conversazionale PWA#super[G], i servizi di backoffice#super[G] per i vettori/bucket e l'integrazione delle API.

@@ -127,7 +127,6 @@ Il capitolato C8 richiede lo sviluppo di *Sonar*, un'applicazione web che si col
 Il sistema deve produrre due risultati: una *documentazione sempre aggiornata* dello store, consultabile via web ed esportabile in Markdown#super[G] o HTML#super[G], e un *rapporto di igiene tecnica* che segnala orfani e codice morto, con una motivazione esplicita per ogni segnalazione. Le funzioni principali sono la scansione durevole dello store, la costruzione di un modello a grafo delle entità e delle dipendenze, l'analisi statica del tema, un motore di regole estensibile, il confronto tra snapshot e l'esportazione della documentazione. Sonar è di sola lettura e non modifica lo store.
 
 === Dominio
-<<<<<<< HEAD
 Il dominio è l'e-commerce su piattaforma Shopify (Shopify Plus) e in particolare la documentazione e la manutenzione di store enterprise: passaggi di consegne tra agenzie, onboarding di nuovi team, audit#super[G] di spesa sulle app e valutazione di migrazioni (replatforming#sub[G]). Dal punto di vista tecnico il progetto riguarda:
 - acquisizione dati dalle Admin GraphQL API#super[G] di Shopify, con gestione del rate limiting#sub[G] e scansioni lunghe, ripartibili e osservabili;
 - normalizzazione dei dati in un grafo di entità e dipendenze, con fonte dell'evidenza e livello di confidenza (accertato, probabile, ipotizzato);
@@ -137,7 +136,6 @@ Il dominio è l'e-commerce su piattaforma Shopify (Shopify Plus) e in particolar
 - acquisizione dati dalle Admin GraphQL#super[G] API di Shopify, con gestione del rate limiting e scansioni lunghe, ripartibili e osservabili;
 - normalizzazione dei dati in un grafo di entità e dipendenze, con fonte dell'evidenza e livello di confidenza;
 - analisi statica del codice di tema (Liquid, JSON, JavaScript, CSS);
->>>>>>> feature/valutazione-capitolati-bozza
 - campionamento statistico per misurare l'uso reale dei campi personalizzati;
 - tecnologie vincolanti: Next.js#super[G] e Vercel, Supabase#super[G] e TypeScript.
 

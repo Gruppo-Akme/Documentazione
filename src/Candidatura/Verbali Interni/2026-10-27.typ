@@ -2,10 +2,11 @@
 
 #show: report.with(
   titolo: "Verbale interno 27/10/2026",
-  stato: "Da approvare",
-  versione: "0.1.0",
+  stato: "Approvato",
+  versione: "1.0.0",
   registro-modifiche: (
-    ("0.1.0", "28/10/2026", "Roberto Piovesan", "Membro gruppo", "Integrazione discussione capitolati e attività"),
+    ("1.0.0", "29/10/2026", "Marco Giacon", "Marco Giacon", "Revisione del documento e approvazione finale"),
+    ("0.1.0", "28/10/2026", "Roberto Piovesan", "Marco Giacon", "Integrazione discussione capitolati e attività"),
   ),
   odg: (
     "Scelta del giorno per la riunione settimanale", "Discussione sulla riunione con Halue S.r.l.", "Discussione sulla riunione con Eggon S.r.l.", "Conferma scelta del capitolato", "Allineamento su documentazione e glossario",
@@ -23,13 +24,13 @@
     "Prof. Cardin Riccardo",
     "Prof. Vardanega Tullio",
   ),
-  verificatore-interno: "Roberto Piovesan",
-  left-signature: "firma-Piovesan.jpeg",
+  verificatore-interno: "Marco Giacon",
+  left-signature: "firma-Giacon.jpeg",
   tipo-verbale: "Interno",
 )
 
 = Informazioni generali
-Con il presente verbale si certifica che Akme Group si è riunito in data 27/10/2026 dalle 18:00 alle 19:30 con l'intento di discutere sui due colloqui telematici avvenuti con le aziende Halue S.r.l. ed Eggon S.r.l., di trarre le conclusioni sulla scelta definitiva del capitolato e di chiarire il workflow relativo alla documentazione, in particolar modo riguardo al suo glossario.
+Con il presente verbale si certifica che Akme Group si è riunito in data 27/10/2026 dalle 18:00 alle 18:30 con l'intento di discutere sui due colloqui telematici avvenuti con le aziende Halue S.r.l. ed Eggon S.r.l., di trarre le conclusioni sulla scelta definitiva del capitolato e di chiarire il workflow relativo alla documentazione.
 
 = Resoconto
 
@@ -64,7 +65,7 @@ Per qualsiasi attività di stesura di documenti, i membri devono attenersi ai se
 4. *Revisione e integrazione Glossario:* Il revisore assegnato esegue la verifica del documento, controllando correttezza ortografica, coerenza logica e qualità dei contenuti. Inoltre, è compito del revisore individuare le parole chiave rilevanti e integrarle nel file/registro del glossario presente nella repository GitHub.
 
 5. *Merge e automazione (GitHub Actions):* Una volta completata la revisione e chiuso il branch, viene avviata automaticamente una GitHub Action che:
-- Applica in automatico la formattazione dei termini di glossario e geenra la sezione appendice
+- Applica in automatico la formattazione dei termini di glossario e genera la sezione appendice
 - Compila il file sorgente _.typ_ convertendolo nel documento finale in formato PDF.
 
 = Decisioni e attività
@@ -85,6 +86,7 @@ A seguire, la suddivisione dello svolgimento delle attività di questa settimana
     [Stesura lettera di presentazione], [Mattia Cadamuro, Marco Giacon], [29/10/2026],
     [Revisione analisi dei capitolati, aggiornamento glossario], [Davide Loparco], [29/10/2026],
     [Stesura preventivo dei costi], [Pietro Giulio Bassi, Chen Daxin], [29/10/2026],
+    [Analisi e revisione verbale interno ed esterno del 27/10/2026], [Marco Gicon, Davide Loparco], [29/10/2026],
   ),
   caption: [Decisioni intraprese e attività conseguenti],
 ) <tab-decisioni>

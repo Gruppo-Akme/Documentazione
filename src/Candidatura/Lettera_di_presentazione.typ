@@ -3,11 +3,11 @@
 #let codice = "C2"
 #let nome-capitolato = "Concierge"
 #let azienda = "Eggon S.r.l."
-#let costo = "XX.XXX€"
-#let scadenza = "GG MM AAAA"
+#let costo = "11.160,00 €"
+#let scadenza = "30-03-2027"
 
 #let url-valutazione = "https://gruppo-akme.github.io/Documentazione/output/Candidatura/Valutazione%20Capitolati.pdf"
-#let url-preventivo = "https://example.com/Preventivo_Costi.pdf"
+#let url-preventivo = "https://gruppo-akme.github.io/Documentazione/output/Candidatura/preventivo_costi.pdf"
 #let url-sito = "https://gruppo-akme.github.io/Documentazione/website/"
 #let url-repo = "https://github.com/Gruppo-Akme/Documentazione"
 
@@ -23,11 +23,14 @@
 #show: report.with(
   titolo: "Candidatura Capitolato " + codice,
   tipo-documento: "Lettera di presentazione",
-  stato: "Bozza",
-  versione: 0.1,
+
+
+  mostra-indice: false,
 )
 
+
 = Candidatura
+
 
 Egregi Professori Vardanega e Cardin,
 
@@ -36,10 +39,10 @@ proposto dall'azienda *#azienda*.
 
 = Motivazioni della scelta
 
-Le principali motivazioni che ci hanno portato a scegliere il presente capitolato sono le seguenti:
+Le principali motivazioni che ci#super[G] hanno portato a scegliere il presente capitolato sono le seguenti:
 
 - *Tecnologie attuali:* il progetto permette di lavorare con modelli linguistici, recupero della conoscenza e integrazione di strumenti, ambiti molto richiesti.
-- *Perimetro definito:* l'MVP riguarda solo ferie e permessi, con criteri di accettazione e prove descritti in modo esplicito.
+- *Perimetro definito:* l'MVP#super[G] riguarda solo ferie e permessi, con criteri di accettazione e prove descritti in modo esplicito.
 - *Supporto del proponente:* sono previsti incontri periodici, un referente dedicato e la fornitura di manuali, regolamenti e dati di prova.
 - *Libertà nelle scelte tecniche:* il team può proporre tecnologie e architettura, motivandole rispetto ai risultati.
 - *Utilità concreta:* il prodotto risolve un problema reale, ridurre le richieste ripetitive e semplificare l’accesso ai servizi HR.

@@ -15,6 +15,7 @@
   left-signature: "",
   tipo-documento: "",
   index: "0",
+  mostra-indice: true,
   body,
 ) = {
   let versione-auto = if versione != none {
@@ -141,23 +142,28 @@
       stroke: (x, y) => if y == 0 { (bottom: 1.2pt + black) } else { (bottom: 0.6pt + black) },
       inset: (y: 7pt, x: 5pt),
       table.header([*Ver.*], [*Data*], [*Autore*], [*Verificatore*], [*Descrizione*]),
-      ..for (ver, data, autore, verificatore, descrizione) in registro-modifiche {
-        ([#ver], [#data], [#autore], [#verificatore], [#descrizione])
-      },
+      ..registro-modifiche.map(row => (
+        [#row.at(0)],
+        [#row.at(1)],
+        [#row.at(2)],
+        [#row.at(3)],
+        [#row.at(4)]
+      )).flatten(),
     )
     #pagebreak()
   ]
 
-  // Indice
-  text(size: 14pt, weight: "bold")[Indice]
-  v(0.5em)
-  outline(
-    title: none,
-    indent: 1.5em,
-    depth: 2,
-  )
-
-  pagebreak()
+  // Controllo condizionale per l'indice (rispetta la proprietà mostra-indice)
+  if mostra-indice [
+    #text(size: 14pt, weight: "bold")[Indice]
+    #v(0.5em)
+    outline(
+      title: none,
+      indent: 1.5em,
+      depth: 2,
+    )
+    #pagebreak()
+  ]
 
   set heading(numbering: "1.")
   set par(
@@ -168,7 +174,7 @@
 
   body
 
-  // Blocco firme finale (se presente verificatore o firma)
+  // Blocco firme finale 
   if verificatore-interno != "" or left-signature != "" [
     #pagebreak()
     #v(1cm)

@@ -47,7 +47,7 @@ All'incontro hanno preso parte:
   - Marco Giacon
 
 = Preparazione all'Incontro
-In preparazione alla riunione, il gruppo di lavoro si è riunito per analizzare nel dettaglio la documentazione del capitolato ed evidenziare i dubbi principali riguardanti il monte ore, l'infrastruttura cloud su AWS Bedrock, le strategie di RAG e confidence score, la tracciabilità nel backoffice, la segmentazione dei documenti e i vincoli di privacy legati al GDPR. I sei quesiti principali sono stati formalizzati e trasmessi preventivamente all’azienda per garantire una discussione mirata e proficua durante la sessione sincrona.
+In preparazione alla riunione, il gruppo di lavoro si è riunito per analizzare nel dettaglio la documentazione del capitolato ed evidenziare i dubbi principali riguardanti il monte ore, l'infrastruttura cloud su AWS#super[G] Bedrock#super[G], le strategie di RAG#super[G] e confidence score, la tracciabilità nel backoffice#super[G], la segmentazione dei documenti e i vincoli di privacy legati al GDPR#super[G]. I sei quesiti principali sono stati formalizzati e trasmessi preventivamente all’azienda per garantire una discussione mirata e proficua durante la sessione sincrona.
 
 = Resoconto della Riunione
 Di seguito viene fornita la rendicontazione puntuale dei quesiti trattati e dei chiarimenti emersi durante la discussione sincrona con il referente aziendale.
@@ -57,7 +57,7 @@ Di seguito viene fornita la rendicontazione puntuale dei quesiti trattati e dei 
   _"Nella documentazione sono state indicate 485 ore individuali di lavoro, nonostante il professor Vardanega abbia stabilito un tetto massimo di 95 ore di cosiddetto "prime time" e 99 ore destinate all'autoapprendimento. In che termini dobbiamo dunque intendere le 485 ore, per gestire la documentazione e la distribuzione dei ruoli e del tempo adeguatamente alle vostre richieste?"_
 - *Sintesi della Risposta (Eggon S.r.l.):*
   - *Refuso e Ricalibrazione delle ore:* L'indicazione delle 485 ore è stata chiarita come un refuso iniziale basato sul volume standard teorico di 480 ore. Le attività e la pianificazione del lavoro sono già modellate sul numero di ore effettivo previsto dall'insegnamento.
-  - *Flessibilità e Negoziabilità dei Requisiti:* Le specifiche e i criteri iniziali sono stati definiti con un approccio flessibile e sono orientati a verificare il funzionamento generale del sistema. Capitolato e modalità operative sono pienamente negoziabili e definibili insieme, entro certi limiti, lungo un percorso iterativo. Il valore principale risiede nel confronto continuo e non solo nella consegna dell'MVP.
+  - *Flessibilità e Negoziabilità dei Requisiti:* Le specifiche e i criteri iniziali sono stati definiti con un approccio flessibile e sono orientati a verificare il funzionamento generale del sistema. Capitolato e modalità operative sono pienamente negoziabili e definibili insieme, entro certi limiti, lungo un percorso iterativo. Il valore principale risiede nel confronto continuo e non solo nella consegna dell'MVP#super[G].
 
 == Configurazione dell'Ambiente Cloud e Risorse di Test
 - *Quesito / Domanda Posta:* \
@@ -69,7 +69,7 @@ Di seguito viene fornita la rendicontazione puntuale dei quesiti trattati e dei 
 
 == Criteri di Accettazione dell'MVP, Confidence Score e Astensione del RAG
 - *Quesito / Domanda Posta:* \
-  _"Nelle specifiche si richiede che il sistema si astenga dal rispondere qualora le fonti autorizzate non siano sufficienti o presentino contrasti. Quali metriche o strategie di confidence score consigliate di adottare per validare l'output del RAG prima di mostrarlo all'utente nella PWA?"_
+  _"Nelle specifiche si richiede che il sistema si astenga dal rispondere qualora le fonti autorizzate non siano sufficienti o presentino contrasti. Quali metriche o strategie di confidence score consigliate di adottare per validare l'output del RAG prima di mostrarlo all'utente nella PWA#super[G]?"_
 - *Sintesi della Risposta (Eggon S.r.l.):*
   - *Strategie di Astensione e Confidence Score:* L'azienda non impone metriche o soglie rigide di confidence score, in quanto la decisione rientra nel lavoro del team. In presenza di fonti insufficienti o in contrasto non risolvibile, il sistema deve astenersi o fornire risposte orientate all'approfondimento, escludendo rigorosamente fonti non autorizzate.
   - *Funzionalità End-to-End dell'MVP:* L'MVP dovrà dimostrare operatività end-to-end, includendo risposte su regolamenti aziendali e manuali Nexum, gestione delle richieste di ferie/permessi con previa conferma dei dati, mantenimento del contesto conversazionale e aggiornamento dinamico delle risposte in caso di sostituzione o eliminazione dei documenti.
@@ -78,14 +78,14 @@ Di seguito viene fornita la rendicontazione puntuale dei quesiti trattati e dei 
 - *Quesito / Domanda Posta:* \
   _"Fino a che livello di dettaglio è richiesto di tracciare le fonti consultate e gli esiti delle operazioni all'interno del backoffice amministrativo per soddisfare i criteri di accettazione dell'MVP?"_
 - *Sintesi della Risposta (Eggon S.r.l.):*
-  - *Tracciamento di Prompt, Fonti ed Esiti:* Ogni risposta prodotta deve associare e mostrare chiaramente le fonti utilizzate. Il backoffice dovrà registrare i prompt inviati al modello, i documenti consultati e gli esiti restituiti, con la possibilità di raccogliere feedback da parte degli utenti.
+  - *Tracciamento di Prompt#super[G], Fonti ed Esiti:* Ogni risposta prodotta deve associare e mostrare chiaramente le fonti utilizzate. Il backoffice dovrà registrare i prompt inviati al modello, i documenti consultati e gli esiti restituiti, con la possibilità di raccogliere feedback da parte degli utenti.
   - *Distinzione degli Stati Operativi:* È richiesta la tracciabilità delle operazioni distinguendo tra richieste registrate e approvate, imponendo una nuova conferma dell'utente in caso di modifica dei dati inviati e garantendo un tracciato di log per la gestione degli errori.
 
 == Segmentazione delle Fonti e Gestione dei Vettori
 - *Quesito / Domanda Posta:* \
   _"Riguardo alla trasformazione dei documenti aziendali (Regolamenti PDF e manuali NEXUM) in unità di conoscenza consultabili, quali linee guida o criteri di segmentazione suggerite per evitare ambiguità tra le regole aziendali e le istruzioni d'uso del prodotto?"_
 - *Sintesi della Risposta (Eggon S.r.l.):*
-  - *Persistenza su PG Vector e Flessibilità Dimensionale:* I documenti verranno convertiti in vettori tramite embedding e salvati su database PostgreSQL con estensione PG Vector. Poiché la sostituzione dei modelli LLM può variare la dimensione dei vettori, si suggerisce di strutturare il database con campi dedicati a gestire le diverse dimensioni dei vettori, garantendo la compatibilità con futuri modelli.
+  - *Persistenza su PG Vector e Flessibilità Dimensionale:* I documenti verranno convertiti in vettori tramite embedding e salvati su database PostgreSQL#super[G] con estensione PG Vector. Poiché la sostituzione dei modelli LLM#super[G] può variare la dimensione dei vettori, si suggerisce di strutturare il database con campi dedicati a gestire le diverse dimensioni dei vettori, garantendo la compatibilità con futuri modelli.
   - *Separazione logica e Layer di Controllo:* È necessario separare nettamente le fonti informative aziendali dalle istruzioni operative della piattaforma. Il team dovrà progettare un livello di controllo e valutare modelli di classificazione automatica delle fonti (es. GEV) per instradare correttamente le interrogazioni.
 
 == Conformità Privacy, Normativa GDPR e Trattamento dei Dati Sensibili

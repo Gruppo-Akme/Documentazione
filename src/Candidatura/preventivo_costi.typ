@@ -19,7 +19,7 @@
   registro-modifiche: (
     (
       "1.0.0",
-      "30/10/2026",
+      "27/10/2026",
       "Akme Group",
       "Pietro Giulio Bassi",
       "Versione iniziale della Dichiarazione di Impegni e Preventivo Costi per C2-Concierge"

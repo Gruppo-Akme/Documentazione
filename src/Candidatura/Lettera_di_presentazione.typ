@@ -39,10 +39,10 @@ proposto dall'azienda *#azienda*.
 
 = Motivazioni della scelta
 
-Le principali motivazioni che ci hanno portato a scegliere il presente capitolato sono le seguenti:
+Le principali motivazioni che ci#super[G] hanno portato a scegliere il presente capitolato sono le seguenti:
 
 - *Tecnologie attuali:* il progetto permette di lavorare con modelli linguistici, recupero della conoscenza e integrazione di strumenti, ambiti molto richiesti.
-- *Perimetro definito:* l'MVP riguarda solo ferie e permessi, con criteri di accettazione e prove descritti in modo esplicito.
+- *Perimetro definito:* l'MVP#super[G] riguarda solo ferie e permessi, con criteri di accettazione e prove descritti in modo esplicito.
 - *Supporto del proponente:* sono previsti incontri periodici, un referente dedicato e la fornitura di manuali, regolamenti e dati di prova.
 - *Libertà nelle scelte tecniche:* il team può proporre tecnologie e architettura, motivandole rispetto ai risultati.
 - *Utilità concreta:* il prodotto risolve un problema reale, ridurre le richieste ripetitive e semplificare l’accesso ai servizi HR.

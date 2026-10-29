@@ -20,10 +20,68 @@
     (
       "1.0.0",
       "27/10/2026",
-      "Akme Group",
       "Pietro Giulio Bassi",
-      "Versione iniziale della Dichiarazione di Impegni e Preventivo Costi per C2-Concierge"
+      "-",
+      "Revisione finale documento"
     ),
+    (
+      "0.7.0",
+      "27/10/2026",
+      "Mattia Cadamuro",
+      "Daxin Chen",
+      "Diagramma PERT e Analisi dei rischi"
+
+    ),
+    (
+      "0.6.0",
+      "27/10/2026",
+      "Daxin Chen",
+      "Pietro Giulio Bassi",
+      "Grafico distribuzione costi"
+
+    ),
+    (
+      "0.5.0",
+      "27/10/2026",
+      "Roberto Piovesan	",
+      "Daxin Chen",
+      "Calcoli preventivo costi e tabella corrispettiva"
+
+    ),
+    (
+      "0.4.0",
+      "27/10/2026",
+      "Marco Giacon",
+      "Roberto Piovesan	",
+      "Grafico suddivisione oraria e criteri rotazione ruoli"
+
+    ),
+    (
+      "0.3.0",
+      "27/10/2026",
+      "Davide	Loparco",
+      "Marco Giacon",
+      "Stesura suddivisione oraria dei ruoli e tabella corrispettiva"
+
+    ),
+    (
+      "0.2.0",
+      "27/10/2026",
+      "Mattia Cadamuro",
+      "Davide	Loparco",
+      "Stesura analisi dei ruoli"
+
+    ),
+    (
+      "0.1.0",
+      "27/10/2026",
+      "Pietro Giulio Bassi",
+      "Daxin Chen",
+      "Versione inziale della Dichiarazione di Impegni e Preventivo Costi per C2-Concierge"
+
+    ),
+    
+
   ),
   body
 )

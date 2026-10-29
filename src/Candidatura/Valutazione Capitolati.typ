@@ -52,7 +52,7 @@ Vengono illustrate le motivazioni che hanno portato alla candidatura per il capi
 *Proponente:* Eggon s.r.l. \
 Il capitolato C2 richiede lo sviluppo di *NEXUM Concierge*, un assistente conversazionale da inserire nella PWA della piattaforma NEXUM, dedicata alla comunicazione aziendale e alla gestione dei servizi HR. Tramite una chat testuale, il personale può trovare informazioni, comprendere procedure e accedere ai servizi aziendali usando il linguaggio naturale.
 
-Il Concierge collega la conoscenza aziendale alle funzioni operative della piattaforma. L'MVP è limitato all'area *ferie e permessi* e deve assicurare quattro funzionalità:
+Il Concierge collega la conoscenza aziendale alle funzioni operative della piattaforma. L'MVP#super[G] è limitato all'area *ferie e permessi* e deve assicurare quattro funzionalità:
 - rispondere a domande sui regolamenti aziendali, usando fonti caricate dal backoffice;
 - spiegare l'uso delle funzioni di NEXUM sulla base dei manuali del prodotto;
 - recuperare e presentare i dati personali su ferie e permessi;
@@ -122,7 +122,7 @@ Il capitolato C0 è stato valutato come la nostra seconda scelta: offre un ambit
 == Capitolato C8 – Sonar
 === Descrizione
 *Proponente:* Halue S.r.l. Società Benefit \
-Il capitolato C8 richiede lo sviluppo di *Sonar*, un'applicazione web che si collega a uno store Shopify di grandi dimensioni, ne interroga sistematicamente configurazioni e codice, e ricostruisce la mappa di cosa esiste, di cosa non serve più e delle eventuali dipendenze. Il problema nasce dalla stratificazione degli store nel tempo: app dimenticate ma ancora fatturate, webhook verso fornitori non più attivi, campi personalizzati mai letti e codice di tema non più referenziato, legati a una conoscenza storica del sistema ormai andata persa.
+Il capitolato C8 richiede lo sviluppo di *Sonar*, un'applicazione web che si collega a uno store Shopify#super[G] di grandi dimensioni, ne interroga sistematicamente configurazioni e codice, e ricostruisce la mappa di cosa esiste, di cosa non serve più e delle eventuali dipendenze. Il problema nasce dalla stratificazione degli store nel tempo: app dimenticate ma ancora fatturate, webhook verso fornitori non più attivi, campi personalizzati mai letti e codice di tema non più referenziato, legati a una conoscenza storica del sistema ormai andata persa.
 
 Il sistema deve produrre due risultati: una *documentazione sempre aggiornata* dello store, consultabile via web ed esportabile in Markdown o HTML, e un *rapporto di igiene tecnica* che segnala orfani e codice morto, con una motivazione esplicita per ogni segnalazione. Le funzioni principali sono la scansione durevole dello store, la costruzione di un modello a grafo delle entità e delle dipendenze, l'analisi statica del tema, un motore di regole estensibile, il confronto tra snapshot e l'esportazione della documentazione. Sonar è di sola lettura e non modifica lo store.
 
@@ -139,7 +139,7 @@ Il dominio è l'e-commerce su piattaforma Shopify (Shopify Plus) e in particolar
 - analisi statica del codice di tema (Liquid, JSON, JavaScript, CSS);
 >>>>>>> feature/valutazione-capitolati-bozza
 - campionamento statistico per misurare l'uso reale dei campi personalizzati;
-- tecnologie vincolanti: Next.js e Vercel, Supabase e TypeScript.
+- tecnologie vincolanti: Next.js e Vercel, Supabase#super[G] e TypeScript.
 
 === Punti di forza
 - *Problema reale e ben motivato:* il capitolato descrive in modo chiaro una necessità concreta di Halue, con costi e scenari d'uso precisi.
@@ -253,7 +253,7 @@ La piattaforma integra un assistente conversazionale basato su architettura RAG 
 - *Gestione complessa dei permessi e degli accessi:* il controllo basato sui soli ruoli (RBAC) risulta insufficiente, richiedendo la modellazione di regole basate anche sulla relazione specifica con il paziente e sul contesto.
 - *Responsabilità etico-clinica e validazione dell'AI:* l'impiego di modelli generativi in ambito sanitario richiede l'introduzione di meccanismi di revisione umana ("human-in-the-loop") per la conferma dei dati estratti.
 - *Adattamento delle pipeline AI alla lingua italiana:* alcuni servizi clinici nativi in cloud (es. Amazon Comprehend Medical) sono disponibili solo in inglese, imponendo al gruppo la progettazione di pipeline alternative per l'estrazione di entità da testi in italiano.
-- *Elevata articolazione funzionale e integrazione dei moduli:* la convivenza di assistente RAG, motore di workflow per le scadenze, gestione documentale e comunicazioni richiede un'attenta coordinazione dei servizi cloud asincroni e degli eventi.
+- *Elevata articolazione funzionale e integrazione dei moduli:* la convivenza di assistente RAG, motore di workflow#super[G] per le scadenze, gestione documentale e comunicazioni richiede un'attenta coordinazione dei servizi cloud asincroni e degli eventi.
 
 == Capitolato C6 – Caching Semantico e Dashboard FinOps
 === Descrizione
@@ -283,7 +283,7 @@ Il capitolato C7, proposto da Ergon Informatica Srl, richiede lo sviluppo di *Sm
 L'architettura di riferimento prevede un Raw Data Store per i dati grezzi, un Data Warehouse basato su un modello dimensionale (star schema) ottimizzato tramite un motore analitico OLAP come DuckDB, e una Web App responsive dotata di dashboard builder drag & drop, libreria di widget interattivi e un assistente AI integrato. Il layer di intelligenza artificiale funge da interprete per generare visualizzazioni in linguaggio naturale, produrre insight automatici, suggerire widget e spiegare le variazioni degli indicatori, protetto da rigorosi controlli di sicurezza e guardrail.
 
 === Punti di forza
-- *Architettura fortemente disaccoppiata:* Il capitolato propone una netta suddivisione in tre livelli (Raw Data Store, Data Warehouse, Web App). Questa impostazione facilita enormemente la stesura della documentazione architetturale in Typst e rende il codice molto più manutenibile e testabile.
+- *Architettura fortemente disaccoppiata:* Il capitolato propone una netta suddivisione in tre livelli (Raw Data Store, Data Warehouse, Web App). Questa impostazione facilita enormemente la stesura della documentazione architetturale in Typst#super[G] e rende il codice molto più manutenibile e testabile.
 - *Facilità di divisione dei compiti:* Grazie all'impostazione modulare e alla comunicazione tramite API REST, il lavoro all'interno del team può essere parallelizzato con grande efficienza.
 - *Approccio di sviluppo iterativo chiaro:* Il proponente suggerisce di non sviluppare tutto subito, ma di procedere per fasi (MVP della pipeline BI, poi integrazione AI di base, poi insight automatici).
 - *Stack tecnologico bilanciato:* Il progetto unisce tecnologie web classiche con elementi altamente innovativi ma circoscritti, come i database orientati all'analisi e le API dei LLM.

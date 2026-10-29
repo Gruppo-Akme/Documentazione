@@ -30,7 +30,7 @@
 )
 
 = Informazioni generali
-Con il presente verbale si certifica che Akme Group si è riunito in data 27/10/2026 dalle 18:00 alle 18:30 con l'intento di discutere sui due colloqui telematici avvenuti con le aziende Halue S.r.l. ed Eggon S.r.l., di trarre le conclusioni sulla scelta definitiva del capitolato e di chiarire il workflow relativo alla documentazione.
+Con il presente verbale si certifica che Akme Group si è riunito in data 27/10/2026 dalle 18:00 alle 18:30 con l'intento di discutere sui due colloqui telematici avvenuti con le aziende Halue S.r.l. ed Eggon S.r.l., di trarre le conclusioni sulla scelta definitiva del capitolato e di chiarire il workflow#super[G] relativo alla documentazione.
 
 = Resoconto
 
@@ -38,10 +38,10 @@ Con il presente verbale si certifica che Akme Group si è riunito in data 27/10/
 Il gruppo ha concordato di fissare la riunione settimanale di coordinamento con cadenza regolare ogni martedì alle ore 18:00. Tale collocazione temporale si è rivelata la soluzione ideale per allineare le attività in corso e pianificare il lavoro dei giorni successivi, oltre che la soluzione migliore per venire incontro alle esigenze lavorative e organizzative di tutti i membri del team.
 
 == Discussione sulla riunione con Halue S.r.l.
-Durante l'incontro con Halue S.r.l. SB, con referente Valentino Baraldo, il gruppo ha approfondito gli aspetti tecnici legati al capitolato C8 (Sonar), focalizzandosi sull'architettura a workflow durevoli (Vercel Workflows) e sull'isolamento multi-tenant tramite RLS. Il confronto si è rivelato costruttivo e ha evidenziato una buona disponibilità aziendale alla negoziabilità e al dimensionamento incrementale dei requisiti per la fase di MVP. Nonostante l'apprezzamento per la qualità tecnica, il team ha valutato la complessità strutturale dell'infrastruttura come leggermente meno in linea con le preferenze complessive del gruppo, se comparata alle altre due proponenti.
+Durante l'incontro con Halue S.r.l. SB, con referente Valentino Baraldo, il gruppo ha approfondito gli aspetti tecnici legati al capitolato C8 (Sonar), focalizzandosi sull'architettura a workflow durevoli (Vercel Workflows#super[G]) e sull'isolamento multi-tenant#super[G] tramite RLS#super[G]. Il confronto si è rivelato costruttivo e ha evidenziato una buona disponibilità aziendale alla negoziabilità e al dimensionamento incrementale dei requisiti per la fase di MVP#super[G]. Nonostante l'apprezzamento per la qualità tecnica, il team ha valutato la complessità strutturale dell'infrastruttura come leggermente meno in linea con le preferenze complessive del gruppo, se comparata alle altre due proponenti.
 
 == Discussione sulla riunione con Eggon S.r.l.
-Il colloquio con Eggon S.r.l., con referente Gianpaolo Ferrarin, ha permesso di analizzare in dettaglio i requisiti del capitolato C2 (Concierge), chiarendo gli aspetti relativi al perimetro operativo, all'integrazione con Amazon Bedrock e alla gestione dei dati tramite PG Vector. L'azienda ha dimostrato un'ottima sintonia con il team, offrendo ampie garanzie di flessibilità, un approccio fortemente iterativo e un supporto concreto con risorse di test dedicate. Il giudizio complessivo su questa proposta e sul relatore è pienamente positivo.
+Il colloquio con Eggon S.r.l., con referente Gianpaolo Ferrarin, ha permesso di analizzare in dettaglio i requisiti del capitolato C2 (Concierge), chiarendo gli aspetti relativi al perimetro operativo, all'integrazione con Amazon Bedrock#super[G] e alla gestione dei dati tramite PG Vector. L'azienda ha dimostrato un'ottima sintonia con il team, offrendo ampie garanzie di flessibilità, un approccio fortemente iterativo e un supporto concreto con risorse di test dedicate. Il giudizio complessivo su questa proposta e sul relatore è pienamente positivo.
 
 == Conferma scelta del capitolato
 In vista dell'imminente scadenza del 30 ottobre 2026 per la consegna della candidatura, entro la quale è prevista la finalizzazione del documento di Valutazione dei Capitolati, il gruppo si è riunito per effettuare una discussione conclusiva relativa alle proposte d'interesse, nello specifico i capitolati C0, C2 e C8.
@@ -52,19 +52,19 @@ A valle del confronto interno e dell'analisi comparativa dei requisiti e dei col
 - _Seconda scelta:_ Capitolato C0
 - _Terza scelta:_ Capitolato C8
 
-== Allineamento su documentazione e glossario
-Il gruppo si è conformato ad un unico workflow operativo per la redazione, la verifica e la pubblicazione automatizzata della documentazione in *Typst*.
+== Allineamento su documentazione e glossario#super[G]
+Il gruppo si è conformato ad un unico workflow operativo per la redazione, la verifica e la pubblicazione automatizzata della documentazione in *Typst#super[G]*.
 Per qualsiasi attività di stesura di documenti, i membri devono attenersi ai seguenti passaggi: 
 
-1. *Creazione del branch:* Si crea un nuovo branch dedicato sulla repository GitHub, nominato direttamente con il nome del documento da redigere (es. _[verbale_interno_27_10_2026]_).
+1. *Creazione del branch:* Si crea un nuovo branch dedicato sulla repository GitHub#super[G], nominato direttamente con il nome del documento da redigere (es. _[verbale_interno_27_10_2026]_).
 
 2. *Stesura del documento:* L'autore redige il file sorgente in *Typst* lavorando esclusivamente sul branch creato. In questa fase *non* deve essere inserito alcun pedice relativo al glossario, né deve essere inclusa manualmente la sezione appendice per il glossario stesso.
 
-3. *Richiesta di revisione:* Una volta ultimata la bozza, si effettua il caricamento sul branch e viene assegnato l'incaricato alla verifica tramite GitHub oppure gruppo di comunicazione interna WhatsApp.
+3. *Richiesta di revisione:* Una volta ultimata la bozza, si effettua il caricamento sul branch e viene assegnato l'incaricato alla verifica tramite GitHub oppure gruppo di comunicazione interna WhatsApp#super[G].
 
 4. *Revisione e integrazione Glossario:* Il revisore assegnato esegue la verifica del documento, controllando correttezza ortografica, coerenza logica e qualità dei contenuti. Inoltre, è compito del revisore individuare le parole chiave rilevanti e integrarle nel file/registro del glossario presente nella repository GitHub.
 
-5. *Merge e automazione (GitHub Actions):* Una volta completata la revisione e chiuso il branch, viene avviata automaticamente una GitHub Action che:
+5. *Merge e automazione (GitHub Actions#super[G]):* Una volta completata la revisione e chiuso il branch, viene avviata automaticamente una GitHub Action che:
 - Applica in automatico la formattazione dei termini di glossario e genera la sezione appendice
 - Compila il file sorgente _.typ_ convertendolo nel documento finale in formato PDF.
 

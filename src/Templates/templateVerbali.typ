@@ -172,7 +172,7 @@
       ..for (ver, data, autore, verificatore, descrizione) in registro-modifiche {
         ([1.0.0], [29/10/2026], [Chen Daxin], [-], [Revisione finale del documento])
 
-        ([#ver], [#data], [#autore], [#verificatore], [#descrizione])
+        ([#ver], [#data], [#autore], [Davide Loparco], [#descrizione])
       },
     )
     #pagebreak()

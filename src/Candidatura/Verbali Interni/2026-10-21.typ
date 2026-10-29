@@ -58,7 +58,7 @@ A seguire, la suddivisione dello svolgimento delle attività di questa settimana
     fill: none,
     inset: (y: 7pt, x: 5pt),
 
-    [*Descrizione*], [*Responsabile*], [*Scadenza*],
+    [*Descrizione*], [*Responsabile#super[G]*], [*Scadenza*],
     [Redazione del verbale odierno], [Davide Loparco], [23/10/2026],
     [Creazione e gestione organization Github#super[G]], [Mattia Cadamuro, Chen DaXin], [23/10/2026],
     [Creazione label per issue nella repo], [Marco Giacon], [25/10/2026],

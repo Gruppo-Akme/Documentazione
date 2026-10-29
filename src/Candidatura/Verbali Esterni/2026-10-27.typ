@@ -39,7 +39,7 @@
 Il presente verbale attesta lo svolgimento dell'incontro di chiarimento ed approfondimento tenutosi in data *27 Ottobre 2026*, dalle ore 17:30 alle ore 18:00, in modalità telematica via videoconferenza (Google Meet). La riunione è stata organizzata per discutere i dettagli tecnici, architetturali e metodologici relativi al *Capitolato C2: Concierge*, proposto dall'azienda *Eggon S.r.l.* (Viale dell'Industria 19, Padova) nell'ambito del corso di Ingegneria del Software (A.A. 2026/2027) del Corso di Laurea in Informatica presso l'Università degli Studi di Padova.
 
 All'incontro hanno preso parte:
-- *Gianpaolo Ferrarin* (Amministratore e Software Architect, Eggon S.r.l.) - Referente Aziendale Proponente;
+- *Gianpaolo Ferrarin* (Amministratore#super[G] e Software Architect, Eggon S.r.l.) - Referente Aziendale Proponente;
 - I seguenti componenti del gruppo *Akme Group*:
   - Pietro Giulio Bassi
   - Davide Loparco

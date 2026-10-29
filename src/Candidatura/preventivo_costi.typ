@@ -103,12 +103,12 @@ Con la presente dichiarazione, i 6 membri del gruppo assumono l'impegno di svolg
 
 I ruoli all'interno del gruppo vengono definiti secondo il regolamento didattico per garantire copertura funzionale, responsabilità chiare e verifica indipendente:
 
-- *Responsabile (Resp):* Coordina il gruppo, gestisce la pianificazione e le risorse, pianifica le milestone e rappresenta l'interfaccia verso committente e proponente.
-- *Amministratore (Amm):* Gestisce l'infrastruttura di lavoro (repository, pipeline di CI/CD, issue tracking) e cura la manutenzione del Way of Working#super[G].
-- *Analista (Analist):* Definisce i requisiti funzionali e non funzionali specifici del Concierge (RAG#super[G], Integrazione API NEXUM, autorizzazioni, tracciabilità).
-- *Progettista (Progett):* Definisce l'architettura tecnica del sistema, la struttura delle Knowledge Base, le interfacce verso i modelli LLM#super[G] e i Gate operativi/di lettura.
-- *Programmatore (Programm):* Implementa il codice per l'interfaccia conversazionale PWA#super[G], i servizi di backoffice#super[G] per i vettori/bucket e l'integrazione delle API.
-- *Verificatore (Verif):* Esegue attività di test unitari, di integrazione, di sistema e validazione delle risposte per prevenire allucinazioni e verificare i criteri d'accettazione.
+- *Responsabile#super[G] (Resp):* Coordina il gruppo, gestisce la pianificazione e le risorse, pianifica le milestone e rappresenta l'interfaccia verso committente e proponente.
+- *Amministratore#super[G] (Amm):* Gestisce l'infrastruttura di lavoro (repository, pipeline di CI/CD, issue tracking) e cura la manutenzione del Way of Working#super[G].
+- *Analista#super[G] (Analist):* Definisce i requisiti funzionali e non funzionali specifici del Concierge (RAG#super[G], Integrazione API NEXUM, autorizzazioni, tracciabilità).
+- *Progettista#super[G] (Progett):* Definisce l'architettura tecnica del sistema, la struttura delle Knowledge Base#super[G], le interfacce verso i modelli LLM#super[G] e i Gate operativi/di lettura.
+- *Programmatore#super[G] (Programm):* Implementa il codice per l'interfaccia conversazionale PWA#super[G], i servizi di backoffice#super[G] per i vettori/bucket e l'integrazione delle API.
+- *Verificatore#super[G] (Verif):* Esegue attività di test unitari, di integrazione, di sistema e validazione delle risposte per prevenire allucinazioni e verificare i criteri d'accettazione.
 
 #pagebreak()
 

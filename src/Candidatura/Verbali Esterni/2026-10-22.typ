@@ -40,7 +40,7 @@
 Il presente verbale attesta lo svolgimento dell'incontro di chiarimento ed approfondimento tenutosi in data *22 Ottobre 2026*, dalle ore 15:30 alle ore 16:15, in modalità telematica via videoconferenza (Google Meet). La riunione è stata organizzata per discutere i dettagli tecnici, architetturali e metodologici relativi al *Capitolato C8: Sonar - Documentazione vivente di uno store Shopify#super[G]*, proposto dall'azienda *Halue S.r.l. Società Benefit* (Viale Mentana 41, Parma) nell'ambito del corso di Ingegneria del Software (A.A. 2026/2027) del Corso di Laurea in Informatica presso l'Università degli Studi di Padova.
 
 All'incontro hanno preso parte:
-- *Valentino Baraldo* (Amministratore e Product Owner, Halue S.r.l. SB) - Referente Aziendale Proponente;
+- *Valentino Baraldo* (Amministratore#super[G] e Product Owner, Halue S.r.l. SB) - Referente Aziendale Proponente;
 - I seguenti componenti del gruppo *Akme Group*:
   - Pietro Giulio Bassi
   - Davide Loparco

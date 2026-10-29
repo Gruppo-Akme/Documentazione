@@ -81,7 +81,7 @@ A seguire, la suddivisione dello svolgimento delle attività di questa settimana
     fill: none,
     inset: (y: 7pt, x: 5pt),
 
-    [*Descrizione*], [*Responsabile*], [*Scadenza*],
+    [*Descrizione*], [*Responsabile#super[G]*], [*Scadenza*],
     [Redazione dei due verbali odierni, interno ed esterno], [Roberto Piovesan], [28/10/2026],
     [Stesura lettera di presentazione], [Mattia Cadamuro, Marco Giacon], [29/10/2026],
     [Revisione analisi dei capitolati, aggiornamento glossario], [Davide Loparco], [29/10/2026],

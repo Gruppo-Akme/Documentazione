@@ -21,7 +21,7 @@
 )
 
 #show: report.with(
-  titolo: "Candidatura Capitolato " + codice,
+  titolo: "Lettera di Presentazione",
   tipo-documento: "Lettera di presentazione",
 
 

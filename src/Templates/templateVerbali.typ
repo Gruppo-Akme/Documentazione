@@ -108,8 +108,8 @@
       align: (right, left),
       stroke: (x, y) => if x == 0 { (right: 0.5pt + luma(150)) } else { none },
       inset: (x: 1.2em, y: 0.5em),
-      [*Stato*], [#stato],
-      [*Versione*], [#versione-auto],
+      [*Stato*], [Approvato],
+      [*Versione*], [1.0.0],
       [*Partecipanti*], [#partecipanti-content],
       [*Distribuzione*], [#distribuzione-content],
     )
@@ -170,7 +170,9 @@
       inset: (y: 7pt, x: 5pt),
       table.header([*Ver.*], [*Data*], [*Autore*], [*Verificatore*], [*Descrizione*]),
       ..for (ver, data, autore, verificatore, descrizione) in registro-modifiche {
-        ([#ver], [#data], [#autore], [#verificatore], [#descrizione])
+        ([1.0.0], [29/10/2026], [Chen Daxin], [-], [Revisione finale del documento])
+
+        ([#ver], [#data], [#autore], [Davide Loparco], [#descrizione])
       },
     )
     #pagebreak()

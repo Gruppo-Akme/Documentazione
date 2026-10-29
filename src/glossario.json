@@ -123,7 +123,17 @@
   "OpenCode": "Agente di programmazione basato sull'intelligenza artificiale, gratuito e open-source rilasciato con licenza MIT.",
   "Harness engineering": "Disciplina che si occupa di progettare e costruire l'infrastruttura, il contesto, gli strumenti e le regole che circondano un modello di IA, trasformandolo in un agente autonomo, sicuro e affidabile.",
   "XMI": "XML Metadata Interchange: Standard sviluppato dall'Object Management Group, utilizzato per scambiare informazioni sui metadati tramite il linguaggio XML.",
-  "XML": "Extensible Markup Language: Metalinguaggio standard creato dal W3C per definire linguaggi di markup personalizzati, progettato per memorizzare, strutturare e trasportare dati tra sistemi diversi."
+  "XML": "Extensible Markup Language: Metalinguaggio standard creato dal W3C per definire linguaggi di markup personalizzati, progettato per memorizzare, strutturare e trasportare dati tra sistemi diversi.",
+  "Responsabile": "L'incaricato alla coordinazione del gruppo. Festisce la pianificazione e le risorse, pianifica le milestone e rappresenta l'interfaccia verso il committente e il proponente.",
+  "Amministratore": "Colui che gestisce l'infrastruttura di lavoro (repository, pipeline di CI/CD, issue tracking) e cura la manutenzione del Way of Working.",
+  "Analista": "Colui che definisce i requisiti funzionali e non funzionali.",
+  "Progettista": "Colui che definisce l'architettura tecnica del sistema, la struttura delle Knowledge Base, le interfacce verso i modelli LLM e i Gate operativi/di lettura.",
+  "Programmatore": "Implementa il codice per l'interfaccia conversazionale PWA, i servizi di backoffice per i vettori/bucket e l'integrazione delle API",
+  "Verificatore": "Esegue attività di test unitari, di integrazione, di sistema e validazione delle risposte per prevenire allucinazioni e verificare i criteri d'accettazione.",
+  "Repository": "Archivio centralizzato dove vengono memorizzati, gestiti e condivisi dati, file, documenti o codice sorgente.",
+  "Issue": "Scheda digitale integrata in una repository che serve a tracciare problemi, bug, funzionalità, idee o attività da svolgere all'interno di un progetto.",
+  "Issue tracking": "Sistema integrato (GitHub issues) che permette di tracciare le issue.",
+  "Knowledge Base": "Archivio digitale centralizzato e strutturato che raccoglie informazioni, dati, regole e soluzioni su un determinato argomento, prodotto, servizio o processo."
 }
 
 

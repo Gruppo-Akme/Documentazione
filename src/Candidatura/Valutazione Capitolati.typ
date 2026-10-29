@@ -14,7 +14,7 @@
 
 
 #show: report.with(
-  titolo: "Valutazione dei Capitolati d'Appalto",
+  titolo: "Valutazione dei Capitolati",
   tipo-documento: "Documento interno",
   stato: "Approvato",
   registro-modifiche: (

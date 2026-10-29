@@ -2,7 +2,7 @@
 #import "../Templates/templateDocumentiGenerici.typ": report
 
 #show: body => report(
-  titolo: "Dichiarazione degli Impegni e Preventivo Costi - Capitolato C2 (NEXUM Concierge)",
+  titolo: "Dichiarazione degli Impegni",
   stato: "Approvato",
   versione: "1.0.1",
   distribuzione: (

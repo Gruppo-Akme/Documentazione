@@ -74,7 +74,7 @@ Di seguito viene fornita la rendicontazione puntuale dei quesiti trattati e dei 
   - *Strategie di Astensione e Confidence Score:* L'azienda non impone metriche o soglie rigide di confidence score, in quanto la decisione rientra nel lavoro del team. In presenza di fonti insufficienti o in contrasto non risolvibile, il sistema deve astenersi o fornire risposte orientate all'approfondimento, escludendo rigorosamente fonti non autorizzate.
   - *Funzionalità End-to-End dell'MVP:* L'MVP dovrà dimostrare operatività end-to-end, includendo risposte su regolamenti aziendali e manuali Nexum, gestione delle richieste di ferie/permessi con previa conferma dei dati, mantenimento del contesto conversazionale e aggiornamento dinamico delle risposte in caso di sostituzione o eliminazione dei documenti.
 
-== Tracciabilità delle Fonti e Gestione Operativa del Backoffice
+== Tracciabilità delle Fonti e Gestione Operativa del Backoffice#super[G]
 - *Quesito / Domanda Posta:* \
   _"Fino a che livello di dettaglio è richiesto di tracciare le fonti consultate e gli esiti delle operazioni all'interno del backoffice amministrativo per soddisfare i criteri di accettazione dell'MVP?"_
 - *Sintesi della Risposta (Eggon S.r.l.):*

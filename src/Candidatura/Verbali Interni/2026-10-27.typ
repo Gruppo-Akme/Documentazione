@@ -62,7 +62,7 @@ Per qualsiasi attività di stesura di documenti, i membri devono attenersi ai se
 
 3. *Richiesta di revisione:* Una volta ultimata la bozza, si effettua il caricamento sul branch e viene assegnato l'incaricato alla verifica tramite GitHub oppure gruppo di comunicazione interna WhatsApp#super[G].
 
-4. *Revisione e integrazione Glossario:* Il revisore assegnato esegue la verifica del documento, controllando correttezza ortografica, coerenza logica e qualità dei contenuti. Inoltre, è compito del revisore individuare le parole chiave rilevanti e integrarle nel file/registro del glossario presente nella repository GitHub.
+4. *Revisione e integrazione Glossario#super[G]:* Il revisore assegnato esegue la verifica del documento, controllando correttezza ortografica, coerenza logica e qualità dei contenuti. Inoltre, è compito del revisore individuare le parole chiave rilevanti e integrarle nel file/registro del glossario presente nella repository GitHub.
 
 5. *Merge e automazione (GitHub Actions#super[G]):* Una volta completata la revisione e chiuso il branch, viene avviata automaticamente una GitHub Action che:
 - Applica in automatico la formattazione dei termini di glossario e genera la sezione appendice

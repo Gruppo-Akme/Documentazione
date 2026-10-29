@@ -316,7 +316,7 @@ Di seguito viene illustrata la rete delle dipendenze logiche e temporali tra le 
         grid.cell(colspan: 5)[#v(0.5em) #line(length: 80%, stroke: 0.5pt + luma(200)) #v(0.5em)],
         
         // Fase PB
-        nodeTask("06", "Design Architetturale"), [#text(12pt)[$-->$]], nodeTask("07", "Gate & Backoffice"), [#text(12pt)[$-->$]], nodeTask("09", "Testing MVP"),
+        nodeTask("06", "Design Architetturale"), [#text(12pt)[$-->$]], nodeTask("07", "Gate & Backoffice#super[G]"), [#text(12pt)[$-->$]], nodeTask("09", "Testing MVP"),
         grid.cell(colspan: 5)[#v(-0.2em)],
         nodeTask("08", "Integrazione API"), [#text(12pt)[$-->$]], nodeTask("09", "Validazione Finale"), [#text(12pt)[$-->$]], nodeMilestone("PB", "MVP Finale")
       )

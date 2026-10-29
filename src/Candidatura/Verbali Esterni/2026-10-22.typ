@@ -5,7 +5,8 @@
   stato: "Approvato",
   versione: "1.0.0",
   registro-modifiche: (
-    ("1.0.0", "24/10/2026", "Pietro Giulio Bassi", "Membro Gruppo", "Stesura iniziale del verbale esterno post-incontro con Halue"),
+    ("1.0.0", "25/10/2026", "Roberto Piovesan", "-", "Revisione del documento e approvazione finale"),
+    ("0.1.0", "24/10/2026", "Pietro Giulio Bassi", "Davide Loparco", "Stesura iniziale del verbale esterno post-incontro con Halue"),
   ),
   odg: (
     "Gestione delle Scansioni Prolungate e Durabilità con Vercel Workflows",
@@ -124,8 +125,8 @@ Il gruppo di lavoro esprime un sincero ringraziamento all'azienda *Halue S.r.l. 
   gutter: 2cm,
   [
     // Firma sinistra (gestita via codice perché l'immagine non ha il nome incorporato)
-    *Pietro Giulio Bassi* \
-    #image("/src/shared/firme/firma-Bassi.jpeg", width: 80%)
+    *Roberto Piovesan* \
+    #image("/src/shared/firme/firma-Piovesan.jpeg", width: 80%)
     #line(length: 80%, stroke: 0.5pt + black)
     #v(0.2cm)
     Firma del revisore interno

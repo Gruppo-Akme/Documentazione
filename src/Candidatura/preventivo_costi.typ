@@ -79,7 +79,7 @@ Il gruppo è formato da 6 componenti. Ciascun componente si impegna ad erogare *
 
 == Grafico della Suddivisione Oraria per Ruolo
 
-Di seguito viene illustrata la distribuzione visiva delle ore assegnate a ciascun ruolo sul monte ore complessivo ($558 h$):
+Di seguito viene illustrata la distribuzione visiva delle ore assegnate a ciascun ruolo sul monte ore complessivo ($558h$):
 
 #align(center)[
   #block(
@@ -89,30 +89,36 @@ Di seguito viene illustrata la distribuzione visiva delle ore assegnate a ciascu
     stroke: 0.5pt + luma(200),
     [
       #grid(
+        columns: (1fr, auto),
+        align: (left, right),
+        [*Distribuzione Ore Ruoli*], [__Totale: 100%__]
+      )
+      #v(6pt)
+      #stack(
+        dir: ltr,
+        rect(width: 25.6%, height: 12pt, fill: rgb("#4A90E2")), // Programmatore
+        rect(width: 25.6%, height: 12pt, fill: rgb("#50E3C2")), // Verificatore
+        rect(width: 21.9%, height: 12pt, fill: rgb("#F5A623")), // Progettista
+        rect(width: 10.4%, height: 12pt, fill: rgb("#B8E986")), // Analista
+        rect(width: 8.2%,  height: 12pt, fill: rgb("#9013FE")), // Responsabile
+        rect(width: 8.3%,  height: 12pt, fill: rgb("#BD10E0")), // Amministratore
+      )
+      #v(10pt)
+      #grid(
         columns: (1fr, 1fr),
-        gutter: 20pt,
+        gutter: 15pt,
         [
           #align(left)[
-            *Programmatore:* 143h (25.6%) \
-            #rect(width: 100%, height: 10pt, fill: rgb("#4A90E2"), radius: 3pt)
-            #v(4pt)
-            *Verificatore:* 143h (25.6%) \
-            #rect(width: 100%, height: 10pt, fill: rgb("#50E3C2"), radius: 3pt)
-            #v(4pt)
-            *Progettista:* 122h (21.9%) \
-            #rect(width: 85%, height: 10pt, fill: rgb("#F5A623"), radius: 3pt)
+            #box(square(size: 8pt, fill: rgb("#4A90E2"))) *Programmatore:* 143h (25.6%) \
+            #box(square(size: 8pt, fill: rgb("#50E3C2"))) *Verificatore:* 143h (25.6%) \
+            #box(square(size: 8pt, fill: rgb("#F5A623"))) *Progettista:* 122h (21.9%)
           ]
         ],
         [
           #align(left)[
-            *Analista:* 58h (10.4%) \
-            #rect(width: 40%, height: 10pt, fill: rgb("#B8E986"), radius: 3pt)
-            #v(4pt)
-            *Responsabile:* 46h (8.2%) \
-            #rect(width: 32%, height: 10pt, fill: rgb("#9013FE"), radius: 3pt)
-            #v(4pt)
-            *Amministratore:* 46h (8.2%) \
-            #rect(width: 32%, height: 10pt, fill: rgb("#BD10E0"), radius: 3pt)
+            #box(square(size: 8pt, fill: rgb("#B8E986"))) *Analista:* 58h (10.4%) \
+            #box(square(size: 8pt, fill: rgb("#9013FE"))) *Responsabile:* 46h (8.2%) \
+            #box(square(size: 8pt, fill: rgb("#BD10E0"))) *Amministratore:* 46h (8.2%)
           ]
         ]
       )
@@ -162,31 +168,32 @@ Il calcolo del preventivo viene effettuato applicando le tariffe orarie ufficial
     radius: 6pt,
     stroke: 0.5pt + luma(200),
     [
+      // Barra unificata al 100% per i costi
+      #stack(
+        dir: ltr,
+        rect(width: 27.3%, height: 12pt, fill: rgb("#F5A623")), // Progettista
+        rect(width: 19.2%, height: 12pt, fill: rgb("#4A90E2")), // Programmatore
+        rect(width: 19.2%, height: 12pt, fill: rgb("#50E3C2")), // Verificatore
+        rect(width: 13.0%, height: 12pt, fill: rgb("#B8E986")), // Analista
+        rect(width: 12.4%, height: 12pt, fill: rgb("#9013FE")), // Responsabile
+        rect(width: 8.9%,  height: 12pt, fill: rgb("#BD10E0")), // Amministratore
+      )
+      #v(10pt)
       #grid(
         columns: (1fr, 1fr),
-        gutter: 20pt,
+        gutter: 15pt,
         [
           #align(left)[
-            *Progettista:* 3.050,00 € (27.3%) \
-            #rect(width: 100%, height: 10pt, fill: rgb("#F5A623"), radius: 3pt)
-            #v(4pt)
-            *Programmatore:* 2.145,00 € (19.2%) \
-            #rect(width: 70%, height: 10pt, fill: rgb("#4A90E2"), radius: 3pt)
-            #v(4pt)
-            *Verificatore:* 2.145,00 € (19.2%) \
-            #rect(width: 70%, height: 10pt, fill: rgb("#50E3C2"), radius: 3pt)
+            #box(square(size: 8pt, fill: rgb("#F5A623"))) *Progettista:* 3.050,00 € (27.3%) \
+            #box(square(size: 8pt, fill: rgb("#4A90E2"))) *Programmatore:* 2.145,00 € (19.2%) \
+            #box(square(size: 8pt, fill: rgb("#50E3C2"))) *Verificatore:* 2.145,00 € (19.2%)
           ]
         ],
         [
           #align(left)[
-            *Analista:* 1.450,00 € (13.0%) \
-            #rect(width: 48%, height: 10pt, fill: rgb("#B8E986"), radius: 3pt)
-            #v(4pt)
-            *Responsabile:* 1.380,00 € (12.4%) \
-            #rect(width: 45%, height: 10pt, fill: rgb("#9013FE"), radius: 3pt)
-            #v(4pt)
-            *Amministratore:* 920,00 € (8.2%) \
-            #rect(width: 30%, height: 10pt, fill: rgb("#BD10E0"), radius: 3pt)
+            #box(square(size: 8pt, fill: rgb("#B8E986"))) *Analista:* 1.450,00 € (13.0%) \
+            #box(square(size: 8pt, fill: rgb("#9013FE"))) *Responsabile:* 1.380,00 € (12.4%) \
+            #box(square(size: 8pt, fill: rgb("#BD10E0"))) *Amministratore:* 920,00 € (8.9%)
           ]
         ]
       )

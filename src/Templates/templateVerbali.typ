@@ -67,10 +67,10 @@
   grid(
     columns: (1fr, 1fr),
     align(left + horizon)[
-      #image("/src/shared/logo_unipd_scritta.jpg", width: 70%)
+      #image("/Documentazione/src/shared/logo_unipd_scritta.jpg", width: 70%)
     ],
     align(right + horizon)[
-      #image("/src/shared/logo-big1.png", width: 80%)
+      #image("/Documentazione/src/shared/logo-big1.png", width: 80%)
     ],
   )
 
@@ -140,7 +140,7 @@
       #grid(
         columns: (auto, 1fr),
         align(left)[
-          #image("/src/shared/logo-small1.png", height: 2em)
+          #image("/Documentazione/src/shared/logo-small1.png", height: 2em)
         ],
         align(right + horizon)[
           #text(size: 11pt)[#titolo]
@@ -229,7 +229,7 @@
       [
         #if verificatore-interno != "" [*#verificatore-interno* \ ]
         #if left-signature != "" [
-          #let sig = if left-signature.starts-with("/") or left-signature.starts-with(".") { left-signature } else { "/src/shared/firme/" + left-signature }
+          #let sig = if left-signature.starts-with("/") or left-signature.starts-with(".") { left-signature } else { "/Documentazione/src/shared/firme/" + left-signature }
           #image(sig, width: 40%)
         ]
         #line(length: 40%, stroke: 0.5pt + black)

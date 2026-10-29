@@ -157,7 +157,7 @@
   if mostra-indice [
     #text(size: 14pt, weight: "bold")[Indice]
     #v(0.5em)
-    outline(
+    #outline(
       title: none,
       indent: 1.5em,
       depth: 2,

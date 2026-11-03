@@ -66,7 +66,7 @@
 }
 
 html {
-    font-size: 120%;
+    font-size: 132%;
     scroll-behavior: smooth;
     background-color: #121316;
     background-image: 
@@ -99,13 +99,13 @@ body {
     display: flex;
     justify-content: center;
     background: transparent;
-    max-width: 1440px;
+    max-width: 1584px;
     margin: 0 auto;
     min-height: 100vh;
 }
 
 header {
-    width: 360px;
+    width: 396px;
     flex-shrink: 0;
     background: transparent;
 }
@@ -152,7 +152,7 @@ nav::after {
 
 #header-logo img {
     width: 100%;
-    max-width: 276px;
+    max-width: 304px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -262,16 +262,13 @@ main section {
     padding: var(--section-top-padding) var(--section-right-padding) var(--section-bottom-padding) var(--section-left-padding);
     scroll-margin-top: 0;
     position: relative;
-    border-bottom: var(--divisor-width) solid var(--bg-secondario-hex);
+    border-bottom: none;
 }
 
 #contatti {
     border-bottom: none;
 }
 
-#rtb::before,
-#pb::before,
-#diapositive::before,
 #candidatura::before {
     content: '';
     width: var(--content-bar-width);
@@ -283,9 +280,6 @@ main section {
     border-radius: calc(var(--content-bar-width) / 2);
 }
 
-#rtb *:not(h2)::before,
-#pb *:not(h2)::before,
-#diapositive *:not(h2)::before,
 #candidatura *:not(h2)::before {
     content: '';
     position: absolute;
@@ -406,7 +400,7 @@ a:hover {
     padding: 2rem 1rem;
     font-size: 0.9rem;
     color: var(--muted-font-color-hex);
-    border-top: var(--divisor-width) solid var(--bg-secondario-hex);
+    border-top: none;
     margin: 0;
 }
 
@@ -434,7 +428,7 @@ a:hover {
     }
 
     #header-logo img {
-        max-width: 228px;
+        max-width: 250px;
     }
 
     nav {

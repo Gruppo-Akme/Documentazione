@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-    --bg-primario-hex: #000000;
-    --bg-secondario-hex: #222222;
+    --bg-primario-hex: #181a1e;
+    --bg-secondario-hex: #2d3037;
     --main-font-color-hex: #ffffff;
-    --muted-font-color-hex: #b5b5b5;
+    --muted-font-color-hex: #c2c5cc;
     --accent-primario-hex: #ffffff;
-    --accent-secondario-hex: #a0a0a0;
+    --accent-secondario-hex: #adb1b8;
+
+    /* SFONDO CON PUNTI E SFUMATURE DI GRIGIO */
+    --dot-color: rgba(255, 255, 255, 0.15);
+    --dot-size: 1.25px;
+    --dot-space: 26px;
 
     /* NAVBAR */
     --hover-augmentation: .35vw;
@@ -61,9 +66,22 @@
 }
 
 html {
-    font-size: 120%;
+    font-size: 132%;
     scroll-behavior: smooth;
-    background-color: var(--bg-primario-hex);
+    background-color: #121316;
+    background-image: 
+        /* Trama a griglia di punti */
+        radial-gradient(var(--dot-color) var(--dot-size), transparent var(--dot-size)),
+        /* Sfumatura grigio fumo superiore */
+        radial-gradient(ellipse 90% 55% at 50% -5%, rgba(145, 153, 166, 0.35) 0%, transparent 70%),
+        /* Sfumatura grigio morbida a destra */
+        radial-gradient(circle at 90% 35%, rgba(110, 118, 130, 0.22) 0%, transparent 55%),
+        /* Sfumatura grigio tenue a sinistra */
+        radial-gradient(circle at 10% 75%, rgba(95, 102, 115, 0.20) 0%, transparent 50%),
+        /* Gradiente di base su ricche tonalità di grigio */
+        linear-gradient(150deg, #2b2f37 0%, #1f2227 40%, #15171a 75%, #0f1012 100%);
+    background-size: var(--dot-space) var(--dot-space), 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+    background-attachment: fixed;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -80,16 +98,16 @@ ul::-webkit-scrollbar {
 body {
     display: flex;
     justify-content: center;
-    background-color: var(--bg-primario-hex);
-    max-width: 1440px;
+    background: transparent;
+    max-width: 1584px;
     margin: 0 auto;
     min-height: 100vh;
 }
 
 header {
-    width: 360px;
+    width: 396px;
     flex-shrink: 0;
-    background-color: var(--bg-primario-hex);
+    background: transparent;
 }
 
 main {
@@ -115,7 +133,7 @@ nav {
 nav::after {
     content: ' ';
     width: var(--divisor-width);
-    background-color: var(--bg-secondario-hex);
+    background-color: rgba(255, 255, 255, 0.12);
     position: absolute;
     top: 4%;
     bottom: 4%;
@@ -134,7 +152,7 @@ nav::after {
 
 #header-logo img {
     width: 100%;
-    max-width: 276px;
+    max-width: 304px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -199,13 +217,15 @@ nav::after {
     align-items: center;
     justify-content: space-between;
     text-decoration: none;
-    background-color: #121212;
+    background-color: rgba(38, 41, 48, 0.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     color: var(--main-font-color-hex);
     font-weight: 600;
     font-size: 0.98rem;
     padding: 0.85rem 1.25rem;
     border-radius: 999px;
-    border: 1px solid #444444;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     transition: all 0.25s ease;
 }
 
@@ -242,16 +262,13 @@ main section {
     padding: var(--section-top-padding) var(--section-right-padding) var(--section-bottom-padding) var(--section-left-padding);
     scroll-margin-top: 0;
     position: relative;
-    border-bottom: var(--divisor-width) solid var(--bg-secondario-hex);
+    border-bottom: none;
 }
 
 #contatti {
     border-bottom: none;
 }
 
-#rtb::before,
-#pb::before,
-#diapositive::before,
 #candidatura::before {
     content: '';
     width: var(--content-bar-width);
@@ -263,9 +280,6 @@ main section {
     border-radius: calc(var(--content-bar-width) / 2);
 }
 
-#rtb *:not(h2)::before,
-#pb *:not(h2)::before,
-#diapositive *:not(h2)::before,
 #candidatura *:not(h2)::before {
     content: '';
     position: absolute;
@@ -329,11 +343,11 @@ a:hover {
 
 .monospace {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Courier New', monospace;
-    background: var(--bg-secondario-hex);
+    background: rgba(255, 255, 255, 0.08);
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
     color: var(--main-font-color-hex);
-    border: 1px solid #333333;
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .members-list {
@@ -343,14 +357,25 @@ a:hover {
 }
 
 .member-item {
-    background-color: #0d0d0d;
-    border: 1px solid #333333;
+    background-color: rgba(30, 33, 39, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-left: 3px solid var(--main-font-color-hex);
-    border-radius: 6px;
+    border-radius: 8px;
     padding: 1rem 1.25rem;
     display: flex;
     flex-direction: column;
     gap: 0.35rem;
+    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.member-item:hover {
+    background-color: rgba(42, 47, 56, 0.85);
+    border-color: rgba(255, 255, 255, 0.25);
+    border-left-color: var(--main-font-color-hex);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
 
 .member-name {
@@ -375,7 +400,7 @@ a:hover {
     padding: 2rem 1rem;
     font-size: 0.9rem;
     color: var(--muted-font-color-hex);
-    border-top: var(--divisor-width) solid var(--bg-secondario-hex);
+    border-top: none;
     margin: 0;
 }
 
@@ -403,7 +428,7 @@ a:hover {
     }
 
     #header-logo img {
-        max-width: 228px;
+        max-width: 250px;
     }
 
     nav {

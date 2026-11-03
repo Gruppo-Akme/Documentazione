@@ -1,5 +1,5 @@
 header {
-    width: 180px;
+    width: 198px;
 }
 
 nav {
@@ -68,7 +68,9 @@ main section {
         width: 100%;
         position: sticky;
         top: 0;
-        background-color: var(--bg-primario-hex);
+        background-color: rgba(24, 26, 30, 0.88);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
         z-index: 5;
     }
 

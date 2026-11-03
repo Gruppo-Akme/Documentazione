@@ -139,6 +139,30 @@ def extract_date_key(title, filename):
     return (0, 0, 0)
 
 
+def sort_document_key(item):
+    """
+    Chiave di ordinamento per i documenti:
+    - Priorità speciale per documenti istituzionali (es. Lettera di presentazione sempre in cima).
+    - Data decrescente per verbali o documenti datati (più recente in cima).
+    - Ordinamento alfabetico secondario controllato.
+    """
+    title, href, rel_path = item
+    title_lower = title.lower()
+    path_lower = rel_path.lower()
+
+    if "lettera" in title_lower or "lettera" in path_lower:
+        doc_priority = 1
+    elif "dichiarazione" in title_lower or "impegni" in title_lower or "preventivo" in path_lower or "costi" in path_lower:
+        doc_priority = 2
+    elif "valutazione" in title_lower or "valutazione" in path_lower:
+        doc_priority = 3
+    else:
+        doc_priority = 10
+
+    date_key = extract_date_key(title, rel_path)
+    return (doc_priority, -date_key[0], -date_key[1], -date_key[2], title_lower)
+
+
 def map_path_to_section_and_category(rel_path):
     """
     Dato un percorso relativo (es. Candidatura/Verbali Interni/2026-10-15.pdf),
@@ -248,12 +272,9 @@ def update_index_html():
             continue
         docs_by_category.setdefault((sec_id, cat), []).append(doc_info)
 
-    # Ordina ciascuna lista in ordine DECRESCENTE (più recente in cima, più vecchio in fondo)
+    # Ordina ciascuna lista (Lettera di presentazione in cima, verbali per data decrescente)
     for key in docs_by_category:
-        docs_by_category[key].sort(
-            key=lambda item: (extract_date_key(item[0], item[2]), item[2]),
-            reverse=True
-        )
+        docs_by_category[key].sort(key=sort_document_key)
 
     content = INDEX_HTML.read_text(encoding="utf-8")
 

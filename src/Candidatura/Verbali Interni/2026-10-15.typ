@@ -105,8 +105,8 @@ Il gruppo alla fine dell'incontro ha deciso come suddividersi i compiti con rela
 
     [*ID*], [*Azione*], [*Incaricato*], [*Scadenza*], [*Issue#super[G]*],
     [A1], [Redazione del verbale], [Roberto Piovesan], [18/10/2026], [-],
-    [A2], [Creazione sito _GitHub Pages_ e Glossario#super[G]], [Chen Daxin, Marco Giacon], [21/10/2026], [-],
-    [A3], [Creazione template _Typst_], [Mattia Cadamuro], [21/10/2026], [-],
+    [A2], [Creazione sito _GitHub Pages_ e Glossario#super[G]], [Chen Daxin, Marco Giacon], [21/10/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/2")[\#2]],
+    [A3], [Creazione template _Typst_], [Mattia Cadamuro], [21/10/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/1")[\#1]],
     [A4], [Contatto aziende], [Pietro Giulio Bassi, Davide Loparco], [20/10/2026], [-],
   ),
   caption: [Decisioni intraprese e attività conseguenti],

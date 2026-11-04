@@ -48,18 +48,19 @@ Si è proceduto alla standardizzazione grafica dei file Typst in modo da garanti
 == Risultati dei test
 Tutti i documenti compilano correttamente senza produrre avvisi o errori di formattazione.
 
-= Decisioni e attività
+= Decisioni e azioni da svolgere
 #figure(
   table(
-    columns: (2fr, 2fr, 1fr),
-    align: (left + horizon, left + horizon, left + horizon),
+    columns: (auto, 3fr, 2fr, auto, auto),
+    align: (left + horizon, left + horizon, left + horizon, center + horizon, center + horizon),
     stroke: (x, y) => if y == 0 { (bottom: 1.2pt + black) } else { (bottom: 0.6pt + black) },
-    inset: (y: 7pt, x: 5pt),
+    fill: none,
+    inset: (y: 7pt, x: 6pt),
 
-    [*Attività*], [*Incaricato*], [*Scadenza*],
-    [Finalizzazione dei template], [Mattia Cadamuro], [23/10/2026],
-    [Revisione verbali], [Roberto Piovesan], [24/10/2026],
+    [*ID*], [*Azione*], [*Incaricato*], [*Scadenza*], [*Issue*],
+    [A1], [Modificare la vista web su GitHub Pages], [Lorenzo Cisco], [2026-10-28], [#issue(24)],
+    [A2], [Pubblicare il verbale interno del 2026-10-26], [Niccolò Bassan], [2026-10-28], [#issue(28)],
   ),
-  caption: [Riepilogo delle decisioni],
-)
+  caption: [Decisioni e azioni da svolgere],
+) <tab-decisioni-azioni>
 

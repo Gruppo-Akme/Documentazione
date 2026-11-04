@@ -77,6 +77,22 @@ Testo introduttivo del verbale...
 = Resoconto
 == Discussione punto 1
 Dettagli discussione...
+
+= Decisioni e azioni da svolgere
+#figure(
+  table(
+    columns: (auto, 3fr, 2fr, auto, auto),
+    align: (left + horizon, left + horizon, left + horizon, center + horizon, center + horizon),
+    stroke: (x, y) => if y == 0 { (bottom: 1.2pt + black) } else { (bottom: 0.6pt + black) },
+    fill: none,
+    inset: (y: 7pt, x: 6pt),
+
+    [*ID*], [*Azione*], [*Incaricato*], [*Scadenza*], [*Issue*],
+    [A1], [Modificare la vista web su GitHub Pages], [Lorenzo Cisco], [2026-10-28], [#issue(24)],
+    [A2], [Pubblicare il verbale interno del 2026-10-26], [Niccolò Bassan], [2026-10-28], [#issue(28)],
+  ),
+  caption: [Decisioni e azioni da svolgere],
+) <tab-decisioni-azioni>
 ```
 
 ---

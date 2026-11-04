@@ -4,6 +4,44 @@
 
 #let gloss(term) = [*#term#sub[G]*]
 
+#let issue(number, repo: "Documentazione") = {
+  let issue-url = "https://github.com/Gruppo-Akme/" + repo + "/issues/" + str(number)
+  link(issue-url)[\##number]
+}
+
+#let tabella-azioni(azioni, caption: [Decisioni e azioni da svolgere]) = {
+  figure(
+    table(
+      columns: (auto, 3fr, 2fr, auto, auto),
+      align: (left + horizon, left + horizon, left + horizon, center + horizon, center + horizon),
+      stroke: (x, y) => if y == 0 { (bottom: 1.2pt + black) } else { (bottom: 0.6pt + black) },
+      fill: none,
+      inset: (y: 7pt, x: 6pt),
+      table.header([*ID*], [*Azione*], [*Incaricato*], [*Scadenza*], [*Issue*]),
+      ..for r in azioni {
+        let id = r.at(0)
+        let azione = r.at(1)
+        let incaricato = r.at(2)
+        let scadenza = r.at(3)
+        let iss = if r.len() > 4 {
+          let v = r.at(4)
+          if type(v) == int {
+            issue(v)
+          } else if type(v) == str and v.starts-with("#") {
+            issue(v.slice(1))
+          } else {
+            v
+          }
+        } else {
+          "-"
+        }
+        ([#id], [#azione], [#incaricato], [#scadenza], [#iss])
+      }
+    ),
+    caption: caption,
+  )
+}
+
 #let report(
   titolo: none,
   stato: "Approvato",

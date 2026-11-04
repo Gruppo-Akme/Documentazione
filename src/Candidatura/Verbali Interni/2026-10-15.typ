@@ -97,17 +97,17 @@ Il gruppo alla fine dell'incontro ha deciso come suddividersi i compiti con rela
 
 #figure(
   table(
-    columns: (2.2fr, 2.2fr, 1fr),
-    align: (left + horizon, left + horizon, left + horizon),
+    columns: (auto, 3fr, 2fr, auto, auto),
+    align: (left + horizon, left + horizon, left + horizon, center + horizon, center + horizon),
     stroke: (x, y) => if y == 0 { (bottom: 1.2pt + black) } else { (bottom: 0.6pt + black) },
     fill: none,
-    inset: (y: 7pt, x: 5pt),
+    inset: (y: 7pt, x: 6pt),
 
-    [*Descrizione*], [*Responsabile#super[G]*], [*Scadenza*],
-    [Redazione del verbale], [Roberto Piovesan], [18/10/2026],
-    [Creazione sito _GitHub Pages_ e Glossario#super[G]], [Chen Daxin, Marco Giacon], [21/10/2026],
-    [Creazione template _Typst_], [Mattia Cadamuro], [21/10/2026],
-    [Contatto aziende], [Pietro Giulio Bassi, Davide Loparco], [20/10/2026],
+    [*ID*], [*Azione*], [*Incaricato*], [*Scadenza*], [*Issue#super[G]*],
+    [A1], [Redazione del verbale], [Roberto Piovesan], [18/10/2026], [-],
+    [A2], [Creazione sito _GitHub Pages_ e Glossario#super[G]], [Chen Daxin, Marco Giacon], [21/10/2026], [-],
+    [A3], [Creazione template _Typst_], [Mattia Cadamuro], [21/10/2026], [-],
+    [A4], [Contatto aziende], [Pietro Giulio Bassi, Davide Loparco], [20/10/2026], [-],
   ),
   caption: [Decisioni intraprese e attività conseguenti],
 ) <tab-decisioni>

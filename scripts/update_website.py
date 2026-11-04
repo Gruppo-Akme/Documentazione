@@ -28,6 +28,7 @@ GLOSSARY_JSON = SRC_DIR / "glossario.json"
 # Sezioni e categorie fisse previste in website/index.html
 SECTIONS_CATEGORIES = {
     "candidatura": ["Documenti", "Verbali Esterni", "Verbali Interni"],
+    "diapositive": ["Presentazioni"],
 }
 
 

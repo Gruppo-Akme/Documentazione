@@ -77,18 +77,18 @@ A seguire, la suddivisione dello svolgimento delle attività di questa settimana
 
 #figure(
   table(
-    columns: (2.2fr, 2.2fr, 1fr),
-    align: (left + horizon, left + horizon, left + horizon),
+    columns: (auto, 3fr, 2fr, auto, auto),
+    align: (left + horizon, left + horizon, left + horizon, center + horizon, center + horizon),
     stroke: (x, y) => if y == 0 { (bottom: 1.2pt + black) } else { (bottom: 0.6pt + black) },
     fill: none,
-    inset: (y: 7pt, x: 5pt),
+    inset: (y: 7pt, x: 6pt),
 
-    [*Descrizione*], [*Responsabile#super[G]*], [*Scadenza*],
-    [Redazione dei due verbali odierni, interno ed esterno], [Roberto Piovesan], [28/10/2026],
-    [Stesura lettera di presentazione], [Mattia Cadamuro, Marco Giacon], [29/10/2026],
-    [Revisione analisi dei capitolati, aggiornamento glossario], [Davide Loparco], [29/10/2026],
-    [Stesura preventivo dei costi], [Pietro Giulio Bassi, Chen Daxin], [29/10/2026],
-    [Analisi e revisione verbale interno ed esterno del 27/10/2026], [Marco Gicon, Davide Loparco], [29/10/2026],
+    [*ID*], [*Azione*], [*Incaricato*], [*Scadenza*], [*Issue#super[G]*],
+    [A1], [Redazione dei due verbali odierni, interno ed esterno], [Roberto Piovesan], [28/10/2026], [-],
+    [A2], [Stesura lettera di presentazione], [Mattia Cadamuro, Marco Giacon], [29/10/2026], [-],
+    [A3], [Revisione analisi dei capitolati, aggiornamento glossario], [Davide Loparco], [29/10/2026], [-],
+    [A4], [Stesura preventivo dei costi], [Pietro Giulio Bassi, Chen Daxin], [29/10/2026], [-],
+    [A5], [Analisi e revisione verbale interno ed esterno del 27/10/2026], [Marco Giacon, Davide Loparco], [29/10/2026], [-],
   ),
   caption: [Decisioni intraprese e attività conseguenti],
 ) <tab-decisioni>

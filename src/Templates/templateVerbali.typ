@@ -14,6 +14,9 @@
   index: "0",
   odg: (),
   registro-modifiche: (),
+  ora-inizio: none,
+  ora-fine: none,
+  orario: none,
   verificatore-interno: "",
   left-signature: "",
   verificatore-esterno: "",
@@ -27,6 +30,21 @@
     registro-modifiche.first().at(0)
   } else {
     "1.0"
+  }
+
+  let orario-val = if orario != none {
+    let o = str(orario).trim()
+    if lower(o).starts-with("orario:") {
+      o.slice(7).trim()
+    } else {
+      o
+    }
+  } else if ora-inizio != none and ora-fine != none {
+    str(ora-inizio).trim() + " - " + str(ora-fine).trim()
+  } else if ora-inizio != none {
+    str(ora-inizio).trim()
+  } else {
+    none
   }
 
   let kw = ()
@@ -110,13 +128,17 @@
       inset: (x: 1.2em, y: 0.5em),
       [*Stato*], [#stato],
       [*Versione*], [#versione-auto],
+      ..if orario-val != none {
+        ([*Orario*], [#orario-val])
+      } else {
+        ()
+      },
       [*Partecipanti*], [#partecipanti-content],
       [*Distribuzione*], [#distribuzione-content],
     )
   ]
 
-  v(2cm)
-
+  v(1cm)
   // Ordine del giorno (se presente)
   if odg != none and odg.len() > 0 [
     #align(center)[
@@ -193,6 +215,11 @@
     leading: 0.75em,
     spacing: 1.2em,
   )
+
+  if orario-val != none [
+    *Orario:* #orario-val
+    #v(1em)
+  ]
 
   body
 

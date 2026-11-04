@@ -41,6 +41,8 @@ Per creare un nuovo verbale (es. `src/Candidatura/Verbali Interni/2025-10-22.typ
   titolo: "Verbale interno 22/10/2025",
   stato: "Verificato",
   versione: "1.0.0",
+  ora-inizio: "12:00",
+  ora-fine: "14:00",
   registro-modifiche: (
     ("1.0.0", "23/10/2026", "Davide Loparco", "Davide Loparco", "Revisione e approvazione finale"),
     ("0.2.0", "22/10/2026", "Roberto Piovesan", "Davide Loparco", "Integrazione contenuti e tabelle"),

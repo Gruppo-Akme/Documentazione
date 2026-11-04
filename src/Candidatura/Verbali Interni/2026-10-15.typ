@@ -4,6 +4,8 @@
   titolo: "Verbale interno 15/10/2026",
   stato: "Approvato",
   versione: "1.0.0",
+  ora-inizio: "17:40",
+  ora-fine: "19:00",
   registro-modifiche: (
     ("1.0.0", "18/10/2026", "Davide Loparco", "Davide Loparco", "Revisione del documento e approvazione finale"),
     ("0.2.0", "17/10/2026", "Roberto Piovesan", "Davide Loparco", "Integrazione discussione capitolati e attività"),

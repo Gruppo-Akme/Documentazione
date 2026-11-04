@@ -61,10 +61,10 @@ A seguire, la suddivisione dello svolgimento delle attività di questa settimana
     inset: (y: 7pt, x: 6pt),
 
     [*ID*], [*Azione*], [*Incaricato*], [*Scadenza*], [*Issue#super[G]*],
-    [A1], [Redazione del verbale odierno], [Davide Loparco], [23/10/2026], [-],
+    [A1], [Redazione del verbale odierno], [Davide Loparco], [23/10/2026], [#link("github.com/Gruppo-Akme/Documentazione/issues/4")[\#4]],
     [A2], [Creazione e gestione organization Github#super[G]], [Mattia Cadamuro, Chen DaXin], [23/10/2026], [-],
-    [A3], [Creazione label per issue nella repo], [Marco Giacon], [25/10/2026], [-],
-    [A4], [Redazione del verbale esterno], [Pietro Giulio Bassi, Roberto Piovesan], [25/10/2026], [-],
+    [A3], [Creazione label per issue nella repo], [Marco Giacon], [25/10/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/3")[\#3]],
+    [A4], [Redazione del verbale esterno], [Pietro Giulio Bassi, Roberto Piovesan], [25/10/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/16")[\#16]],
   ),
   caption: [Decisioni intraprese e attività conseguenti],
 ) <tab-decisioni>

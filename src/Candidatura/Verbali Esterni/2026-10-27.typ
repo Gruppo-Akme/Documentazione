@@ -7,8 +7,8 @@
   ora-inizio: "17:30",
   ora-fine: "18:00",
   registro-modifiche: (
-    ("1.0.0", "29/10/2026", "", "Chen Daxin", "Revisione del documento e approvazione finale"),
-    ("0.1.0", "28/10/2026", "Roberto Piovesan", "Chen Daxin", "Stesura iniziale del verbale esterno post-incontro con Eggon"),
+    ("1.0.0", "29/10/2026", "-", "Chen Daxin", "Verifica del documento"),
+    ("0.1.0", "28/10/2026", "Roberto Piovesan", "Marco Giacon", "Stesura iniziale del verbale esterno post-incontro con Eggon"),
   ),
   odg: (
     "Chiarimenti sul monte ore e Allineamento ai vincoli CFU",

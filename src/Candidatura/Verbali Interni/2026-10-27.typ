@@ -3,10 +3,12 @@
 #show: report.with(
   titolo: "Verbale interno 27/10/2026",
   stato: "Approvato",
-  versione: "1.0.0",
+  versione: "2.0.0",
   ora-inizio: "18:00",
   ora-fine: "18:30",
   registro-modifiche: (
+    ("2.0.0", "04/11/2026", "-", "Pietro Giulio Bassi", "Verifica del documento"),
+    ("1.1.0", "04/11/2026", "Davide Loparco", "Chen DaXin", "Linking delle issue Github"),
     ("1.0.0", "29/10/2026", "Marco Giacon", "Marco Giacon", "Revisione del documento e approvazione finale"),
     ("0.1.0", "28/10/2026", "Roberto Piovesan", "Marco Giacon", "Integrazione discussione capitolati e attività"),
   ),
@@ -26,8 +28,8 @@
     "Prof. Cardin Riccardo",
     "Prof. Vardanega Tullio",
   ),
-  verificatore-interno: "Marco Giacon",
-  left-signature: "firma-Giacon.jpeg",
+  verificatore-interno: "Pietro Giulio Bassi",
+  left-signature: "firma-Bassi.jpeg",
   tipo-verbale: "Interno",
 )
 

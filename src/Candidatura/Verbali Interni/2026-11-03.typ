@@ -47,7 +47,7 @@ A seguito delle osservazioni ricevute in sede di revisione, il gruppo ha uniform
 
 2. *Convenzione per la versione definitiva:* Il gruppo ha stabilito che l'ultima riga di versione definitiva di ciascun documento, qualora non siano presenti correzioni ortografiche o strutturali da fare e in linea generale il documento sia corretto, debba presentare il campo dell'"editore" vuoto e il campo del "verificatore" recante il nome del membro del gruppo che ha effettuato il controllo, accompagnato dall'oggetto "Verifica del documento".
 
-3. *Firma del revisore e ruoli:* È stato ribadito che la firma e l'indicazione del revisore/responsabile interno debbano essere rigorosamente conformi a chi ricopre effettivamente il ruolo di Responsabile alla data di stesura del documento.
+3. *Firma del revisore e ruoli:* È stato ribadito che la firma e l'indicazione del revisore/responsabile interno debbano essere rigorosamente conformi a chi ricopre effettivamente il ruolo di Responsabile#super[G] alla data di stesura del documento.
 
 4. *Risoluzione bug di versionamento:* È stato inoltre individuato e risolto un bug nel sistema di generazione che causava l'aggiunta indesiderata di una riga di versionamento extra in occasione di ogni nuova iterazione.
 
@@ -56,7 +56,7 @@ In seguito ai rilievi emersi durante la revisione con il docente, sono state app
 
 1. *Aggiunta dell'orario della riunione:* Nella prima pagina di ciascun verbale è stato integrato l'orario di svolgimento dell'incontro (ora inizio e ora fine), andando a completare la sezione dei metadati generali che già comprendeva la data, l'ordine del giorno e la lista dei partecipanti.
 
-2. *Revisione della tabella di tracciamento attività:* È stata aggiornata la struttura della tabella finale relativa alle decisioni e attività conseguenti. La nuova conformazione include un identificativo univoco ("ID") per ciascuna azione e il collegamento diretto con il repository di progetto tramite link ipertestuale alla relativa *issue* di GitHub, garantendo così la piena tracciabilità tra le delibere e la loro esecuzione.
+2. *Revisione della tabella di tracciamento attività:* È stata aggiornata la struttura della tabella finale relativa alle decisioni e attività conseguenti. La nuova conformazione include un identificativo univoco ("ID") per ciascuna azione e il collegamento diretto con il repository di progetto tramite link ipertestuale alla relativa *issue* di GitHub#super[G], garantendo così la piena tracciabilità tra le delibere e la loro esecuzione.
 
 == Aggiornamento documentazione
 A seguito della riconsiderazione delle proposte di capitolato e dei rilievi emersi in sede di revisione, il gruppo ha ravvisato la necessità di aggiornare e redigere daccapo la documentazione essenziale per presentare la nuova candidatura ufficiale. 
@@ -78,7 +78,7 @@ A seguire, la suddivisione dello svolgimento delle attività di questa settimana
     fill: none,
     inset: (y: 7pt, x: 6pt),
 
-    [*ID*], [*Azione*], [*Incaricato*], [*Scadenza*], [*Issue*],
+    [*ID*], [*Azione*], [*Incaricato*], [*Scadenza*], [*Issue#super[G]*],
     [A1], [Standardizzazione registro delle modifiche nei verbali], [Davide Loparco], [04/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/26")[\#26]],
     [A2], [Stesura nuova lettera di Candidatura], [Marco Giacon], [04/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/27")[\#27]],
     [A3], [Stesura nuova Analisi degli Impegni], [Pietro Giulio Bassi], [04/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/28")[\#28]],

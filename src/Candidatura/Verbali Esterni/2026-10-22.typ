@@ -7,7 +7,7 @@
   ora-inizio: "15:30",
   ora-fine: "16:15",
   registro-modifiche: (
-    ("1.0.0", "25/10/2026", "Roberto Piovesan", "Roberto Piovesan", "Revisione del documento e approvazione finale"),
+    ("1.0.0", "25/10/2026", "-", "Roberto Piovesan", "Revisione del documento e approvazione finale"),
     ("0.1.0", "24/10/2026", "Pietro Giulio Bassi", "Davide Loparco", "Stesura iniziale del verbale esterno post-incontro con Halue"),
   ),
   odg: (

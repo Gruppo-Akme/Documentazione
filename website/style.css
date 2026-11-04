@@ -269,6 +269,7 @@ main section {
     border-bottom: none;
 }
 
+#diapositive::before,
 #candidatura::before {
     content: '';
     width: var(--content-bar-width);
@@ -280,6 +281,7 @@ main section {
     border-radius: calc(var(--content-bar-width) / 2);
 }
 
+#diapositive *:not(h2)::before,
 #candidatura *:not(h2)::before {
     content: '';
     position: absolute;

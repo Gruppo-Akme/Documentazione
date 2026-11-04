@@ -4,6 +4,8 @@
   titolo: "Verbale interno 21/10/2026",
   stato: "Approvato",
   versione: "1.0.0",
+  ora-inizio: "17:30",
+  ora-fine: "18:40",
   registro-modifiche: (
     ("1.0.0", "23/10/2026", "Roberto Piovesan", "Roberto Piovesan", "Revisione del documento e approvazione finale"),
     ("0.1.0", "22/10/2026", "Davide Loparco", "Roberto Piovesan", "Integrazione discussione capitolati e attività"),
@@ -52,17 +54,17 @@ A seguire, la suddivisione dello svolgimento delle attività di questa settimana
 
 #figure(
   table(
-    columns: (2.2fr, 2.2fr, 1fr),
-    align: (left + horizon, left + horizon, left + horizon),
+    columns: (auto, 3fr, 2fr, auto, auto),
+    align: (left + horizon, left + horizon, left + horizon, center + horizon, center + horizon),
     stroke: (x, y) => if y == 0 { (bottom: 1.2pt + black) } else { (bottom: 0.6pt + black) },
     fill: none,
-    inset: (y: 7pt, x: 5pt),
+    inset: (y: 7pt, x: 6pt),
 
-    [*Descrizione*], [*Responsabile#super[G]*], [*Scadenza*],
-    [Redazione del verbale odierno], [Davide Loparco], [23/10/2026],
-    [Creazione e gestione organization Github#super[G]], [Mattia Cadamuro, Chen DaXin], [23/10/2026],
-    [Creazione label per issue nella repo], [Marco Giacon], [25/10/2026],
-    [Redazione del verbale esterno], [Pietro Giulio Bassi, Roberto Piovesan], [25/10/2026],
+    [*ID*], [*Azione*], [*Incaricato*], [*Scadenza*], [*Issue#super[G]*],
+    [A1], [Redazione del verbale odierno], [Davide Loparco], [23/10/2026], [-],
+    [A2], [Creazione e gestione organization Github#super[G]], [Mattia Cadamuro, Chen DaXin], [23/10/2026], [-],
+    [A3], [Creazione label per issue nella repo], [Marco Giacon], [25/10/2026], [-],
+    [A4], [Redazione del verbale esterno], [Pietro Giulio Bassi, Roberto Piovesan], [25/10/2026], [-],
   ),
   caption: [Decisioni intraprese e attività conseguenti],
 ) <tab-decisioni>

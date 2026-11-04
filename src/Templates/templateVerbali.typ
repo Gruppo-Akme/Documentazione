@@ -4,6 +4,44 @@
 
 #let gloss(term) = [*#term#sub[G]*]
 
+#let issue(number, repo: "Documentazione") = {
+  let issue-url = "https://github.com/Gruppo-Akme/" + repo + "/issues/" + str(number)
+  link(issue-url)[\##number]
+}
+
+#let tabella-azioni(azioni, caption: [Decisioni e azioni da svolgere]) = {
+  figure(
+    table(
+      columns: (auto, 3fr, 2fr, auto, auto),
+      align: (left + horizon, left + horizon, left + horizon, center + horizon, center + horizon),
+      stroke: (x, y) => if y == 0 { (bottom: 1.2pt + black) } else { (bottom: 0.6pt + black) },
+      fill: none,
+      inset: (y: 7pt, x: 6pt),
+      table.header([*ID*], [*Azione*], [*Incaricato*], [*Scadenza*], [*Issue*]),
+      ..for r in azioni {
+        let id = r.at(0)
+        let azione = r.at(1)
+        let incaricato = r.at(2)
+        let scadenza = r.at(3)
+        let iss = if r.len() > 4 {
+          let v = r.at(4)
+          if type(v) == int {
+            issue(v)
+          } else if type(v) == str and v.starts-with("#") {
+            issue(v.slice(1))
+          } else {
+            v
+          }
+        } else {
+          "-"
+        }
+        ([#id], [#azione], [#incaricato], [#scadenza], [#iss])
+      }
+    ),
+    caption: caption,
+  )
+}
+
 #let report(
   titolo: none,
   stato: "Approvato",
@@ -14,6 +52,9 @@
   index: "0",
   odg: (),
   registro-modifiche: (),
+  ora-inizio: none,
+  ora-fine: none,
+  orario: none,
   verificatore-interno: "",
   left-signature: "",
   verificatore-esterno: "",
@@ -27,6 +68,21 @@
     registro-modifiche.first().at(0)
   } else {
     "1.0"
+  }
+
+  let orario-val = if orario != none {
+    let o = str(orario).trim()
+    if lower(o).starts-with("orario:") {
+      o.slice(7).trim()
+    } else {
+      o
+    }
+  } else if ora-inizio != none and ora-fine != none {
+    str(ora-inizio).trim() + " - " + str(ora-fine).trim()
+  } else if ora-inizio != none {
+    str(ora-inizio).trim()
+  } else {
+    none
   }
 
   let kw = ()
@@ -108,15 +164,19 @@
       align: (right, left),
       stroke: (x, y) => if x == 0 { (right: 0.5pt + luma(150)) } else { none },
       inset: (x: 1.2em, y: 0.5em),
-      [*Stato*], [Approvato],
-      [*Versione*], [1.0.0],
+      [*Stato*], [#stato],
+      [*Versione*], [#versione-auto],
+      ..if orario-val != none {
+        ([*Orario*], [#orario-val])
+      } else {
+        ()
+      },
       [*Partecipanti*], [#partecipanti-content],
       [*Distribuzione*], [#distribuzione-content],
     )
   ]
 
-  v(2cm)
-
+  v(1cm)
   // Ordine del giorno (se presente)
   if odg != none and odg.len() > 0 [
     #align(center)[
@@ -170,9 +230,7 @@
       inset: (y: 7pt, x: 5pt),
       table.header([*Ver.*], [*Data*], [*Autore*], [*Verificatore*], [*Descrizione*]),
       ..for (ver, data, autore, verificatore, descrizione) in registro-modifiche {
-        ([1.0.0], [29/10/2026], [Chen Daxin], [-], [Revisione finale del documento])
-
-        ([#ver], [#data], [#autore], [Davide Loparco], [#descrizione])
+        ([#ver], [#data], [#autore], [#verificatore], [#descrizione])
       },
     )
     #pagebreak()
@@ -195,6 +253,11 @@
     leading: 0.75em,
     spacing: 1.2em,
   )
+
+  if orario-val != none [
+    *Orario:* #orario-val
+    #v(1em)
+  ]
 
   body
 

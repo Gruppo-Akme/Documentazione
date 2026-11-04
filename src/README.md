@@ -41,6 +41,8 @@ Per creare un nuovo verbale (es. `src/Candidatura/Verbali Interni/2025-10-22.typ
   titolo: "Verbale interno 22/10/2025",
   stato: "Verificato",
   versione: "1.0.0",
+  ora-inizio: "12:00",
+  ora-fine: "14:00",
   registro-modifiche: (
     ("1.0.0", "23/10/2026", "Davide Loparco", "Davide Loparco", "Revisione e approvazione finale"),
     ("0.2.0", "22/10/2026", "Roberto Piovesan", "Davide Loparco", "Integrazione contenuti e tabelle"),
@@ -75,6 +77,22 @@ Testo introduttivo del verbale...
 = Resoconto
 == Discussione punto 1
 Dettagli discussione...
+
+= Decisioni e azioni da svolgere
+#figure(
+  table(
+    columns: (auto, 3fr, 2fr, auto, auto),
+    align: (left + horizon, left + horizon, left + horizon, center + horizon, center + horizon),
+    stroke: (x, y) => if y == 0 { (bottom: 1.2pt + black) } else { (bottom: 0.6pt + black) },
+    fill: none,
+    inset: (y: 7pt, x: 6pt),
+
+    [*ID*], [*Azione*], [*Incaricato*], [*Scadenza*], [*Issue*],
+    [A1], [Modificare la vista web su GitHub Pages], [Lorenzo Cisco], [2026-10-28], [#issue(24)],
+    [A2], [Pubblicare il verbale interno del 2026-10-26], [Niccolò Bassan], [2026-10-28], [#issue(28)],
+  ),
+  caption: [Decisioni e azioni da svolgere],
+) <tab-decisioni-azioni>
 ```
 
 ---

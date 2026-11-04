@@ -57,7 +57,7 @@
 */
 #let get-url(url-type, repo-string) = {
   let (repo-desc, repo-name, repo-long) = repo-description-from-str(repo-string)
-  let base-url = "https://github.com/Akme-Group-SWE"
+  let base-url = "https://github.com/Gruppo-Akme"
 
   if url-type == "base" {
     (base-url, repo-name).join("/")

@@ -21,14 +21,14 @@
       "1.0.1",
       "29/10/2026",
       "Davide Loparco",
-      "-",
+      "Pietro Giulio Bassi",
       "Correzioni minori"
     ),
     (
       "1.0.0",
       "29/10/2026",
       "Pietro Giulio Bassi",
-      "-",
+      "Pietro Giulio Bassi",
       "Revisione finale documento"
     ),
     (

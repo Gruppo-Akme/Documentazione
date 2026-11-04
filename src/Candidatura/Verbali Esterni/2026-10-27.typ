@@ -2,10 +2,11 @@
 
 #show: report.with(
   titolo: "Verbale esterno 27/10/2026",
-  stato: "Da approvare",
-  versione: "0.1.0",
+  stato: "Approvato",
+  versione: "1.0.0",
   registro-modifiche: (
-    ("0.1.0", "28/10/2026", "Roberto Piovesan", "Membro Gruppo", "Stesura iniziale del verbale esterno post-incontro con Eggon"),
+    ("1.0.0", "29/10/2026", "Chen Daxin", "Chen Daxin", "Revisione del documento e approvazione finale"),
+    ("0.1.0", "28/10/2026", "Roberto Piovesan", "Chen Daxin", "Stesura iniziale del verbale esterno post-incontro con Eggon"),
   ),
   odg: (
     "Chiarimenti sul monte ore e Allineamento ai vincoli CFU",

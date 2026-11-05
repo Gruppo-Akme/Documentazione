@@ -43,7 +43,7 @@ Egregi Professori Vardanega e Cardin,
 
 con la presente il gruppo *Akme Group* desidera formalizzare la propria candidatura ufficiale per la realizzazione del progetto didattico relativo al capitolato d'appalto *#codice: #nome-capitolato* (#sottotitolo-capitolato), proposto dall'azienda *#azienda*.
 
-A seguito della mancata assegnazione del capitolato C2 (Concierge -- Eggon S.r.l.) nella precedente tornata di candidatura, il gruppo si è riunito tempestivamente per riorganizzare la produzione di documenti e il sito facendo tesoro delle indicazioni del professor Vardanega. Ha dunque riesaminato le alternative progettuali disponibili e con delibera unanime formalizzata nel Verbale Interno del 3 novembre 2026, il team ha scelto con piena convinzione di ricandidarsi per il capitolato *C7*, riconoscendo in esso un eccellente equilibrio tra solidità ingegneristica, stimolo formativo e concreta sostenibilità delle risorse.
+A seguito della mancata assegnazione del capitolato C2 (Concierge -- Eggon S.r.l.) nella precedente tornata di candidatura, il gruppo si è riunito tempestivamente per riorganizzare la produzione di documenti e il suo way of working facendo tesoro delle indicazioni del professor Vardanega. Ha dunque riesaminato le alternative progettuali disponibili e con delibera unanime formalizzata nel Verbale Interno del 3 novembre 2026, il team ha scelto con piena convinzione di ricandidarsi per il capitolato *C7*, riconoscendo in esso un eccellente equilibrio tra solidità ingegneristica, stimolo formativo e concreta sostenibilità delle risorse.
 
 = Motivazioni della scelta
 
@@ -68,7 +68,7 @@ Il gruppo stima la consegna del prodotto finale e la richiesta di accesso al col
 Tutta la documentazione prodotta dal gruppo è consultabile pubblicamente sul #link(url-sito)[sito ufficiale] e all'interno della #link(url-repo)[repository GitHub#super[G]] di riferimento. In particolare, si segnalano:
 - *#link(url-valutazione)[Valutazione dei Capitolati v2.0.0]:* documento di analisi e comparazione approfondita delle proposte d'appalto;
 - *#link(url-preventivo)[Dichiarazione degli Impegni e Preventivo Costi v1.0.0]:* analisi dei ruoli, ripartizione oraria ed economica, diagramma PERT e piano di mitigazione dei rischi;
-- *Verbali interni ed esterni:* resoconti formali e tracciati di tutti gli incontri con committente, proponenti e riunioni di coordinamento del team.
+- *Verbali interni ed esterni:* resoconti formali e tracciati di tutti gli incontri con committente, proponenti e riunioni di coordinamento del team. Segnaliamo inoltre che l'incontro con l'azienda Ergon è stato già effettuato in data odierna, confermandoci la validità del progetto proposto. Il verbale non è ancora visibile perché non abbiamo ancora ricevuto la firma del referente.
 
 = Componenti del gruppo
 

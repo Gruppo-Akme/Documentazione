@@ -18,14 +18,16 @@
   tipo-documento: "Documento interno",
   stato: "Approvato",
   registro-modifiche: (
-    ("1.0.0", "28/10/2026", "Davide Loparco", "Davide Loparco", "Revisione con correzioni e approvazione finale del documento"),
+    ("2.0.0", "5/11/2026", "-", "Pietro Giulio Bassi", "Revisione finale documento"),
+    ("1.1.0", "5/11/2026", "Pietro Giulio Bassi", "Davide Loparco", "Aggiornamento analisi per la nuova candidatura al capitolato C7"),
+    ("1.0.0", "28/10/2026", "-", "Davide Loparco", "Revisione con correzioni e approvazione finale del documento"),
     ("0.3.0", "27/10/2026", "Mattia Cadamuro", "Roberto Piovesan, Davide Loparco", "Aggiunta valutazione dei capitolati C6, C7 e C9"),
     ("0.2.0", "26/10/2026", "Roberto Piovesan", "Davide Loparco", "Valutazione dei capitolati C3, C4 e C5"),
     ("0.1.0", "25/10/2026", "Marco Giacon", "Roberto Piovesan", "Creazione e prima stesura documento"),
   ),
 
-  verificatore-interno: "Davide Loparco",
-  left-signature: "firma-Loparco.jpeg",
+  verificatore-interno: "Pietro Giulio Bassi",
+  left-signature: "firma-Bassi.jpeg",
 )
 
 // Funzione per i capitolati valutati ma non scelti
@@ -45,51 +47,71 @@
 = Introduzione
 Nel presente documento viene esposta l'analisi dei capitolati d'appalto esaminati dal gruppo *Akme Group*, al fine di individuare quello più adatto alle competenze e agli obiettivi del team.
 
-Vengono illustrate le motivazioni che hanno portato alla candidatura per il capitolato *C2 - Concierge*, proposto da _Eggon_, insieme alle altre proposte prese in considerazione durante la valutazione.
+Vengono illustrate le motivazioni che hanno portato alla candidatura per il capitolato *C7 - SmartDashboard*, proposto da _Ergon Informatica S.r.l._, insieme alle altre proposte prese in considerazione durante la valutazione.
 
-= Capitolato Selezionato: C2 - Concierge
+= Capitolato Selezionato: C7 – SmartDashboard
 == Descrizione
-*Proponente:* Eggon s.r.l. \
-Il capitolato C2 richiede lo sviluppo di *NEXUM Concierge*, un assistente conversazionale#super[G] da inserire nella PWA#super[G] della piattaforma NEXUM, dedicata alla comunicazione aziendale e alla gestione dei servizi HR. Tramite una chat testuale, il personale può trovare informazioni, comprendere procedure e accedere ai servizi aziendali usando il linguaggio naturale.
+*Proponente:* Ergon Informatica S.r.l. \
+Il capitolato C7 richiede lo sviluppo di *SmartDashboard*, una piattaforma di Business Intelligence self-service potenziata dall'intelligenza artificiale, progettata per consentire agli utenti aziendali di consultare, analizzare e interpretare autonomamente i dati provenienti dagli ERP#super[G].
 
-Il Concierge collega la conoscenza aziendale alle funzioni operative della piattaforma. L'MVP#super[G] è limitato all'area *ferie e permessi* e deve assicurare quattro funzionalità:
-- rispondere a domande sui regolamenti aziendali, usando fonti caricate dal backoffice#super[G];
+L'architettura di riferimento prevede un Raw Data Store per la raccolta e storicizzazione dei dati grezzi, un Data Warehouse basato su un modello dimensionale (star schema) ottimizzato tramite un motore analitico OLAP#super[G] come DuckDB#super[G], e una Web App responsive dotata di dashboard builder drag & drop, libreria di widget interattivi e un assistente AI integrato. Il layer di intelligenza artificiale funge da interprete per generare visualizzazioni a partire da richieste in linguaggio naturale, produrre insight automatici, suggerire widget e spiegare le variazioni degli indicatori, protetto da rigorosi controlli di sicurezza e guardrail.
+
+== Dominio
+Il dominio è quello della Business Intelligence aziendale, del Data Warehousing e dell'integrazione di sistemi di AI per l'analisi dati. Dal punto di vista tecnico il progetto riguarda:
+- *Ingegneria dei dati ed ETL#super[G]:* estrazione, pulizia e trasformazione di dati gestionali grezzi (vendite, ordini, logistica) tramite librerie ad alte prestazioni (es. Polars) in un modello dimensionale a stella;
+- *Motori analitici e storage:* utilizzo di database analitici colonnari (DuckDB) disaccoppiati dal database relazionale di servizio e storicizzazione;
+- *Frontend e data visualization:* sviluppo di una web app responsive in React#super[G] con builder a griglia interattiva, widget personalizzabili e supporto all'esportazione;
+- *Layer AI e LLM#super[G]:* integrazione di modelli linguistici tramite API commerciali (GPT/Claude) gestiti secondo un approccio a livelli per Text-to-Analytics, generazione di insight e assistente conversazionale.
+
+== Motivazioni della scelta
+- *Architettura fortemente disaccoppiata e pulita:* La netta suddivisione in tre livelli (Raw Data Store, Data Warehouse, Web App) semplifica la progettazione formale, l'organizzazione dei moduli del software e la stesura della documentazione architetturale in Typst#super[G], migliorando manutenibilità e testabilità.
+- *Ottima suddivisione del lavoro e parallelizzazione:* La struttura modulare integrata tramite API REST#super[G] ben definite consente una ripartizione equilibrata delle 558 ore complessive tra i 6 membri del gruppo, permettendo di lavorare in parallelo su ETL, backend, frontend e layer AI.
+- *Sviluppo incrementale e sostenibilità economica:* L'approccio consigliato dal proponente (consolidamento della pipeline BI end-to-end prima dell'integrazione progressiva delle funzionalità AI) garantisce il pieno controllo sulle scadenze, rientrando perfettamente nel budget stimato di 11.130,00 € e 93 ore individuali.
+- *Stack tecnologico concreto e spendibile:* L'unione di tecnologie web moderne con strumenti innovativi per l'analisi e la gestione dei dati (DuckDB, Polars, LLM) offre un eccellente valore formativo per tutti i componenti del team.
+- *Supporto e allineamento aziendale:* Ergon garantisce un affiancamento costante tramite incontri di allineamento quindicinali, referenti dedicati per gli aspetti tecnici e la fornitura di un dataset relativo a un caso di studio reale per i test sul campo.
+
+== Conclusione
+Sintesi finale: il capitolato C7 rappresenta la scelta ideale per *Akme Group*, poiché unisce la solidità ingegneristica di una pipeline BI tradizionale alle potenzialità innovative dei modelli generativi. L'impostazione incrementale del progetto e l'adeguatezza delle risorse individuate rendono i rischi tecnici pienamente gestibili, assicurando la consegna di un MVP#super[G] completo, sicuro e ad alto valore d'uso.
+
+= Capitolati di Interesse
+== Capitolato C2 – Concierge
+=== Descrizione
+*Proponente:* Eggon s.r.l. \
+Il capitolato C2 richiede lo sviluppo di *NEXUM Concierge*, un assistente conversazionale da inserire nella PWA#super[G] della piattaforma NEXUM, dedicata alla comunicazione aziendale e alla gestione dei servizi HR. Tramite una chat testuale, il personale può trovare informazioni, comprendere procedure e accedere ai servizi aziendali usando il linguaggio naturale.
+
+Il Concierge collega la conoscenza aziendale alle funzioni operative della piattaforma. L'MVP è limitato all'area *ferie e permessi* e deve assicurare quattro funzionalità:
+- rispondere a domande sui regolamenti aziendali, usando fonti caricate dal backoffice;
 - spiegare l'uso delle funzioni di NEXUM sulla base dei manuali del prodotto;
 - recuperare e presentare i dati personali su ferie e permessi;
 - preparare e registrare una richiesta, dopo riepilogo e conferma esplicita della persona.
 
-Il progetto comprende anche un backoffice per caricare, organizzare, sostituire e ritirare le fonti, oltre a autorizzazioni, gestione degli errori e tracciabilità di fonti ed esiti.
-
-
-
-== Dominio
+=== Dominio
 Il dominio è quello della gestione HR e della comunicazione aziendale, in particolare ferie e permessi. Dal punto di vista tecnico il progetto riguarda:
-- *LLM#super[G]* e recupero della conoscenza (*RAG#super[G]*), con citazione delle fonti e astensione quando le informazioni non bastano;
+- *LLM* e recupero della conoscenza (*RAG#super[G]*), con citazione delle fonti e astensione quando le informazioni non bastano;
 - elaborazione di documenti PDF in modo asincrono;
 - integrazione con servizi applicativi tramite *gate* e abilità, con servizi NEXUM di prova o simulatori;
 - una PWA come interfaccia per il personale e un backoffice per l'amministrazione.
 
-Stack, modelli e servizi vengono concordati con Eggon.
-
-
-== Motivazioni della scelta
+=== Punti di forza
 - *Tecnologie attuali:* il progetto permette di lavorare con modelli linguistici, recupero della conoscenza e integrazione di strumenti, ambiti molto richiesti.
 - *Perimetro definito:* l'MVP riguarda solo ferie e permessi, con criteri di accettazione e prove descritti in modo esplicito.
 - *Supporto del proponente:* sono previsti incontri periodici, un gruppo Telegram dedicato, un referente Eggon e la fornitura di manuali, regolamenti e dati di prova.
 - *Libertà nelle scelte tecniche:* il team può proporre tecnologie e architettura, motivandole rispetto ai risultati.
-- *Utilità concreta:* il prodotto risolve un problema reale, ridurre le richieste ripetitive e semplificare l'accesso ai servizi HR.
 
-== Conclusione
-Sintesi finale: il capitolato C2 offre un buon equilibrio tra novità tecnologica e ambito circoscritto, ed è quello più coerente con le competenze e gli obiettivi del gruppo. Le principali criticità, come l'ampiezza delle quattro capacità da integrare e la dipendenza dalle API di NEXUM, sono considerate gestibili grazie al percorso in tre fasi e al supporto di Eggon.
+=== Criticità riscontrate
+- *Elevata dipendenza da API esterne:* l'integrazione con i servizi di backoffice e i gate di NEXUM espone il progetto al rischio di colli di bottiglia legati alla disponibilità o stabilità delle API aziendali simulate.
+- *Mancanza di componenti di ingegneria dei dati avanzata:* rispetto ad altri capitolati, il lavoro sull'AI è sbilanciato principalmente sull'integrazione RAG e la gestione di conversazioni, senza offrire spazio per modellazione dati complessa o data warehousing.
+- *Gestione del contesto conversazionale e allucinazioni:* la prevenzione rigorosa delle allucinazioni durante l'esecuzione di operazioni dispositivi (es. invio richieste ferie) richiede una logica di controllo estremamente complessa e rigidi meccanismi di conferma utente.
 
-= Capitolati di Interesse
+=== Conclusioni
+Il capitolato C2 è stato valutato come nostra alternativa di interesse: offre un ambito ben perimetrato e tecnologie attuali, ma abbiamo ritenuto la struttura a tre livelli e la completezza ingegneristica del capitolato C7 maggiormente stimolanti e idonee agli obiettivi formativi del gruppo.
+
 == Capitolato C0 – AIRA
 === Descrizione
 *Proponente:* San Marco SPA \
-Il capitolato C0 propone lo sviluppo di *AIRA* (AI Requests Automation), un tool multimodale basato su Intelligenza Artificiale che riceve richieste da canali eterogenei (e-mail con allegati, note vocali WhatsApp#super[G], immagini, cartelle del filesystem), ne estrae il significato e le trasforma in dati strutturati, come JSON#super[G] o record di database. Le informazioni vengono poi inoltrate in automatico ai sistemi aziendali tramite API REST#super[G], oppure notificate via e-mail, eliminando i passaggi manuali.
+Il capitolato C0 propone lo sviluppo di *AIRA* (AI Requests Automation), un tool multimodale basato su Intelligenza Artificiale che riceve richieste da canali eterogenei (e-mail con allegati, note vocali WhatsApp#super[G], immagini, cartelle del filesystem), ne estrae il significato e le trasforma in dati strutturati, come JSON#super[G] o record di database. Le informazioni vengono poi inoltrate in automatico ai sistemi aziendali tramite API REST, oppure notificate via e-mail, eliminando i passaggi manuali.
 
 Le funzionalità richieste comprendono il monitoraggio continuo dei canali, un filtro sui dati in ingresso per evitare accessi non autorizzati o commistione di informazioni, l'elaborazione semantica con LLM, l'avvio automatico di azioni e un'interfaccia amministrativa per configurazione, log e persistenza dei dati. Sono opzionali una dashboard analitica e l'invio autonomo di risposte al mittente.
-
 
 === Dominio
 Il dominio è l'automazione dei processi commerciali e di assistenza in ambito Business-to-Business: inserimento di ordini d'acquisto, apertura di ticket, prenotazione di appuntamenti, segnalazione di opportunità e richiesta di documenti contabili. Dal punto di vista tecnico il progetto riguarda:
@@ -98,8 +120,7 @@ Il dominio è l'automazione dei processi commerciali e di assistenza in ambito B
 - integrazione con applicativi esterni tramite API REST;
 - un'interfaccia web amministrativa e un database relazionale interno.
 
-Le tecnologie consigliate sono Java#super[G] con Spring Boot, LangChain4j#super[G], Angular#super[G] e TypeScript#super[G], Whisper#super[G], Tesseract#super[G] ed EasyOCR#super[G], con persistenza su SQLite#super[G], MariaDB o PostgreSQL#super[G].
-
+Le tecnologie consigliate sono Java#super[G] con Spring Boot, LangChain4j#super[G], Angular#super[G] e TypeScript, Whisper#super[G], Tesseract#super[G] ed EasyOCR#super[G], con persistenza su SQLite#super[G], MariaDB#super[G] o PostgreSQL#super[G].
 
 === Punti di forza
 - *Tecnologie attuali e varie:* il progetto unisce LLM, speech-to-text, OCR e visione artificiale, un insieme di competenze molto spendibili.
@@ -108,36 +129,30 @@ Le tecnologie consigliate sono Java#super[G] con Spring Boot, LangChain4j#super[
 - *Supporto del proponente:* San Marco affianca il gruppo con figure dedicate per supporto tecnico e setup degli ambienti, con metodologia Agile e referenti indicati.
 - *Struttura modulare:* è richiesta un'architettura che permetta di aggiungere in futuro nuovi canali e funzionalità.
 
-
 === Criticità riscontrate
 - *Molti canali e formati da gestire:* e-mail, WhatsApp, immagini, audio e filesystem richiedono tecnologie diverse, con il rischio di disperdere il lavoro su troppi fronti.
 - *Qualità e affidabilità dell'estrazione:* l'OCR su foto di cataloghi e il riconoscimento vocale possono dare errori, e la mappatura sui codici articolo ufficiali richiede una validazione accurata.
 - *Dati sensibili e isolamento:* è richiesto un filtro di sicurezza con identificazione dei tenant, che aggiunge complessità progettuale.
 - *Scalabilità richiesta:* l'architettura deve sostenere elevati volumi di ordini, e la pipeline deve essere coperta da test di unità e di integrazione.
-- *Integrazione con sistemi esterni:* ERP#super[G], CRM#super[G] e portali B2B richiedono API di cui il gruppo dipende.
+- *Integrazione con sistemi esterni:* ERP, CRM#super[G] e portali B2B richiedono API di cui il gruppo dipende.
 
 === Conclusioni
-Il capitolato C0 è stato valutato come la nostra seconda scelta: offre un ambito attuale e concreto, con un buon supporto aziendale, ma abbiamo giudicato più equilibrato il capitolato C2 – Concierge.
+Il capitolato C0 è stato valutato come ulteriore opzione d'interesse: offre un ambito attuale e concreto, con un buon supporto aziendale, ma abbiamo giudicato più equilibrato e coerente l'approccio modulare del capitolato C7 – SmartDashboard.
 
 == Capitolato C8 – Sonar
 === Descrizione
 *Proponente:* Halue S.r.l. Società Benefit \
-Il capitolato C8 richiede lo sviluppo di *Sonar*, un'applicazione web che si collega a uno store Shopify#super[G] di grandi dimensioni, ne interroga sistematicamente configurazioni e codice, e ricostruisce la mappa di cosa esiste, di cosa non serve più e delle eventuali dipendenze. Il problema nasce dalla stratificazione degli store nel tempo: app dimenticate ma ancora fatturate, webhook#super[G] verso fornitori non più attivi, campi personalizzati mai letti e codice di tema non più referenziato, legati a una conoscenza storica del sistema ormai andata persa.
+Il capitolato C8 richiede lo sviluppo di *Sonar*, un'applicazione web che si collega a uno store Shopify#super[G] di grandi dimensioni, ne interroga sistematicamente configurazioni e codice, e ricostruisce la mappa di cosa esiste, di cosa non serve più e delle eventuali dipendenze. Il problema nasce dalla stratificazione degli store nel tempo: app dimenticate ma ancora fatturate, webhook verso fornitori non più attivi, campi personalizzati mai letti e codice di tema non più referenziato, legati a una conoscenza storica del sistema ormai andata persa.
 
 Il sistema deve produrre due risultati: una *documentazione sempre aggiornata* dello store, consultabile via web ed esportabile in Markdown#super[G] o HTML#super[G], e un *rapporto di igiene tecnica* che segnala orfani e codice morto, con una motivazione esplicita per ogni segnalazione. Le funzioni principali sono la scansione durevole dello store, la costruzione di un modello a grafo delle entità e delle dipendenze, l'analisi statica del tema, un motore di regole estensibile, il confronto tra snapshot e l'esportazione della documentazione. Sonar è di sola lettura e non modifica lo store.
 
 === Dominio
-Il dominio è l'e-commerce su piattaforma Shopify (Shopify Plus) e in particolare la documentazione e la manutenzione di store enterprise: passaggi di consegne tra agenzie, onboarding di nuovi team, audit#super[G] di spesa sulle app e valutazione di migrazioni (replatforming#sub[G]). Dal punto di vista tecnico il progetto riguarda:
-- acquisizione dati dalle Admin GraphQL API#super[G] di Shopify, con gestione del rate limiting#sub[G] e scansioni lunghe, ripartibili e osservabili;
-- normalizzazione dei dati in un grafo di entità e dipendenze, con fonte dell'evidenza e livello di confidenza (accertato, probabile, ipotizzato);
-- analisi statica del codice di tema (Liquid#super[G], JSON, JavaScript#super[G], CSS#super[G]);
-=======
 Il dominio è l'e-commerce su piattaforma Shopify (Shopify Plus) e in particolare la documentazione e la manutenzione di store enterprise: passaggi di consegne tra agenzie, onboarding di nuovi team, audit di spesa sulle app e valutazione di migrazioni. Dal punto di vista tecnico il progetto riguarda:
-- acquisizione dati dalle Admin GraphQL#super[G] API di Shopify, con gestione del rate limiting e scansioni lunghe, ripartibili e osservabili;
+- acquisizione dati dalle Admin GraphQL API#super[G] di Shopify, con gestione del rate limiting e scansioni lunghe, ripartibili e osservabili;
 - normalizzazione dei dati in un grafo di entità e dipendenze, con fonte dell'evidenza e livello di confidenza;
-- analisi statica del codice di tema (Liquid, JSON, JavaScript, CSS);
+- analisi statica del codice di tema (Liquid#super[G], JSON, JavaScript#super[G], CSS#super[G]);
 - campionamento statistico per misurare l'uso reale dei campi personalizzati;
-- tecnologie vincolanti: Next.js#super[G] e Vercel, Supabase#super[G] e TypeScript.
+- tecnologie vincolanti: Next.js#super[G] e Vercel, Supabase e TypeScript.
 
 === Punti di forza
 - *Problema reale e ben motivato:* il capitolato descrive in modo chiaro una necessità concreta di Halue, con costi e scenari d'uso precisi.
@@ -158,15 +173,15 @@ Il dominio è l'e-commerce su piattaforma Shopify (Shopify Plus) e in particolar
 - *Nessun incontro in presenza e nessun canale di messaggistica condiviso:* la comunicazione è affidata a videoconferenze e a una casella di posta.
 
 === Conclusioni
-Il capitolato C8 è stato valutato come la nostra terza scelta: è ben strutturato e offre un buon margine di negoziazione, ma lo stack vincolante, l'ampiezza dei requisiti obbligatori e la necessità di costruire autonomamente l'ambiente di lavoro sono stati determinanti nella nostra decisione di preferenza.
+Il capitolato C8 è stato valutato come ulteriore opzione d'interesse: è ben strutturato e offre un buon margine di negoziazione, ma lo stack vincolante, l'ampiezza dei requisiti obbligatori e la necessità di costruire autonomamente l'ambiente di lavoro sono stati determinanti nella nostra decisione di preferenza.
 
 = Altri Capitolati Valutati
 == Capitolato C1 – AURA
 === Descrizione
 *Proponente:* Vimar S.p.A. \
-Il capitolato C1, proposto dall'Area Ricerca e Sviluppo Elettronica di Vimar, richiede di progettare e realizzare *AURA* (_AI for Understanding, Reasoning and Automation_), un dimostratore IoT + AI per il settore residenziale. Il cuore del progetto è un *server MCP#super[G]* (Model Context Protocol) e un client MCP che rendono le KNX IoT 3rd party API#super[G] di Vimar utilizzabili da servizi di intelligenza artificiale generativa commerciali, come Claude#super[G], ChatGPT#super[G], Copilot#super[G] e Gemini#super[G]. In questo modo l'utente può interrogare e comandare il proprio impianto domotico View Wireless in linguaggio naturale, autenticandosi con il proprio account MyVimar.
+Il capitolato C1, proposto dall'Area Ricerca e Sviluppo Elettronica di Vimar, richiede di progettare e realizzare *AURA* (_AI for Understanding, Reasoning and Automation_), un dimostratore IoT + AI per il settore residenziale. Il cuore del progetto è un *server MCP#super[G]* (Model Context Protocol) e un client MCP che rendono le KNX IoT 3rd party API di Vimar utilizzabili da servizi di intelligenza artificiale generativa commerciali, come Claude#super[G], ChatGPT#super[G], Copilot#super[G] e Gemini#super[G]. In questo modo l'utente può interrogare e comandare il proprio impianto domotico View Wireless in linguaggio naturale, autenticandosi con il proprio account MyVimar.
 
-Il progetto comprende tre componenti obbligatori: un'infrastruttura Cloud-ready#super[G] basata su container#super[G] e Infrastructure as Code#super[G], il server e il client MCP, e il collegamento con un agente#super[G] o modello AI esterno che gestisca casi d'uso base e avanzati (selezione dell'impianto, lettura e scrittura dello stato dei dispositivi, richieste ambigue o implicite, conferme per comandi estesi). Sono previsti come opzionali il supporto al multi-impianto, allo storico, agli scenari composti e ai trigger#super[G].
+Il progetto comprende tre componenti obbligatori: un'infrastruttura Cloud-ready#super[G] basata su container e Infrastructure as Code#super[G], il server e il client MCP, e il collegamento con un agente o modello AI esterno che gestisca casi d'uso base e avanzati (selezione dell'impianto, lettura e scrittura dello stato dei dispositivi, richieste ambigue o implicite, conferme per comandi estesi). Sono previsti come opzionali il supporto al multi-impianto, allo storico, agli scenari composti e ai trigger.
 
 === Punti di forza
 - *Tecnologia attuale e di interesse:* il protocollo MCP e l'integrazione con LLM commerciali sono un ambito molto recente, con competenze spendibili sul mercato.
@@ -181,7 +196,7 @@ Il progetto comprende tre componenti obbligatori: un'infrastruttura Cloud-ready#
 - *Dipendenza da servizi e hardware esterni:* il progetto si appoggia al kit fisico, alle API KNX IoT e ai servizi AI di terzi; limiti, indisponibilità o cambiamenti di questi servizi sono fuori dal controllo del gruppo.
 - *Accesso alla documentazione soggetto a registrazione:* la documentazione KNX IoT è scaricabile solo dopo la registrazione sul sito Vimar e la firma di un documento d'uso.
 - *Comportamento dell'AI non completamente controllabile:* i casi d'uso dipendono da come il modello esterno interpreta richieste ambigue o implicite, e rendere i risultati verificabili con i test non è semplice.
-- *Vincolo sull'aggiornamento tramite Subscription:* il polling#super[G] non è ammesso, quindi le notifiche di impianto vanno gestite con il meccanismo push dello standard, più complesso da realizzare e da testare.
+- *Vincolo sull'aggiornamento tramite Subscription:* il polling non è ammesso, quindi le notifiche di impianto vanno gestite con il meccanismo push dello standard, più complesso da realizzare e da testare.
 - *Requisiti di test elevati:* sono richiesti test di unità, integrazione ed end-to-end, con copertura minima del 75% per unità e integrazione e dell'80% per gli end-to-end.
 - *Molti prodotti attesi:* oltre al codice sono richiesti documentazione con modello C4#super[G], analisi tecnica con stima dei costi AWS, documentazione del server e del client, manuale di installazione, video dimostrativo e report dei test.
 - *Ambito meno incentrato sull'AI:* la parte di intelligenza artificiale è affidata a servizi esterni commerciali, quindi il gruppo lavora più sull'integrazione che sull'AI stessa.
@@ -192,7 +207,7 @@ Il progetto comprende tre componenti obbligatori: un'infrastruttura Cloud-ready#
 *Proponente:* Uranion EMEA Ltd \ 
 Il capitolato C3, proposto da Uranion EMEA Ltd, richiede di progettare e realizzare Fossdot, uno smart speaker vocale open source, estensibile e orientato alla privacy. L'obiettivo principale è superare i limiti dei dispositivi commerciali tradizionali, liberando l'utente da cloud proprietari opachi e vincoli di lock-in, consentendo la libera scelta, la configurazione del provider di intelligenza artificiale (in cloud o locale) e la cooperazione tra più dispositivi domestici.
 
-L'infrastruttura richiesta comprende quattro componenti chiave: la selezione e validazione dell'hardware di riferimento con distinta base, il firmware embedded per la gestione audio e il rilevamento della wake word#super[G], il servizio server di bridging con pipeline STT#super[G] --> LLM --> TTS#super[G] e integrazione MCP, e un'applicazione web per la registrazione e gestione dei dispositivi. Il capitolato distingue una consegna minima con la dimostrazione del flusso end-to-end su hardware fisico e un unico provider, e una consegna completa estesa a più provider, agenti/skills vocali e opzioni di privacy interamente locali.
+L'infrastruttura richiesta comprende quattro componenti chiave: la selezione e validazione dell'hardware di riferimento con distinta base, il firmware embedded per la gestione audio e il rilevamento della wake word, il servizio server di bridging con pipeline STT#super[G] --> LLM --> TTS#super[G] e integrazione MCP, e un'applicazione web per la registrazione e gestione dei dispositivi. Il capitolato distingue una consegna minima con la dimostrazione del flusso end-to-end su hardware fisico e un unico provider, e una consegna completa estesa a più provider, agenti/skills vocali e opzioni di privacy interamente locali.
 
 === Punti di forza
 - *Adozione di tecnologie emergenti e di interesse:* l'integrazione del MCP e l'impiego di framework moderni (come Rust#super[G] embedded, Embassy#super[G] e Axum#super[G]) offrono un bagaglio di competenze innovative e spendibili sul mercato.
@@ -241,7 +256,7 @@ La piattaforma integra un assistente conversazionale basato su architettura RAG 
 === Punti di forza
 - *Elevato impatto sociale e applicazione reale dell'AI:* il progetto applica soluzioni di GenAI#super[G], RAG e NLP#super[G] a un contesto sanitario ed etico di forte rilievo, in diretta collaborazione con l'associazione Sanfilippo Fighters e con validazione sul campo.
 - *Architettura modulare basata su "Disease Pack":* la netta separazione tra la logica generale della piattaforma e i moduli specifici per patologia rende il sistema altamente riusabile ed estendibile senza dover riscrivere il codice base.
-- *Stack tecnologico serverless e cross-platform professionale:* l'impiego di tecnologie cloud-native su AWS e di framework come Flutter o React#super[G] Native consente di acquisire competenze di alto livello ed estremamente spendibili sul mercato.
+- *Stack tecnologico serverless e cross-platform professionale:* l'impiego di tecnologie cloud-native su AWS e di framework come Flutter o React Native consente di acquisire competenze di alto livello ed estremamente spendibili sul mercato.
 - *Integrazione di GenAI affidabile tramite RAG e guardrail:* l'uso del Retrieval-Augmented Generation e di filtri di sicurezza garantisce che l'assistente risponda basandosi esclusivamente su fonti verificate, minimizzando il rischio di allucinazioni.
 - *Eccellente supporto, mentorship e formazione del proponente:* Miriade garantisce referenti dedicati per architettura cloud, sviluppo full-stack/AI e UX/UI, oltre a una formazione iniziale specifica sul dominio clinico e sulla privacy dei dati sanitari.
 - *Flessibilità nella definizione dell'ambito di progetto:* Miriade si dichiara disponibile a discutere e concordare con il gruppo un perimetro di lavoro proporzionato ed equilibrato rispetto alle risorse disponibili.
@@ -251,45 +266,27 @@ La piattaforma integra un assistente conversazionale basato su architettura RAG 
 - *Gestione complessa dei permessi e degli accessi:* il controllo basato sui soli ruoli (RBAC) risulta insufficiente, richiedendo la modellazione di regole basate anche sulla relazione specifica con il paziente e sul contesto.
 - *Responsabilità etico-clinica e validazione dell'AI:* l'impiego di modelli generativi in ambito sanitario richiede l'introduzione di meccanismi di revisione umana ("human-in-the-loop") per la conferma dei dati estratti.
 - *Adattamento delle pipeline AI alla lingua italiana:* alcuni servizi clinici nativi in cloud (es. Amazon Comprehend Medical#super[G]) sono disponibili solo in inglese, imponendo al gruppo la progettazione di pipeline alternative per l'estrazione di entità da testi in italiano.
-- *Elevata articolazione funzionale e integrazione dei moduli:* la convivenza di assistente RAG, motore di workflow#super[G] per le scadenze, gestione documentale e comunicazioni richiede un'attenta coordinazione dei servizi cloud asincroni e degli eventi.
+- *Elevata articolazione funzionale e integrazione dei moduli:* la convivenza di assistente RAG, motore di workflow per le scadenze, gestione documentale e comunicazioni richiede un'attenta coordinazione dei servizi cloud asincroni e degli eventi.
 
 == Capitolato C6 – Caching Semantico e Dashboard FinOps
 === Descrizione
 *Proponente:* Var Group \
 Il capitolato C6, proposto da Var Group, richiede di estendere il proxy open source *LiteLLM#super[G]* attraverso lo sviluppo di due componenti originali volte a ottimizzare l'uso dei modelli di intelligenza artificiale generativa in contesti aziendali: un sistema di caching semantico e una dashboard FinOps. 
 
-Il primo componente implementa un livello di cache basato su embedding e ricerca per similarità semantica, in grado di riconoscere richieste equivalenti, restituire risposte pre-salvate e tracciare il risparmio di token e latenza, gestendo soglie di similarità configurabili, invalidazione tramite TTL/versioning e persistenza su Redis#super[G] o Vector DB. Il secondo componente consiste in un servizio separato per il tracciamento dei costi (FinOps), con aggregazione dei consumi per team, progetto e utente, calcolo del risparmio generato dalla cache, gestione di budget, avvisi e previsioni di spesa mensili con supporto al multi-tenancy#super[G] e aggiornamento in tempo quasi reale.
+Il primo componente implementa un livello di cache basato su embedding e ricerca per similarità semantica, in grado di riconoscere richieste equivalenti, restituire risposte pre-salvate e tracciare il risparmio di token e latenza, gestendo soglie di similarità configurabili, invalidazione tramite TTL/versioning e persistenza su Redis#super[G] o Vector DB. Il secondo componente consiste in un servizio separato per il tracciamento dei costi (FinOps), con aggregazione dei consumi per team, progetto e utente, calcolo del risparmio generato dalla cache, gestione di budget, avvisi e previsioni di spesa mensili con supporto al multi-tenancy e aggiornamento in quasi reale.
 
 === Punti di forza
 - *Architettura di partenza consolidata:* l'adozione di LiteLLM come proxy/orchestratore fornisce una base solida già operante in produzione, evitando di reinventare componenti di routing e gestione credenziali e permettendo di focalizzarsi sulle estensioni richieste.
 - *Risoluzione di problemi reali di produzione:* sia il caching semantico che la gestione dei costi (FinOps) rispondono a esigenze concrete del mercato enterprise.
-- *Stack tecnologico moderno e flessibile:* la libertà di scelta per gli embedding (OpenAI, sentence-transformers#super[G]) e i database (Redis, Qdrant#super[G], pgvector#super[G], PostgreSQL) consente di adattare lo stack alle competenze del team.
+- *Stack tecnologico moderno e flessibile:* la libertà di scelta per gli embedding (OpenAI, sentence-transformers) e i database (Redis, Qdrant#super[G], pgvector#super[G], PostgreSQL) consente di adattare lo stack alle competenze del team.
 - *Eccellente supporto e processo del proponente:* Var Group offre sessioni di design thinking, User Story Mapping, formazione tecnologica, standup periodici e review condivise.
 - *Modularità del sistema:* la netta separazione tra il middleware di caching e il servizio per la dashboard FinOps facilita la suddivisione del lavoro tra i componenti del gruppo.
 
 === Criticità riscontrate
-- *Complessità del caching semantico:* tarare la soglia di similarità coseno#super[G] e gestire correttamente l'invalidazione della cache (TTL e versioning dei modelli) sono compiti complessi per evitare di servire risposte obsolete o semanticamente scorrette.
+- *Complessità del caching semantico:* tarare la soglia di similarità coseno e gestire correttamente l'invalidazione della cache (TTL e versioning dei modelli) sono compiti complessi per evitare di servire risposte obsolete o semanticamente scorrette.
 - *Difficoltà nella validazione e testing dei modelli:* il vincolo di copertura test $>= 70%$ richiede la netta separazione tra test deterministici e valutazione probabilistica delle similarità degli embedding.
 - *Gestione del multi-tenancy e isolamento dei dati:* garantire la segregazione rigorosa delle metriche e dei dati tra differenti team/progetti nella dashboard FinOps aumenta la complessità architetturale.
 - *Aggregazione dei dati in quasi real-time:* la componente FinOps richiede la raccolta e l'elaborazione continua e performante degli audit log e dei token senza introdurre latenza nell'instradamento delle richieste LLM.
-
-== Capitolato C7 – SmartDashboard
-=== Descrizione
-*Proponente:* Ergon Informatica Srl\
-Il capitolato C7, proposto da Ergon Informatica Srl, richiede lo sviluppo di *SmartDashboard*, una piattaforma di Business Intelligence self-service potenziata dall'intelligenza artificiale, progettata per consentire agli utenti aziendali di consultare, analizzare e interpretare autonomamente i dati provenienti dagli ERP. 
-
-L'architettura di riferimento prevede un Raw Data Store per i dati grezzi, un Data Warehouse basato su un modello dimensionale (star schema) ottimizzato tramite un motore analitico OLAP#super[G] come DuckDB#super[G], e una Web App responsive dotata di dashboard builder drag & drop, libreria di widget interattivi e un assistente AI integrato. Il layer di intelligenza artificiale funge da interprete per generare visualizzazioni in linguaggio naturale, produrre insight automatici, suggerire widget e spiegare le variazioni degli indicatori, protetto da rigorosi controlli di sicurezza e guardrail.
-
-=== Punti di forza
-- *Architettura fortemente disaccoppiata:* Il capitolato propone una netta suddivisione in tre livelli (Raw Data Store, Data Warehouse, Web App). Questa impostazione facilita enormemente la stesura della documentazione architetturale in Typst#super[G] e rende il codice molto più manutenibile e testabile.
-- *Facilità di divisione dei compiti:* Grazie all'impostazione modulare e alla comunicazione tramite API REST, il lavoro all'interno del team può essere parallelizzato con grande efficienza.
-- *Approccio di sviluppo iterativo chiaro:* Il proponente suggerisce di non sviluppare tutto subito, ma di procedere per fasi (MVP della pipeline BI, poi integrazione AI di base, poi insight automatici).
-- *Stack tecnologico bilanciato:* Il progetto unisce tecnologie web classiche con elementi altamente innovativi ma circoscritti, come i database orientati all'analisi e le API dei LLM.
-
-=== Criticità riscontrate
-- *Ampiezza e complessità complessiva:* la realizzazione congiunta di una pipeline ETL#super[G], di un data warehouse dimensionale, di un'interfaccia web self-service avanzata e di un layer AI richiede un impegno sistemistico notevole.
-- *Gestione dell'ambiguità e affidabilità dell'AI:* le richieste in linguaggio naturale possono essere ambigue e presentano il rischio di generare risultati errati ma plausibili.
-- *Progettazione del modello dimensionale:* la corretta modellazione dei dati aziendali in uno schema a stella richiede competenze specifiche di data warehousing per evitare inefficienze nelle aggregazioni.
 
 == Capitolato C9 – SpecCheck
 === Descrizione
@@ -303,7 +300,7 @@ Il sistema si articola principalmente in due fasi:
 Il progetto comprende inoltre la realizzazione di una dashboard integrata (eseguita via plugin) per mostrare lo stato di copertura e dei test con evidenza immediata delle discrepanze, e un installer completo per l'integrazione in OpenCode#super[G] tramite script di installazione automatizzati.
 
 === Punti di forza
-- *Tematica all'avanguardia:* il progetto affronta direttamente i paradigmi più moderni dell'ingegneria del software basata su LLM, focalizzandosi sull'harness engineering#super[G], sulla validazione automatica e sul controllo della coerenza progettuale.
+- *Tematica all'avanguardia:* il progetto affronta direttamente i paradigmi più moderni dell'ingegneria del software basata su LLM, focalizzandosi sull'harness engineering, sulla validazione automatica e sul controllo della coerenza progettuale.
 - *Chiara definizione delle fasi e degli obiettivi:* il perimetro di lavoro è suddiviso in moduli logici ben definiti (parsing dei diagrammi, analisi comportamentale, dashboard integrata e pacchetto di installazione).
 - *Supporto di un proponente strutturato:* l'affiancamento da parte di Zucchetti garantisce un contesto di riferimento solido, orientato alla condivisione di best practices e metodologie di sviluppo innovative.
 

@@ -67,7 +67,7 @@
     ),
     (
       "0.1.0",
-      "3/13/2026",
+      "3/11/2026",
       "Pietro Giulio Bassi",
       "Davide Loparco ",
       "Versione iniziale della Dichiarazione di Impegni e Preventivo Costi per C7-SmartDashboard"

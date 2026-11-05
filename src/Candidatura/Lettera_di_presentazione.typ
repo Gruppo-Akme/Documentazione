@@ -10,6 +10,7 @@
 #let scadenza = "30 marzo 2027"
 
 #let url-valutazione = "https://gruppo-akme.github.io/Documentazione/output/Candidatura/Valutazione%20Capitolati.pdf"
+#let url-verbale = "https://gruppo-akme.github.io/Documentazione/output/Candidatura/Verbali%20Interni/2026-11-03.pdf"
 #let url-preventivo = "https://gruppo-akme.github.io/Documentazione/output/Candidatura/preventivo_costi.pdf"
 #let url-sito = "https://gruppo-akme.github.io/Documentazione/website/"
 #let url-repo = "https://github.com/Gruppo-Akme/Documentazione"
@@ -69,6 +70,13 @@ Tutta la documentazione prodotta dal gruppo è consultabile pubblicamente sul #l
 - *#link(url-valutazione)[Valutazione dei Capitolati v2.0.0]:* documento di analisi e comparazione approfondita delle proposte d'appalto;
 - *#link(url-preventivo)[Dichiarazione degli Impegni e Preventivo Costi v1.0.0]:* analisi dei ruoli, ripartizione oraria ed economica, diagramma PERT e piano di mitigazione dei rischi;
 - *Verbali interni ed esterni:* resoconti formali e tracciati di tutti gli incontri con committente, proponenti e riunioni di coordinamento del team. Segnaliamo inoltre che l'incontro con l'azienda Ergon è stato già effettuato in data odierna, confermandoci la validità del progetto proposto. Il verbale non è ancora visibile perché non abbiamo ancora ricevuto la firma del referente.
+
+= Riassunto modifiche effettuate rispetto alla prima candidatura
+
+In seguito alla mancata assegnazione del primo capitolato, il gruppo ha implementato le seguenti modifiche ai documenti, alla repository e al sito, che si trovano descritte in maggior dettaglio nel  #link(url-verbale)[verbale interno del 03/11/2026]:
+- *Allineamento sui versionamenti*: A seguito delle osservazioni ricevute in sede di revisione, il gruppo ha uniformato la gestione e la tracciabilità delle modifiche all’interno della documentazione.
+- *Correzione template verbali*: In seguito ai rilievi emersi durante la revisione con il docente, sono state apportate alcune modifiche migliorative e correttive alla struttura del template dei verbali (sia interni che esterni)
+- *Aggiornamento documentazione*: A seguito della riconsiderazione delle proposte di capitolato e dei rilievi emersi in sede di revisione, il gruppo ha ravvisato la necessità di aggiornare e redigere daccapo la documentazione essenziale per presentare la nuova candidatura ufficiale.
 
 = Componenti del gruppo
 

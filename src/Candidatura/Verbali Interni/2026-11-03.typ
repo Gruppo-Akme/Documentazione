@@ -3,10 +3,11 @@
 #show: report.with(
   titolo: "Verbale interno 03/11/2026",
   stato: "Approvato",
-  versione: "0.1.0",
+  versione: "1.0.0",
   ora-inizio: "18:00",
   ora-fine: "19:30",
   registro-modifiche: (
+    ("1.0.0", "29/10/2026", "-", "Pietro Giulio Bassi", "Verifica finale"),
     ("0.1.0", "29/10/2026", "Roberto Piovesan", "Marco Giacon", "Prima stesura del documento"),
   ),
   odg: (

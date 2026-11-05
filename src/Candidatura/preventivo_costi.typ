@@ -3,7 +3,7 @@
 #show: body => report(
   titolo: "Dichiarazione degli Impegni",
   stato: "Approvato",
-  versione: "1.0.1",
+  versione: "1.0.0",
   distribuzione: (
     "Akme Group",
     "Prof. Cardin Riccardo",
@@ -17,21 +17,15 @@
   left-signature: "firma-Bassi.jpeg",
   registro-modifiche: (
     (
-      "1.0.1",
-      "Davide Loparco",
-      "Pietro Giulio Bassi",
-      "Correzioni minori"
       "1.0.0",
-      "5/11/2026",
+      "05/11/2026",
       "-",
-      "Pietro Giulio Bassi",
-      "29/10/2026",
       "Pietro Giulio Bassi",
       "Revisione finale documento"
     ),
     (
       "0.7.0",
-      "5/10/2026",
+      "05/11/2026",
       "Pietro Giulio Bassi",
       "Daxin Chen",
       "Diagramma PERT e Analisi dei rischi"
@@ -147,7 +141,7 @@ Di seguito viene illustrata la distribuzione visiva delle ore assegnate a ciascu
       #grid(
         columns: (1fr, auto),
         align: (left, right),
-        [*Distribuzione Ore Ruoli*], [__Totale: 100%__]
+        [*Distribuzione Ore Ruoli*], [*Totale: 100%*]
       )
       #v(6pt)
       #stack(
@@ -227,7 +221,7 @@ Il calcolo del preventivo viene effettuato applicando le tariffe orarie ufficial
       #grid(
         columns: (1fr, auto),
         align: (left, right),
-        [*Distribuzione Costi per Ruolo*], [__Totale: 100%__]
+        [*Distribuzione Costi per Ruolo*], [*Totale: 100%*]
       )
       #v(6pt)
       // Barra unificata al 100% per i costi

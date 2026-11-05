@@ -18,58 +18,58 @@
   registro-modifiche: (
     (
       "1.0.0",
-      "29/10/2026",
-      "Pietro Giulio Bassi",
+      "5/11/2026",
       "-",
+      "Pietro Giulio Bassi",
       "Revisione finale documento"
     ),
     (
       "0.7.0",
-      "28/10/2026",
+      "5/10/2026",
       "Pietro Giulio Bassi",
       "Daxin Chen",
       "Diagramma PERT e Analisi dei rischi"
     ),
     (
       "0.6.0",
-      "28/10/2026",
+      "4/11/2026",
       "Daxin Chen",
       "Pietro Giulio Bassi",
       "Grafico distribuzione costi"
     ),
     (
       "0.5.0",
-      "28/10/2026",
+      "4/11/2026",
       "Roberto Piovesan",
-      "Daxin Chen",
+      "Marco Giacon",
       "Calcoli preventivo costi e tabella corrispettiva"
     ),
     (
       "0.4.0",
-      "27/10/2026",
+      "4/11/2026",
       "Marco Giacon",
       "Roberto Piovesan",
       "Grafico suddivisione oraria e criteri rotazione ruoli"
     ),
     (
       "0.3.0",
-      "27/10/2026",
+      "4/11/2026",
       "Davide Loparco",
-      "Marco Giacon",
+      "Daxin Chen ",
       "Stesura suddivisione oraria dei ruoli e tabella corrispettiva"
     ),
     (
       "0.2.0",
-      "27/10/2026",
+      "3/11/2026",
       "Mattia Cadamuro",
-      "Davide Loparco",
+      "Daxin Chen",
       "Stesura analisi dei ruoli"
     ),
     (
       "0.1.0",
-      "27/10/2026",
+      "3/13/2026",
       "Pietro Giulio Bassi",
-      "Daxin Chen",
+      "Davide Loparco ",
       "Versione iniziale della Dichiarazione di Impegni e Preventivo Costi per C7-SmartDashboard"
     ),
   ),
@@ -181,7 +181,7 @@ Di seguito viene illustrata la distribuzione visiva delle ore assegnate a ciascu
 Il gruppo adotta un piano di rotazione periodica strutturato per massimizzare la crescita formativa di ciascun componente su tutti gli aspetti del ciclo di vita del software:
 - *Frequenza:* La rotazione dei ruoli viene effettuata ogni *2 settimane* (coincidente con l'arco temporale di 2 Sprint di lavoro). Questa cadenza permette un adeguato periodo di inserimento operativo ed evita il disorientamento tipico di rotazioni settimanali troppo rapide.
 - *Copertura:* Ciascun membro del gruppo, nell'arco temporale del progetto didattico, avrà l'opportunità di ricoprire tutti i ruoli previsti, garantendo piena equità formativa.
-- *Gestione dei Conflitti di Interesse:* Le regole di rotazione garantiscono in modo rigoroso l'assenza di conflitti d'interesse: nessun componente può ricoprire contemporaneamente il ruolo di programmatore/progettista e di verificatore sul medesimo artefatto, assicurando così l'indipendenza e l'oggettività delle attività di controllo di qualità.
+- *Gestione dei Conflitti di Interesse:* Le regole di rotazione garantiscono in modo l'assenza di conflitti d'interesse: nessun componente può ricoprire contemporaneamente il ruolo di programmatore/progettista e di verificatore sul medesimo artefatto, assicurando così l'indipendenza e l'oggettività delle attività di controllo di qualità.
 - *Passaggio di Consegne:* Al termine di ogni ciclo di rotazione, ogni membro si impegna a redigere un breve resoconto e a trasferire le competenze acquisite al successore, agevolando la continuità operativa del team.
 
 #pagebreak()

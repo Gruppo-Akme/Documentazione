@@ -300,7 +300,7 @@ Di seguito viene illustrata la rete delle dipendenze logiche e temporali tra le 
         
         nodeTask("01", "Avvio & WoW Setup"), [#text(12pt)[$-->$]], nodeTask("02", "Analisi ETL & DWH"), [#text(12pt)[$-->$]], nodeTask("03", "Studio Tech DuckDB"),
         grid.cell(colspan: 5)[#v(-0.2em)],
-        nodeTask("04", "Progettazione PoC#super[G]"), [#text(12pt)[$-->$]], nodeTask("05", "Sviluppo Pipeline BI"), [#text(12pt)[$-->$]], nodeMilestone("RTB", "Milestone RTB"),
+        nodeTask("04", "Progettazione P.o.C."), [#text(12pt)[$-->$]], nodeTask("05", "Sviluppo Pipeline BI"), [#text(12pt)[$-->$]], nodeMilestone("RTB", "Milestone RTB"),
         
         grid.cell(colspan: 5)[#v(0.5em) #line(length: 80%, stroke: 0.5pt + luma(200)) #v(0.5em)],
         
@@ -323,7 +323,7 @@ Di seguito viene illustrata la rete delle dipendenze logiche e temporali tra le 
 
 == Descrizione del Cammino Critico
 
-1. *Pipeline BI & PoC (Fase RTB):* L'implementazione del flusso di ingestione dei dati grezzi dall'ERP#super[G], la strutturazione del data warehouse con DuckDB e la validazione del modello dimensionale costituiscono il collo di bottiglia principale prima dello sviluppo della web app.
+1. *Pipeline BI & PoC#super[G] (Fase RTB):* L'implementazione del flusso di ingestione dei dati grezzi dall'ERP#super[G], la strutturazione del data warehouse con DuckDB e la validazione del modello dimensionale costituiscono il collo di bottiglia principale prima dello sviluppo della web app.
 2. *Integrazione AI e Validazione MVP (Fase PB):* La configurazione dell'assistente basato su LLM e la connessione sicura con il modello dati precedono il collaudo end-to-end della piattaforma di Business Intelligence.
 
 = Analisi dei Rischi

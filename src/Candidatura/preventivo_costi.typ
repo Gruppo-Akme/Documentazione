@@ -304,9 +304,9 @@ Di seguito viene illustrata la rete delle dipendenze logiche e temporali tra le 
         
         grid.cell(colspan: 5)[#v(0.5em) #line(length: 80%, stroke: 0.5pt + luma(200)) #v(0.5em)],
         
-        nodeTask("06", "Design Web App & UI"), [#text(12pt)[$-->$]], nodeTask("07", "Drag & Drop Builder"), [#text(12pt)[$-->$]], nodeTask("09", "Testing BI & Widget"),
+        nodeTask("06", "Design Web App & UI"), [#text(12pt)[$-->$]], nodeTask("07", "Drag & Drop Builder"), [#text(12pt)[$-->$]], nodeTask("08", "Testing BI & Widget"),
         grid.cell(colspan: 5)[#v(-0.2em)],
-        nodeTask("08", "Integrazione LLM/AI"), [#text(12pt)[$-->$]], nodeTask("09", "Validazione Finale"), [#text(12pt)[$-->$]], nodeMilestone("PB", "MVP Finale")
+        nodeTask("09", "Integrazione LLM/AI"), [#text(12pt)[$-->$]], nodeTask("10", "Validazione Finale"), [#text(12pt)[$-->$]], nodeMilestone("PB", "MVP Finale")
       )
       
       #v(0.8em)
@@ -330,7 +330,7 @@ Di seguito viene illustrata la rete delle dipendenze logiche e temporali tra le 
 
 Il gruppo ha condotto un'attenta analisi dei rischi potenziali legati allo sviluppo del capitolato *C7 - SmartDashboard*, definendo le relative strategie di mitigazione:
 
-1. *Complessità nella modellazione dimensionale e performance ETL:* La trasformazione dei dati grezzi in Star Schema e l'effic eseguito su grandi volumi possono presentare criticità di prestazioni.
+1. *Complessità nella modellazione dimensionale e performance ETL:* La trasformazione dei dati grezzi in Star Schema eseguito su grandi volumi possono presentare criticità di prestazioni.
    - *Mitigazione:* Utilizzo di librerie di manipolazione performanti come Polars e sfruttamento delle ottimizzazioni colonnari di DuckDB.
 2. *Integrazione e affidabilità del Layer AI (LLM):* Gestione delle richieste in linguaggio naturale (Text-to-SQL/Analytics) evitando allucinazioni e garantendo che l'AI operi esclusivamente sui metadati autorizzati.
    - *Mitigazione:* Adozione di API commerciali stabili (GPT/Claude) e introduzione di un rigoroso livello di astrazione e controllo sulle query generate.

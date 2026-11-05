@@ -254,11 +254,6 @@
     spacing: 1.2em,
   )
 
-  if orario-val != none [
-    *Orario:* #orario-val
-    #v(1em)
-  ]
-
   body
 
   // Blocco firme finale

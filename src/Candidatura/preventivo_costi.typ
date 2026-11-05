@@ -330,7 +330,7 @@ Di seguito viene illustrata la rete delle dipendenze logiche e temporali tra le 
 
 Il gruppo ha condotto un'attenta analisi dei rischi potenziali legati allo sviluppo del capitolato *C7 - SmartDashboard*, definendo le relative strategie di mitigazione:
 
-1. *Complessità nella modellazione dimensionale e performance ETL:* La trasformazione dei dati grezzi in Star Schema eseguito su grandi volumi possono presentare criticità di prestazioni.
+1. *Complessità nella modellazione dimensionale e performance ETL:* La trasformazione dei dati grezzi in Star Schema eseguita su grandi volumi possono presentare criticità di prestazioni.
    - *Mitigazione:* Utilizzo di librerie di manipolazione performanti come Polars e sfruttamento delle ottimizzazioni colonnari di DuckDB.
 2. *Integrazione e affidabilità del Layer AI (LLM):* Gestione delle richieste in linguaggio naturale (Text-to-SQL/Analytics) evitando allucinazioni e garantendo che l'AI operi esclusivamente sui metadati autorizzati.
    - *Mitigazione:* Adozione di API commerciali stabili (GPT/Claude) e introduzione di un rigoroso livello di astrazione e controllo sulle query generate.

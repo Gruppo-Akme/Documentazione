@@ -43,7 +43,7 @@ Egregi Professori Vardanega e Cardin,
 
 con la presente il gruppo *Akme Group* desidera formalizzare la propria candidatura ufficiale per la realizzazione del progetto didattico relativo al capitolato d'appalto *#codice: #nome-capitolato* (#sottotitolo-capitolato), proposto dall'azienda *#azienda*.
 
-A seguito della mancata assegnazione del capitolato C2 (Concierge -- Eggon S.r.l.) nella precedente tornata di candidatura, il gruppo si è riunito tempestivamente per riesaminare le alternative progettuali disponibili. Con delibera unanime formalizzata nel Verbale Interno del 3 novembre 2026, il team ha scelto con piena convinzione di ricandidarsi per il capitolato *C7*, riconoscendo in esso un eccellente equilibrio tra solidità ingegneristica, stimolo formativo e concreta sostenibilità delle risorse.
+A seguito della mancata assegnazione del capitolato C2 (Concierge -- Eggon S.r.l.) nella precedente tornata di candidatura, il gruppo si è riunito tempestivamente per riorganizzare la produzione di documenti e il sito facendo tesoro delle indicazioni del professor Vardanega. Ha dunque riesaminato le alternative progettuali disponibili e con delibera unanime formalizzata nel Verbale Interno del 3 novembre 2026, il team ha scelto con piena convinzione di ricandidarsi per il capitolato *C7*, riconoscendo in esso un eccellente equilibrio tra solidità ingegneristica, stimolo formativo e concreta sostenibilità delle risorse.
 
 = Motivazioni della scelta
 

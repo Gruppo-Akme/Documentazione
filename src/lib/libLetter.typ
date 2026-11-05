@@ -70,11 +70,7 @@
     footer: context [
       #set align(right)
       #set text(luma(80), 9pt)
-      Pagina
-      #counter(page).display(
-        "1 di 1",
-        both: true,
-      )
+      Pagina #counter(page).display() di #counter(page).final().first()
     ],
     number-align: center,
   )

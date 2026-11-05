@@ -9,6 +9,7 @@ In questa cartella si trovano tutti i sorgenti [Typst](https://typst.app/) per l
 - **`Templates/`**: contiene i template principali per i documenti:
   - `templateVerbali.typ`: template per i verbali interni ed esterni, provvisto di testata, ordine del giorno, tabella partecipanti, registro modifiche e sezione firme.
   - `templateDocumentiGenerici.typ`: template per documenti ufficiali (Norme di Progetto, Piano di Progetto, Piano di Qualifica, Analisi dei Requisiti, ecc.).
+  - `templateLettera.typ`: template istituzionale per lettere formali di presentazione e candidatura.
   - `templateSlides.typ` e `templateSlidesRTB.typ`: template per presentazioni e slide (basati sul package `polylux`).
 - **`lib/`**: funzioni e moduli di supporto:
   - `libVerbali.typ`: impaginazione, layout prima pagina e blocco firme per i verbali.
@@ -128,26 +129,18 @@ Contenuto del documento...
 ## Esempio d'uso: Lettera formale
 
 ```typst
-#import "../../lib/libLetter.typ": *
+#import "../../Templates/templateLettera.typ": *
 
-#show: almost-tud-letter.with(
-  title: "Lettera di Presentazione",
-  from: (
-    name: "Akme Group",
-    email: "akmeswe@gmail.com",
-  ),
-  to: [
-    Alla cortese attenzione di \
-    Prof. Vardanega Tullio \
-    Prof. Cardin Riccardo \
-  ],
-  date: "2025-10-31",
-  subject: "Candidatura capitolato C...",
-  logo: "../shared/logo-big1.png",
-  htmlId: "Candidatura-Generale",
-  versione: "1.0.0",
+#show: lettera.with(
+  titolo: "Lettera di Presentazione",
+  oggetto: "Candidatura per il capitolato C7 -- SmartDashboard (Ergon Informatica S.r.l.)",
+  versione: "2.0.0",
+  responsabile: "Pietro Giulio Bassi",
+  ruolo-responsabile: "Responsabile di Progetto",
+  left-signature: "firma-Bassi.jpeg",
 )
 
-Egregi professori...
+= Candidatura
+Egregi Professori...
 ```
 

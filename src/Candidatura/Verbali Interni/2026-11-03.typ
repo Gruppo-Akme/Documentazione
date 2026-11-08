@@ -7,8 +7,8 @@
   ora-inizio: "18:00",
   ora-fine: "19:30",
   registro-modifiche: (
-    ("1.0.0", "29/10/2026", "-", "Pietro Giulio Bassi", "Verifica finale"),
-    ("0.1.0", "29/10/2026", "Roberto Piovesan", "Marco Giacon", "Prima stesura del documento"),
+    ("1.0.0", "04/11/2026", "-", "Pietro Giulio Bassi", "Verifica finale"),
+    ("0.1.0", "03/11/2026", "Roberto Piovesan", "Marco Giacon", "Prima stesura del documento"),
   ),
   odg: (
     "Scelta del nuovo capitolato", "Allineamento sui versionamenti", "Correzione template verbali", "Aggiornamento documentazione", 

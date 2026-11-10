@@ -34,7 +34,7 @@ distribuzione: (
     "Ergon Informatica S.r.l.",
   ),
   verificatore-interno: "Pietro Giulio Bassi",
-  left-signature: "firma-bassi.jpeg",
+  left-signature: "firma-Bassi.jpeg",
   verificatore-esterno: "Gianluca Carlesso",
   right-signature: "firma-Carlesso.png",
   tipo-verbale: "esterno",

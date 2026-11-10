@@ -2,11 +2,12 @@
 
 #show: report.with(
   titolo: "Verbale esterno 05/11/2026",
-  stato: "Bozza",
-  versione: "0.2.0",
+  stato: "Approvato",
+  versione: "1.0.0",
   ora-inizio: "14:00",
   ora-fine: "14:15",
   registro-modifiche: (
+    ("1.0.0", "08/11/2026", "-", "Pietro Giulio Bassi", "Approvazione del revisore esterno, verifica e pubblicazione"),
     ("0.2.0", "05/11/2026", "-", "Pietro Giulio Bassi", "Verifica verbale prima della firma da parte del revisore esterno"),
     ("0.1.0", "05/11/2026", "Davide Loparco", "Mattia Cadamuro", "Bozza iniziale del verbale"),
   ),

@@ -65,7 +65,7 @@ Di seguito viene fornita la rendicontazione puntuale dei quesiti trattati e dei 
 
 == Trattamento di dati sensibili
 - *Quesito / Domanda Posta:*\
- _"Considerando i vincoli del GDPR, in che modo dobbiamo gestire l'invio dei dati sensibili della smart dashboard all'Intelligenza Artificiale per garantire la privacy degli utenti?"_
+ _"Considerando i vincoli del GDPR#super[G], in che modo dobbiamo gestire l'invio dei dati sensibili della smart dashboard all'Intelligenza Artificiale per garantire la privacy degli utenti?"_
 - *Sintesi della Risposta (Ergon Informatica S.r.l.):*
  -Il rispetto della privacy e del GDPR si garantisce attraverso un'attenta selezione e minimizzazione dei dati trasmessi all'IA. È fondamentale strutturare correttamente le query, inviando esclusivamente le informazioni strettamente necessarie all'elaborazione ed escludendo i dati sensibili superflui.
 
@@ -89,12 +89,12 @@ Di seguito viene fornita la rendicontazione puntuale dei quesiti trattati e dei 
 
  == Versione mobile
 - *Quesito / Domanda Posta:*\
- _"Per quanto concerne la fruibilità su dispositivi mobili, l'applicativo deve essere progettato come Progressive Web App (PWA), come applicazione nativa dedicata o tramite un approccio web responsive?"_
+ _"Per quanto concerne la fruibilità su dispositivi mobili, l'applicativo deve essere progettato come Progressive Web App (PWA#super[G]), come applicazione nativa dedicata o tramite un approccio web responsive?"_
 - *Sintesi della Risposta (Ergon Informatica S.r.l.):*
  - Il sistema dovrà essere sviluppato esclusivamente come applicazione web responsive, scartando l'ipotesi di un'app nativa.
 
 = Conclusioni e Decisioni Prese
-L'incontro ha permesso di chiarire gli aspetti chiave del progetto e stabilire le linee guida architetturali e operative. La collaborazione sarà supportata da incontri di allineamento regolari con cadenza quindicinale, integrati dall'uso di canali di comunicazione diretta (Teams, Telegram, WhatsApp, email) per la gestione tempestiva di eventuali necessità. Sono state inoltre definite con chiarezza le responsabilità in merito alla fornitura delle risorse per i test e alla definizione delle regole di business.
+L'incontro ha permesso di chiarire gli aspetti chiave del progetto e stabilire le linee guida architetturali e operative. La collaborazione sarà supportata da incontri di allineamento regolari con cadenza quindicinale, integrati dall'uso di canali di comunicazione diretta (Teams, Telegram, WhatsApp#super[G], email) per la gestione tempestiva di eventuali necessità. Sono state inoltre definite con chiarezza le responsabilità in merito alla fornitura delle risorse per i test e alla definizione delle regole di business.
 
 #figure(
   table(

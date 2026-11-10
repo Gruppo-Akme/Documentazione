@@ -36,7 +36,7 @@ distribuzione: (
   verificatore-interno: "Pietro Giulio Bassi",
   left-signature: "firma-bassi.jpeg",
   verificatore-esterno: "Gianluca Carlesso",
-  right-signature: "blank.png",
+  right-signature: "firma-Carlesso.png",
   tipo-verbale: "esterno",
 )
 

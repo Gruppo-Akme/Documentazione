@@ -1,4 +1,6 @@
 {
+  "Business Intelligence": "Insieme di processi, tecniche e strumenti per raccogliere, integrare e analizzare i dati aziendali, trasformandoli in informazioni utili a supportare le decisioni strategiche e operative.",
+  "SmartDashboard": "Interfaccia web interattiva che raccoglie e visualizza in tempo reale dati e indicatori provenienti da più sorgenti per monitorare lo stato del sistema e permettere all'utente di intervenire tramite controlli e notifiche.",
   "Way of working": "Insieme di convenzioni, pratiche, regole e strumenti adottati dai membri del gruppo per coordinarsi ed eseguire le attività di progetto.",
   "Typst": "Linguaggio di markup e sistema di impaginazione moderno utilizzato per la redazione della documentazione ufficiale del gruppo.",
   "GitHub Actions": "Piattaforma di integrazione e distribuzione continua (CI/CD) fornita da GitHub per automatizzare compilazione, test e deploy dei documenti.",

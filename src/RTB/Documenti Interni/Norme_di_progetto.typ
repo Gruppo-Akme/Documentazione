@@ -14,15 +14,28 @@
 #let url-piano_progetto = "manca"
 #let url-piano_qualifica = "manca"
 
+#show outline: it => { 
+  if it.depth == 4 { 
+      it 
+    } else { 
+      let args = it.fields() 
+      args.depth = 4 
+      outline(..args) 
+    } 
+  }
+
+#set heading(numbering: "1.1")
+
 #show: report.with(
   titolo: "Norme di progetto",
   tipo-documento: "RTB - Documento interno",
   stato: "Bozza",
-  versione: "0.2.0",
+  versione: "0.2.1",
   registro-modifiche: (
-    ("0.2.0", "12/11/2026", "Mattia Cadamuro", "", "Aggiunta capitolo 2 e aggiunta link"),
+    ("0.2.1", "13/11/2026", "Marco Giacon", "", "Aggiunta indici oltre x.y, correzioni versione precedente e aggiornamento glossario"),
+    ("0.2.0", "12/11/2026", "Mattia Cadamuro", "Marco Giacon", "Aggiunta capitolo 2 e aggiunta link"),
     ("0.1.1", "11/11/2026", "Marco Giacon", "", "Correzioni minori versione precedente"),
-    ("0.1.0", "25/10/2026", "Mattia Cadamuro", "Marco Giacon", "Creazione e prima stesura documento"),
+    ("0.1.0", "10/11/2026", "Mattia Cadamuro", "Marco Giacon", "Creazione e prima stesura documento"),
   ),
   verificatore-interno: "",
   left-signature: "",
@@ -64,7 +77,7 @@ Per rendere immediata l'individuazione di tali termini, ogni parola afferente al
   #link(url-Gloss)
 
 = Processi primari
-I processi primari definiti dallo standard *ISO/IEC 12207:1995* racchiudono le attività principali del Ciclo di vita del software: acquisizione, fornitura, sviluppo, operazione e manutenzione. Il loro scopo è garantire che i prodotti realizzati rispettino i requisiti e gli obiettivi di qualità prefissati.
+I processi primari definiti dallo standard *ISO/IEC 12207:1995* racchiudono le attività principali del Ciclo di vita#super[G] del software: acquisizione, fornitura, sviluppo, operazione e manutenzione. Il loro scopo è garantire che i prodotti realizzati rispettino i requisiti e gli obiettivi di qualità prefissati.
 
 Nel contesto del progetto didattico, il gruppo applica i seguenti processi primari:
 - #link(<processo-fornitura>)[*Fornitura*]
@@ -77,11 +90,11 @@ L'obiettivo è assicurare che la piattaforma *SmartDashboard* venga sviluppata i
 
 === Strumenti a supporto
 Per la gestione interna della fornitura il gruppo utilizza:
-- *GitHub*: infrastruttura per il controllo di versione e la gestione delle repository di progetto:
-  - *GitHub Issues*: per suddividere le attività del backlog in compiti atomici assegnabili ai singoli membri e per segnalare eventuali anomalie;
-  - *GitHub Projects*: per visualizzare lo stato di avanzamento dei compiti tramite bacheca Kanban e diagrammi di Gantt;
-- *WhatsApp*: per le comunicazioni rapide e asincrone tra i componenti del gruppo;
-- *Discord*: per lo svolgimento delle riunioni interne da remoto.
+- *GitHub#super[G]*: infrastruttura per il controllo di versione e la gestione delle repository di progetto:
+  - *GitHub Issues#super[G]*: per suddividere le attività del backlog in compiti atomici assegnabili ai singoli membri e per segnalare eventuali anomalie;
+  - *GitHub Projects#super[G]*: per visualizzare lo stato di avanzamento dei compiti tramite bacheca Kanban e diagrammi di Gantt;
+- *WhatsApp#super[G]*: per le comunicazioni rapide e asincrone tra i componenti del gruppo;
+- *Discord#super[G]*: per lo svolgimento delle riunioni interne da remoto.
 
 Per le comunicazioni e gli incontri con l'azienda proponente vengono impiegati:
 - *Gmail*: per le comunicazioni formali e l'invio di documentazione all'azienda tramite l'indirizzo del gruppo (`akmeswe@gmail.com`);
@@ -140,12 +153,12 @@ Possono essere consultati sull'appostito #link(url-sito)[sito web] del gruppo.
 Il processo di *sviluppo* comprende tutte le attività tecniche volte alla realizzazione del sistema software *SmartDashboard*. Include l'analisi dei requisiti, la progettazione architetturale e di dettaglio, la codifica, l'integrazione delle componenti e i relativi test.
 
 === Strumenti a supporto
-- *Python* (con librerie *Polars* / *Pandas*): per lo sviluppo delle procedure ETL di estrazione e trasformazione dei dati provenienti dal gestionale ERP;
-- *PostgreSQL*: come database relazionale per il Raw Data Store, destinato a mantenere una copia fedele e storicizzata dei dati grezzi;
-- *DuckDB*: come motore analitico OLAP colonnare per il Data Warehouse, strutturato secondo un modello dimensionale (star schema);
-- *Angular* e *TypeScript*: per lo sviluppo della web app responsive, del costruttore di dashboard self-service e della libreria di widget;
-- *Visual Studio Code*: come ambiente di sviluppo (IDE) per la scrittura del codice;
-- *StarUML*: per la realizzazione dei diagrammi dei casi d'uso e dei diagrammi architetturali UML.
+- *Python#super[G]* (con librerie *Polars#super[G]* / *Pandas#super[G]*): per lo sviluppo delle procedure ETL#super[G] di estrazione e trasformazione dei dati provenienti dal gestionale ERP;
+- *PostgreSQL#super[G]*: come database relazionale per il Raw Data Store#super[G], destinato a mantenere una copia fedele e storicizzata dei dati grezzi;
+- *DuckDB#super[G]*: come motore analitico OLAP#super[G] colonnare per il Data Warehouse#super[G], strutturato secondo un modello dimensionale (star schema);
+- *Angular#super[G]* e *TypeScript#super[G]*: per lo sviluppo della web app responsive, del costruttore di dashboard self-service e della libreria di widget;
+- *Visual Studio Code#super[G]*: come ambiente di sviluppo (IDE#super[G]) per la scrittura del codice;
+- *StarUML#super[G]*: per la realizzazione dei diagrammi dei casi d'uso e dei diagrammi architetturali UML#super[G].
 
 === Attività previste
 Il processo di sviluppo prevede le seguenti attività:
@@ -153,7 +166,7 @@ Il processo di sviluppo prevede le seguenti attività:
 - *Analisi dei requisiti di sistema*: individuazione delle esigenze degli utenti finali (direzione, vendite, logistica) e definizione delle funzionalità attese dal sistema complessivo;
 - *Progettazione dell'architettura di sistema*: definizione dell'architettura di alto livello, mantenendo la separazione logica tra Raw Data Store, Data Warehouse e App;
 - *Analisi dei requisiti software*: specifica puntuale dei requisiti funzionali, non funzionali, di dominio e di vincolo per ciascuna componente software, inclusi i controlli di coerenza e i guardrail per il layer AI;
-- *Progettazione dell'architettura software*: traduzione dei requisiti in una struttura modulare che definisca componenti, schemi dati, API REST e interfacce di comunicazione con l'LLM;
+- *Progettazione dell'architettura software*: traduzione dei requisiti in una struttura modulare che definisca componenti, schemi dati, API REST#super[G] e interfacce di comunicazione con l'LLM#super[G];
 - *Progettazione dettagliata del software*: definizione di dettaglio dei singoli moduli e delle unità software prima della loro implementazione;
 - *Codifica e test del software*: scrittura del codice sorgente delle singole unità software ed esecuzione dei relativi test di unità per verificarne il funzionamento in isolamento;
 - *Integrazione del software*: assemblaggio progressivo dei moduli sviluppati (pipeline dati, backend, frontend e assistente AI) verificandone la corretta interazione;
@@ -163,7 +176,7 @@ Il processo di sviluppo prevede le seguenti attività:
 - *Installazione del software*: predisposizione del prodotto software per l'esecuzione nell'ambiente operativo;
 - *Supporto all'accettazione del software*: affiancamento al committente e alla proponente durante i test di accettazione finali.
 
-In relazione alle due baseline principali del progetto didattico, il gruppo concentra nella fase *RTB* l'*analisi dei requisiti* e la realizzazione del *Proof of Concept* (PoC) per validare la fattibilità tecnologica. Nella successiva fase *PB* vengono invece approfondite la *progettazione dell'architettura software*, la *progettazione dettagliata* e la *codifica* del prodotto finale.
+In relazione alle due baseline principali del progetto didattico, il gruppo concentra nella fase *RTB* l'*analisi dei requisiti* e la realizzazione del *Proof of Concept* (PoC#super[G]) per validare la fattibilità tecnologica. Nella successiva fase *PB* vengono invece approfondite la *progettazione dell'architettura software*, la *progettazione dettagliata* e la *codifica* del prodotto finale.
 
 === Analisi dei Requisiti
 L'attività di *analisi dei requisiti* ha l'obiettivo di raccogliere, analizzare e formalizzare le richieste dell'azienda proponente emerse dal *Capitolato C7* e dagli incontri periodici, traducendole in requisiti non ambigui e verificabili.

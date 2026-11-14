@@ -61,7 +61,7 @@ Il dominio è quello della Business Intelligence aziendale, del Data Warehousing
 - *Ingegneria dei dati ed ETL#super[G]:* estrazione, pulizia e trasformazione di dati gestionali grezzi (vendite, ordini, logistica) tramite librerie ad alte prestazioni (es. Polars) in un modello dimensionale a stella;
 - *Motori analitici e storage:* utilizzo di database analitici colonnari (DuckDB) disaccoppiati dal database relazionale di servizio e storicizzazione;
 - *Frontend e data visualization:* sviluppo di una web app responsive in React#super[G] con builder a griglia interattiva, widget personalizzabili e supporto all'esportazione;
-- *Layer AI e LLM#super[G]:* integrazione di modelli linguistici tramite API commerciali (GPT/Claude) gestiti secondo un approccio a livelli per Text-to-Analytics, generazione di insight e assistente conversazionale.
+- *Layer AI e LLM#super[G]:* integrazione di modelli linguistici tramite API commerciali (GPT/Claude) gestiti secondo un approccio a livelli per Text-to-Analytics#super[G], generazione di insight e assistente conversazionale.
 
 == Motivazioni della scelta
 - *Architettura fortemente disaccoppiata e pulita:* La netta suddivisione in tre livelli (Raw Data Store, Data Warehouse, Web App) semplifica la progettazione formale, l'organizzazione dei moduli del software e la stesura della documentazione architetturale in Typst#super[G], migliorando manutenibilità e testabilità.

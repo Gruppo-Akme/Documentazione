@@ -179,7 +179,7 @@ Di seguito viene illustrata la distribuzione visiva delle ore assegnate a ciascu
 == Criteri di Rotazione dei Ruoli
 
 Il gruppo adotta un piano di rotazione periodica strutturato per massimizzare la crescita formativa di ciascun componente su tutti gli aspetti del ciclo di vita del software:
-- *Frequenza:* La rotazione dei ruoli viene effettuata ogni *2 settimane* (coincidente con l'arco temporale di 2 Sprint di lavoro). Questa cadenza permette un adeguato periodo di inserimento operativo ed evita il disorientamento tipico di rotazioni settimanali troppo rapide.
+- *Frequenza:* La rotazione dei ruoli viene effettuata ogni *2 settimane* (coincidente con l'arco temporale di 2 Sprint#super[G] di lavoro). Questa cadenza permette un adeguato periodo di inserimento operativo ed evita il disorientamento tipico di rotazioni settimanali troppo rapide.
 - *Copertura:* Ciascun membro del gruppo, nell'arco temporale del progetto didattico, avrà l'opportunità di ricoprire tutti i ruoli previsti, garantendo piena equità formativa.
 - *Gestione dei Conflitti di Interesse:* Le regole di rotazione garantiscono in modo l'assenza di conflitti d'interesse: nessun componente può ricoprire contemporaneamente il ruolo di programmatore/progettista e di verificatore sul medesimo artefatto, assicurando così l'indipendenza e l'oggettività delle attività di controllo di qualità.
 - *Passaggio di Consegne:* Al termine di ogni ciclo di rotazione, ogni membro si impegna a redigere un breve resoconto e a trasferire le competenze acquisite al successore, agevolando la continuità operativa del team.

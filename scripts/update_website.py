@@ -27,6 +27,7 @@ GLOSSARY_JSON = SRC_DIR / "glossario.json"
 
 # Sezioni e categorie fisse previste in website/index.html
 SECTIONS_CATEGORIES = {
+    "rtb": ["Documenti Esterni", "Documenti Interni", "Verbali Esterni", "Verbali Interni"],
     "candidatura": ["Documenti", "Verbali Esterni", "Verbali Interni"],
     "diapositive": ["Presentazioni"],
 }
@@ -155,8 +156,18 @@ def sort_document_key(item):
         doc_priority = 1
     elif "dichiarazione" in title_lower or "impegni" in title_lower or "preventivo" in path_lower or "costi" in path_lower:
         doc_priority = 2
-    elif "valutazione" in title_lower or "valutazione" in path_lower:
+    elif "norme" in title_lower or "norme" in path_lower or "ndp" in title_lower:
         doc_priority = 3
+    elif "analisi" in title_lower or "analisi" in path_lower or "adr" in title_lower:
+        doc_priority = 4
+    elif "piano di progetto" in title_lower or "piano_di_progetto" in path_lower or "pdp" in title_lower:
+        doc_priority = 5
+    elif "piano di qualifica" in title_lower or "piano_di_qualifica" in path_lower or "pdq" in title_lower:
+        doc_priority = 6
+    elif "glossario" in title_lower or "glossario" in path_lower:
+        doc_priority = 7
+    elif "valutazione" in title_lower or "valutazione" in path_lower:
+        doc_priority = 8
     else:
         doc_priority = 10
 
@@ -188,17 +199,19 @@ def map_path_to_section_and_category(rel_path):
 
     elif "rtb" in section_folder:
         sec_id = "rtb"
-        sub = parts[1].lower() if len(parts) > 2 else ""
-        if "intern" in sub and "verb" in sub:
+        sub_str = " ".join(parts[1:]).lower()
+        if "intern" in sub_str and "verb" in sub_str:
             cat = "Verbali Interni"
-        elif "estern" in sub and "verb" in sub:
+        elif "estern" in sub_str and "verb" in sub_str:
             cat = "Verbali Esterni"
-        elif "intern" in sub:
-            cat = "Documenti Interni"
-        elif "estern" in sub:
+        elif "verb" in sub_str:
+            cat = "Verbali Interni"
+        elif "estern" in sub_str or "analisi" in sub_str or "piano" in sub_str or "lettera" in sub_str:
             cat = "Documenti Esterni"
-        else:
+        elif "intern" in sub_str or "norme" in sub_str or "glossario" in sub_str:
             cat = "Documenti Interni"
+        else:
+            cat = "Documenti Esterni"
         return sec_id, cat
 
     elif "pb" in section_folder:

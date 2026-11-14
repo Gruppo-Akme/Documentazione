@@ -133,7 +133,24 @@
   "Repository": "Archivio centralizzato dove vengono memorizzati, gestiti e condivisi dati, file, documenti o codice sorgente.",
   "Issue": "Scheda digitale integrata in una repository che serve a tracciare problemi, bug, funzionalità, idee o attività da svolgere all'interno di un progetto.",
   "Issue tracking": "Sistema integrato (GitHub issues) che permette di tracciare le issue.",
-  "Knowledge Base": "Archivio digitale centralizzato e strutturato che raccoglie informazioni, dati, regole e soluzioni su un determinato argomento, prodotto, servizio o processo."
+  "Knowledge Base": "Archivio digitale centralizzato e strutturato che raccoglie informazioni, dati, regole e soluzioni su un determinato argomento, prodotto, servizio o processo.",
+  "Business Intelligence": "Insieme di processi, metodologie e tecnologie che trasformano dati aziendali grezzi in informazioni strutturate, report e analisi a supporto delle decisioni strategiche e operative.",
+  "Dashboard": "Interfaccia grafica interattiva che aggrega e visualizza in un'unica vista indicatori chiave di prestazione (KPI), grafici e tabelle per monitorare l'andamento dei dati aziendali.",
+  "Agile": "Approccio allo sviluppo software basato su iterazioni brevi e incrementali, collaborazione continua con gli stakeholder e adattamento rapido ai cambiamenti dei requisiti.",
+  "Sprint": "Iterazione temporale di durata fissa (nel progetto pari a due settimane) all'interno del framework Scrum, al termine della quale viene rilasciato un incremento verificato del prodotto o della documentazione.",
+  "Scrum": "Framework Agile per la gestione iterativa e incrementale dei progetti software, strutturato attorno a ruoli definiti, Sprint e cerimonie periodiche di pianificazione e retrospettiva.",
+  "Sprint Planning": "Riunione svolta all'inizio di ciascuno Sprint per definire gli obiettivi dell'iterazione, assegnare i ruoli, pianificare le attività e stimare l'impegno orario.",
+  "Sprint Retrospective": "Riunione svolta al termine di ciascuno Sprint per analizzare l'andamento del lavoro, redigere il consuntivo, valutare i rischi occorsi e individuare miglioramenti organizzativi.",
+  "Star Schema": "Modello di organizzazione dei dati tipico dei Data Warehouse, composto da una tabella centrale dei fatti (misure quantitative) collegata direttamente a più tabelle delle dimensioni (attributi descrittivi).",
+  "Data Warehouse": "Archivio centrale di dati storici e integrati, progettato e ottimizzato per l'analisi multidimensionale e il supporto alle decisioni aziendali.",
+  "Polars": "Libreria open-source ad alte prestazioni per la manipolazione e l'analisi di DataFrame, progettata per elaborare rapidamente grandi volumi di dati tabellari tramite esecuzione parallela e colonnare.",
+  "Text-to-Analytics": "Funzionalità basata su modelli linguistici che consente agli utenti di interrogare i dati e generare grafici o metriche formulando richieste in linguaggio naturale.",
+  "Guardrail": "Meccanismo di controllo e validazione interposto tra un modello di intelligenza artificiale e il sistema applicativo per filtrare gli input, verificare gli output e prevenire comportamenti errati o non sicuri.",
+  "Milestone": "Traguardo intermedio o finale di rilevanza critica nella pianificazione di progetto (come le revisioni RTB e PB), associato alla consegna di artefatti concordati.",
+  "RTB": "Requirements and Technology Baseline: prima revisione di avanzamento del progetto didattico, finalizzata a consolidare l'analisi dei requisiti, le norme di lavoro e la fattibilità tecnologica tramite un Proof of Concept.",
+  "PB": "Product Baseline: revisione finale del progetto didattico che attesta il completamento della progettazione architetturale, dell'implementazione del prodotto (MVP) e della relativa verifica.",
+  "Stakeholder": "Qualsiasi soggetto, interno o esterno al gruppo di lavoro (committenti, azienda proponente, utenti finali, team), che ha un interesse o un ruolo nell'andamento e nei risultati del progetto.",
+  "Capitolato d'appalto": "Documento formale redatto dall'azienda proponente che descrive il contesto, gli obiettivi, i requisiti e i vincoli del prodotto software da realizzare."
 }
 
 

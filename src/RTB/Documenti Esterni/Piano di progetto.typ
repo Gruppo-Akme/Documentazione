@@ -12,7 +12,8 @@
   ),
   tipo-documento: "Documento esterno",
   registro-modifiche: (
-    ("0.1.0", "14/11/2026", "Pietro Giulio Bassi", "DaXin Chen", "Prima stesura del Piano di Progetto: Introduzione, Analisi dei Rischi, Pianificazione a lungo termine e Preventivo Sprint 1"),
+    ("0.2.0", "14/11/2026", "Davide Loparco", "DaXin Chen", "Assegnazione ruoli e calcolo preventivo Sprint 1"),
+    ("0.1.0", "14/11/2026", "Pietro Giulio Bassi", "DaXin Chen", "Prima stesura del Piano di Progetto: Introduzione, Analisi dei Rischi, Pianificazione a lungo termine"),
   ),
   mostra-indice: true,
 )
@@ -293,17 +294,17 @@ Come stabilito durante la riunione di pianificazione del 10/11/2026, per lo Spri
   table.header([*Componente*], [*Resp.*], [*Amm.*], [*Anal.*], [*Prog.*], [*Progr.*], [*Verif.*], [*Totale*]),
   [Pietro Giulio Bassi], [—], [—], [5], [—], [—], [—], [5],
   [Roberto Piovesan], [—], [—], [5], [—], [—], [—], [5],
-  [Marco Giacon], [—], [—], [5], [—], [—], [—], [5],
+  [Marco Giacon], [—], [—], [—], [—], [—], [5], [5],
   [DaXin Chen], [—], [—], [—], [—], [—], [5], [5],
   [Mattia Cadamuro], [—], [—], [5], [—], [—], [—], [5],
   [Davide Loparco], [5], [—], [—], [—], [—], [—], [5],
-  [*Totale Ore*], [*5*], [*0*], [*20*], [*0*], [*0*], [*5*], [*30*],
+  [*Totale Ore*], [*5*], [*0*], [*15*], [*0*], [*0*], [*10*], [*30*],
 )
 
-Il costo totale preventivato per lo Sprint 1 ammonta a *725,00 €*, così ripartito per ruolo:
+Il costo totale preventivato per lo Sprint 1 ammonta a *675,00 €*, così ripartito per ruolo:
 - *Responsabile*: 5 ore × 30,00 €/h = 150,00 €
 - *Amministratore*: 0 ore × 20,00 €/h = 0,00 €
-- *Analista*: 20 ore × 25,00 €/h = 500,00 €
+- *Analista*: 15 ore × 25,00 €/h = 375,00 €
 - *Progettista*: 0 ore × 25,00 €/h = 0,00 €
 - *Programmatore*: 0 ore × 15,00 €/h = 0,00 €
-- *Verificatore*: 5 ore × 15,00 €/h = 75,00 €
+- *Verificatore*: 10 ore × 15,00 €/h = 150,00 €

@@ -1,5 +1,13 @@
+body {
+    max-width: 1584px;
+}
+
 header {
     width: 198px;
+}
+
+main {
+    max-width: none;
 }
 
 nav {

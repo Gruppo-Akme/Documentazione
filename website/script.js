@@ -93,3 +93,73 @@ if (sections.length > 0 && navLinks.length > 0) {
   updateActiveSection();
   window.addEventListener("load", updateActiveSection);
 }
+
+// --- Animazione di comparsa allo scroll per file e contenuti ---
+const initScrollReveal = () => {
+  const itemsToReveal = document.querySelectorAll("main section h4, main section h3, .member-item");
+  if (!itemsToReveal.length) return;
+
+  // Rispetta la preferenza di movimento ridotto dell'utente
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+
+  itemsToReveal.forEach(el => el.classList.add("reveal-item"));
+
+  const revealElement = (el, delay = 0) => {
+    if (!el.classList.contains("revealed")) {
+      if (delay > 0) {
+        setTimeout(() => el.classList.add("revealed"), delay);
+      } else {
+        el.classList.add("revealed");
+      }
+    }
+  };
+
+  const checkVisibility = () => {
+    const unrevealed = document.querySelectorAll(".reveal-item:not(.revealed)");
+    if (!unrevealed.length) return;
+
+    const isMainScrollable = main && (main.scrollHeight > main.clientHeight) && window.getComputedStyle(main).overflowY !== "visible";
+    const containerTop = isMainScrollable ? main.getBoundingClientRect().top : 0;
+    const containerBottom = isMainScrollable ? main.getBoundingClientRect().bottom : window.innerHeight;
+
+    unrevealed.forEach((el, index) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < containerBottom - 20 && rect.bottom > containerTop + 20) {
+        revealElement(el, index * 35);
+      }
+    });
+  };
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          revealElement(entry.target, index * 40);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.1,
+      rootMargin: "0px 0px -20px 0px"
+    });
+
+    itemsToReveal.forEach(el => observer.observe(el));
+  }
+
+  // Verifica immediata e allo scroll (supporta sia lo scroll interno di main che quello globale di window)
+  checkVisibility();
+  if (main) {
+    main.addEventListener("scroll", checkVisibility, { passive: true });
+  }
+  window.addEventListener("scroll", checkVisibility, { passive: true });
+  window.addEventListener("load", checkVisibility);
+};
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initScrollReveal);
+} else {
+  initScrollReveal();
+}

@@ -133,7 +133,12 @@
   "Repository": "Archivio centralizzato dove vengono memorizzati, gestiti e condivisi dati, file, documenti o codice sorgente.",
   "Issue": "Scheda digitale integrata in una repository che serve a tracciare problemi, bug, funzionalità, idee o attività da svolgere all'interno di un progetto.",
   "Issue tracking": "Sistema integrato (GitHub issues) che permette di tracciare le issue.",
-  "Knowledge Base": "Archivio digitale centralizzato e strutturato che raccoglie informazioni, dati, regole e soluzioni su un determinato argomento, prodotto, servizio o processo."
+  "Knowledge Base": "Archivio digitale centralizzato e strutturato che raccoglie informazioni, dati, regole e soluzioni su un determinato argomento, prodotto, servizio o processo.",
+  "Text-to-Analytics": "Tecnologia basata sull'intelligenza artificiale che consente agli utenti di esplorare, interrogare e visualizzare basi di dati utilizzando domande in linguaggio naturale.",
+  "Sprint": "Iterazione temporale a durata fissa all'interno della quale il team di sviluppo lavora per realizzare un incremento di prodotto testato, funzionante e potenzialmente rilasciabile.",
+  "Sprint Planning": "Evento Scrum che segna l'inizio formale di uno Sprint, durante il quale il team collabora per stabilire gli obiettivi e il piano di lavoro per l'iterazione imminente.",
+  "Sprint Retrospective": "Incontro che chiude il ciclo temporale dello Sprint, dedicato all'ispezione e al miglioramento continuo del processo metodologico.",
+  "Scrum": "Framework metodologico Agile e iterativo utilizzato per lo sviluppo, la consegna e la gestione di prodotti complessi."
 }
 
 

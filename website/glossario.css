@@ -8,6 +8,7 @@ header {
 
 main {
     max-width: none;
+    scroll-snap-type: none !important;
 }
 
 nav {
@@ -66,7 +67,10 @@ h2 {
 }
 
 main section {
-    min-height: auto;
+    display: block !important;
+    animation: none !important;
+    scroll-snap-align: none !important;
+    min-height: auto !important;
     margin: 0 8%;
     padding: var(--section-top-padding) 0 var(--section-bottom-padding) 0;
 }

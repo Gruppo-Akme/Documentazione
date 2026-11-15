@@ -52,13 +52,13 @@ Vengono illustrate le motivazioni che hanno portato alla candidatura per il capi
 = Capitolato Selezionato: C7 – SmartDashboard
 == Descrizione
 *Proponente:* Ergon Informatica S.r.l. \
-Il capitolato C7 richiede lo sviluppo di *SmartDashboard*, una piattaforma di Business Intelligence self-service potenziata dall'intelligenza artificiale, progettata per consentire agli utenti aziendali di consultare, analizzare e interpretare autonomamente i dati provenienti dagli ERP#super[G].
+Il capitolato C7 richiede lo sviluppo di *SmartDashboard*, una piattaforma di Business Intelligence#super[G] self-service potenziata dall'intelligenza artificiale, progettata per consentire agli utenti aziendali di consultare, analizzare e interpretare autonomamente i dati provenienti dagli ERP#super[G].
 
-L'architettura di riferimento prevede un Raw Data Store per la raccolta e storicizzazione dei dati grezzi, un Data Warehouse basato su un modello dimensionale (star schema) ottimizzato tramite un motore analitico OLAP#super[G] come DuckDB#super[G], e una Web App responsive dotata di dashboard builder drag & drop, libreria di widget interattivi e un assistente AI integrato. Il layer di intelligenza artificiale funge da interprete per generare visualizzazioni a partire da richieste in linguaggio naturale, produrre insight automatici, suggerire widget e spiegare le variazioni degli indicatori, protetto da rigorosi controlli di sicurezza e guardrail.
+L'architettura di riferimento prevede un Raw Data Store per la raccolta e storicizzazione dei dati grezzi, un Data Warehouse#super[G] basato su un modello dimensionale (star schema) ottimizzato tramite un motore analitico OLAP#super[G] come DuckDB#super[G], e una Web App responsive dotata di dashboard builder drag & drop, libreria di widget interattivi e un assistente AI integrato. Il layer di intelligenza artificiale funge da interprete per generare visualizzazioni a partire da richieste in linguaggio naturale, produrre insight automatici, suggerire widget e spiegare le variazioni degli indicatori, protetto da rigorosi controlli di sicurezza e guardrail.
 
 == Dominio
 Il dominio è quello della Business Intelligence aziendale, del Data Warehousing e dell'integrazione di sistemi di AI per l'analisi dati. Dal punto di vista tecnico il progetto riguarda:
-- *Ingegneria dei dati ed ETL#super[G]:* estrazione, pulizia e trasformazione di dati gestionali grezzi (vendite, ordini, logistica) tramite librerie ad alte prestazioni (es. Polars) in un modello dimensionale a stella;
+- *Ingegneria dei dati ed ETL#super[G]:* estrazione, pulizia e trasformazione di dati gestionali grezzi (vendite, ordini, logistica) tramite librerie ad alte prestazioni (es. Polars#super[G]) in un modello dimensionale a stella;
 - *Motori analitici e storage:* utilizzo di database analitici colonnari (DuckDB) disaccoppiati dal database relazionale di servizio e storicizzazione;
 - *Frontend e data visualization:* sviluppo di una web app responsive in React#super[G] con builder a griglia interattiva, widget personalizzabili e supporto all'esportazione;
 - *Layer AI e LLM#super[G]:* integrazione di modelli linguistici tramite API commerciali (GPT/Claude) gestiti secondo un approccio a livelli per Text-to-Analytics#super[G], generazione di insight e assistente conversazionale.
@@ -126,7 +126,7 @@ Le tecnologie consigliate sono Java#super[G] con Spring Boot, LangChain4j#super[
 - *Tecnologie attuali e varie:* il progetto unisce LLM, speech-to-text, OCR e visione artificiale, un insieme di competenze molto spendibili.
 - *Ambito concreto e comprensibile:* automatizzare l'inserimento di ordini e richieste è un caso d'uso chiaro, con benefici evidenti per l'azienda.
 - *Stack consigliato e architettura indicata:* il capitolato propone strumenti consolidati (Java/Spring Boot, Angular) e uno schema architetturale di partenza.
-- *Supporto del proponente:* San Marco affianca il gruppo con figure dedicate per supporto tecnico e setup degli ambienti, con metodologia Agile e referenti indicati.
+- *Supporto del proponente:* San Marco affianca il gruppo con figure dedicate per supporto tecnico e setup degli ambienti, con metodologia Agile#super[G] e referenti indicati.
 - *Struttura modulare:* è richiesta un'architettura che permetta di aggiungere in futuro nuovi canali e funzionalità.
 
 === Criticità riscontrate
@@ -268,7 +268,7 @@ La piattaforma integra un assistente conversazionale basato su architettura RAG 
 - *Adattamento delle pipeline AI alla lingua italiana:* alcuni servizi clinici nativi in cloud (es. Amazon Comprehend Medical#super[G]) sono disponibili solo in inglese, imponendo al gruppo la progettazione di pipeline alternative per l'estrazione di entità da testi in italiano.
 - *Elevata articolazione funzionale e integrazione dei moduli:* la convivenza di assistente RAG, motore di workflow per le scadenze, gestione documentale e comunicazioni richiede un'attenta coordinazione dei servizi cloud asincroni e degli eventi.
 
-== Capitolato C6 – Caching Semantico e Dashboard FinOps
+== Capitolato C6 – Caching Semantico e Dashboard#super[G] FinOps
 === Descrizione
 *Proponente:* Var Group \
 Il capitolato C6, proposto da Var Group, richiede di estendere il proxy open source *LiteLLM#super[G]* attraverso lo sviluppo di due componenti originali volte a ottimizzare l'uso dei modelli di intelligenza artificiale generativa in contesti aziendali: un sistema di caching semantico e una dashboard FinOps. 

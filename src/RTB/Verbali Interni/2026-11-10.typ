@@ -72,12 +72,12 @@ I ruoli assegnati sono i seguenti:
 Il gruppo ha deciso di contattare via mail l'azienda Ergon per fissare un incontro volto a discutere in maniera più approfondita le specifiche del progetto e le aspettative dell'azienda, nonché stabilire i canali di comunicazione e la cadenza degli incontri futuri.
 
 == Preparazione teorica e studio individuale
-In vista dell'incontro programmato con l'azienda Ergon, il gruppo ha delineato la necessità per ogni componente di svolgere una preparazione teorica e uno studio individuale delle tecnologie proposte all'interno del capitolato C7: Smart Dashboard. Inoltre, è stato deciso di approfondire la conoscenza dei diagrammi d'uso, in quanto strumento fondamentale per la comprensione dei requisiti e la formalizzazione dei casi d'uso.
+In vista dell'incontro programmato con l'azienda Ergon, il gruppo ha delineato la necessità per ogni componente di svolgere una preparazione teorica e uno studio individuale delle tecnologie proposte all'interno del capitolato C7: Smart Dashboard#super[G]. Inoltre, è stato deciso di approfondire la conoscenza dei diagrammi d'uso, in quanto strumento fondamentale per la comprensione dei requisiti e la formalizzazione dei casi d'uso.
 
 È stato infine concordato di creare un documento condiviso per raccogliere le informazioni e le domande da porre all'azienda, in modo da arrivare all'incontro con una base di conoscenze comune e una lista di quesiti da discutere.
 
 == Suddivisione dei compiti per la stesura dei nuovi documenti
-Con l'avvio della fase di *RTB*, è stato stabilito che gli analisti dedicheranno la maggior parte del loro impegno alla stesura della documentazione, ripartendo il carico di lavoro tra Norme di Progetto, Piano di Progetto e Analisi dei Requisiti. Trattandosi dei primi passi di questo percorso, l'attività fungerà soprattutto da palestra formativa, in particolare per l'Analisi dei Requisiti, che richiede una chiara comprensione e formalizzazione dei casi d'uso, argomento che verrà inizialmente trattato assieme all'azienda Ergon proprio nell'incontro programmato.
+Con l'avvio della fase di *RTB#super[G]*, è stato stabilito che gli analisti dedicheranno la maggior parte del loro impegno alla stesura della documentazione, ripartendo il carico di lavoro tra Norme di Progetto, Piano di Progetto e Analisi dei Requisiti. Trattandosi dei primi passi di questo percorso, l'attività fungerà soprattutto da palestra formativa, in particolare per l'Analisi dei Requisiti, che richiede una chiara comprensione e formalizzazione dei casi d'uso, argomento che verrà inizialmente trattato assieme all'azienda Ergon proprio nell'incontro programmato.
 
 Per rendere la produzione dei documenti più fluida ed evitare conflitti o sovrapposizioni sui file, i componenti del team incaricati della redazione hanno deciso di coordinarsi adottando un flusso di lavoro prevalentemente asincrono.
 

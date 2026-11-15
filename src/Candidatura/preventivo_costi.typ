@@ -78,7 +78,7 @@
 
 = Introduzione
 
-Il gruppo *Akme Group* si impegna formalmente alla realizzazione del Capitolato *C7 - SmartDashboard: piattaforma di Business Intelligence self-service potenziata da AI*, proposto dall'azienda *Ergon Informatica S.r.l.*, nell'ambito del corso di Ingegneria del Software presso l'Università degli Studi di Padova (A.A. 2026/2027).
+Il gruppo *Akme Group* si impegna formalmente alla realizzazione del Capitolato *C7 - SmartDashboard: piattaforma di Business Intelligence#super[G] self-service potenziata da AI*, proposto dall'azienda *Ergon Informatica S.r.l.*, nell'ambito del corso di Ingegneria del Software presso l'Università degli Studi di Padova (A.A. 2026/2027).
 
 Con la presente dichiarazione, i 6 membri del gruppo assumono l'impegno di svolgere con responsabilità, trasparenza e continuità tutte le attività necessarie alla consegna dell'MVP#super[G] (Minimum Viable Product), rispettando le scadenze concordate, le regole del Progetto Didattico e gli standard di qualità definiti.
 
@@ -88,7 +88,7 @@ I ruoli all'interno del gruppo vengono definiti secondo il regolamento didattico
 
 - *Responsabile#super[G] (Resp):* Coordina il gruppo, gestisce la pianificazione e le risorse, pianifica le milestone e rappresenta l'interfaccia verso committente e proponente.
 - *Amministratore#super[G] (Amm):* Gestisce l'infrastruttura di lavoro (repository, pipeline di CI/CD, issue tracking) e cura la manutenzione del Way of Working#super[G].
-- *Analista#super[G] (Analist):* Definisce i requisiti funzionali e non funzionali specifici della SmartDashboard (pipeline ETL#super[G], Data Warehouse, modello dimensionale Star Schema, integrazione LLM#super[G]).
+- *Analista#super[G] (Analist):* Definisce i requisiti funzionali e non funzionali specifici della SmartDashboard (pipeline ETL#super[G], Data Warehouse#super[G], modello dimensionale Star Schema#super[G], integrazione LLM#super[G]).
 - *Progettista#super[G] (Progett):* Definisce l'architettura tecnica a tre livelli, la struttura del motore analitico DuckDB#super[G], le interfacce API REST#super[G] e il layer di intelligenza artificiale conversazionale.
 - *Programmatore#super[G] (Programm):* Implementa il codice per la web application responsive, il costruttore drag-and-drop di dashboard, la libreria di widget e il pannello assistente AI.
 - *Verificatore#super[G] (Verif):* Esegue attività di test unitari, di integrazione, di sistema e validazione delle visualizzazioni generate e dell'accuratezza delle risposte dell'assistente AI.
@@ -261,7 +261,7 @@ Il calcolo del preventivo viene effettuato applicando le tariffe orarie ufficial
 
 = Pianificazione Temporale e Diagramma PERT
 
-Il progetto è articolato sulle milestone principali del corso: *RTB (Requirements and Technology Baseline)* e *PB (Product Baseline)*.
+Il progetto è articolato sulle milestone principali del corso: *RTB#super[G] (Requirements and Technology Baseline)* e *PB#super[G] (Product Baseline)*.
 
 == Diagramma PERT delle Attività
 
@@ -300,7 +300,7 @@ Di seguito viene illustrata la rete delle dipendenze logiche e temporali tra le 
         
         nodeTask("01", "Avvio & WoW Setup"), [#text(12pt)[$-->$]], nodeTask("02", "Analisi ETL & DWH"), [#text(12pt)[$-->$]], nodeTask("03", "Studio Tech DuckDB"),
         grid.cell(colspan: 5)[#v(-0.2em)],
-        nodeTask("04", "Progettazione P.o.C."), [#text(12pt)[$-->$]], nodeTask("05", "Sviluppo Pipeline BI"), [#text(12pt)[$-->$]], nodeMilestone("RTB", "Milestone RTB"),
+        nodeTask("04", "Progettazione P.o.C."), [#text(12pt)[$-->$]], nodeTask("05", "Sviluppo Pipeline BI"), [#text(12pt)[$-->$]], nodeMilestone("RTB", "Milestone#super[G] RTB"),
         
         grid.cell(colspan: 5)[#v(0.5em) #line(length: 80%, stroke: 0.5pt + luma(200)) #v(0.5em)],
         
@@ -331,7 +331,7 @@ Di seguito viene illustrata la rete delle dipendenze logiche e temporali tra le 
 Il gruppo ha condotto un'attenta analisi dei rischi potenziali legati allo sviluppo del capitolato *C7 - SmartDashboard*, definendo le relative strategie di mitigazione:
 
 1. *Complessità nella modellazione dimensionale e performance ETL:* La trasformazione dei dati grezzi in Star Schema eseguita su grandi volumi possono presentare criticità di prestazioni.
-   - *Mitigazione:* Utilizzo di librerie di manipolazione performanti come Polars e sfruttamento delle ottimizzazioni colonnari di DuckDB.
+   - *Mitigazione:* Utilizzo di librerie di manipolazione performanti come Polars#super[G] e sfruttamento delle ottimizzazioni colonnari di DuckDB.
 2. *Integrazione e affidabilità del Layer AI (LLM):* Gestione delle richieste in linguaggio naturale (Text-to-SQL/Analytics) evitando allucinazioni e garantendo che l'AI operi esclusivamente sui metadati autorizzati.
    - *Mitigazione:* Adozione di API commerciali stabili (GPT/Claude) e introduzione di un rigoroso livello di astrazione e controllo sulle query generate.
 3. *Superamento del budget orario disponibile:* Rischio di sovrastima o sottostima dell'impegno richiesto per lo sviluppo congiunto della parte BI e delle funzionalità avanzate di intelligenza artificiale.

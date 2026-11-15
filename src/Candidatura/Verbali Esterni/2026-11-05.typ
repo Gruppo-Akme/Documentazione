@@ -42,7 +42,7 @@ distribuzione: (
 )
 
 = Introduzione
-Il presente verbale attesta lo svolgimento dell'incontro di chiarimento ed approfondimento tenutosi in data *5 novembre 2026*, dalle ore 14:00 alle ore 14:15, in modalità telematica via videoconferenza (Microsoft Teams). La riunione è stata organizzata per discutere dettagli di vario genere relativi al *Capitolato C7: Smart Dashboard*, proposto dall'azienda *Ergon Informatica S.r.l.* (Via per Salvatronda 21, Salvarosa TV) nell'ambito del corso di Ingegneria del Software (A.A. 2026/2027) del Corso di Laurea in Informatica presso l'Università degli Studi di Padova.
+Il presente verbale attesta lo svolgimento dell'incontro di chiarimento ed approfondimento tenutosi in data *5 novembre 2026*, dalle ore 14:00 alle ore 14:15, in modalità telematica via videoconferenza (Microsoft Teams). La riunione è stata organizzata per discutere dettagli di vario genere relativi al *Capitolato C7: Smart Dashboard#super[G]*, proposto dall'azienda *Ergon Informatica S.r.l.* (Via per Salvatronda 21, Salvarosa TV) nell'ambito del corso di Ingegneria del Software (A.A. 2026/2027) del Corso di Laurea in Informatica presso l'Università degli Studi di Padova.
 
 All'incontro hanno preso parte:
 - *Gianluca Carlesso* (Software Developer, Ergon Informatica S.r.l.) - Referente Aziendale Proponente;

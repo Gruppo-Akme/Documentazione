@@ -57,11 +57,11 @@ I ruoli assegnati sono i seguenti:
       inset: (y: 7pt, x: 6pt),
 
       [*Ruolo*], [*Incaricato*],
-      [Responsabile], [Davide Loparco],
-      [Analista], [Roberto Piovesan],
+      [Responsabile#super[G]], [Davide Loparco],
+      [Analista#super[G]], [Roberto Piovesan],
       [Analista], [Mattia Cadamuro],
       [Analista], [Pietro Giulio Bassi],
-      [Verificatore], [Marco Giacon],
+      [Verificatore#super[G]], [Marco Giacon],
       [Verificatore], [Chen Daxin],
     ),
   ),
@@ -84,11 +84,11 @@ Per rendere la produzione dei documenti più fluida ed evitare conflitti o sovra
 Infine, è stato stabilito che il sito di riferimento della repository automatizzata dovrà essere aggiornato con il passaggio a RTB, in modo da rendere disponibili i nuovi documenti e a oscurare quelli obsoleti.
 
 == Allineamento sulle Norme di Progetto
-La discussione si è successivamente concentrata sul documento delle Norme di Progetto, che definisce il *way of working* del gruppo. Per continuare la stesura si è deciso di focalizzarsi sui canali di comunicazione utilizzati, le GitHub Actions della repository automatizzata, la sua organizzazione generale e i flussi di lavoro operativi. 
+La discussione si è successivamente concentrata sul documento delle Norme di Progetto, che definisce il *way of working* del gruppo. Per continuare la stesura si è deciso di focalizzarsi sui canali di comunicazione utilizzati, le GitHub Actions#super[G] della repository automatizzata, la sua organizzazione generale e i flussi di lavoro operativi. 
 
 In particolare, confrontandosi con l'analista Mattia Cadamuro in vista dell'avvio della stesura, è emersa la necessità di integrare un aggiornamento fondamentale del registro delle modifiche, recependo le osservazioni del professor Vardanega: l'ultima versione di ogni documento deve corrispondere al rilascio ufficiale effettuato dal responsabile, il quale agisce e firma su un prodotto precedentemente verificato. Di conseguenza, salvo eccezioni documentate, la penultima versione dovrà riportare esplicitamente nell'oggetto la dicitura "verifica finale del documento", redatta dal verificatore attivo nello sprint in corso. 
 
-Infine, è stato concordato di inserire nelle norme anche le linee guida per la generazione locale dei file PDF tramite Typst all'interno di VS Code, formalizzando questo ulteriore flusso di lavoro utilizzato per la visualizzazione in tempo reale e la sperimentazione delle modifiche prima di procedere con il commit e il push.
+Infine, è stato concordato di inserire nelle norme anche le linee guida per la generazione locale dei file PDF tramite Typst#super[G] all'interno di VS Code, formalizzando questo ulteriore flusso di lavoro utilizzato per la visualizzazione in tempo reale e la sperimentazione delle modifiche prima di procedere con il commit e il push.
 
 = Decisioni e attività
 In data 17/11/2026 alle ore 18:00 è prevista una nuova riunione interna per valutare l'andamento del primo sprint e discutere dell'incontro programmato con Ergon.
@@ -102,7 +102,7 @@ A seguire, la suddivisione dello svolgimento delle attività di questa settimana
     fill: none,
     inset: (y: 7pt, x: 6pt),
 
-    [*ID*], [*Azione*], [*Incaricato*], [*Scadenza*], [*Issue*],
+    [*ID*], [*Azione*], [*Incaricato*], [*Scadenza*], [*Issue#super[G]*],
     [A1], [Studio individuale tecnologie azienda e Diagrammi d'Uso], [Tutti], [13/11/2026], [-],
     [A2], [Continuazione stesura Norme di progetto (verbali e generazione PDF da Typst)], [Mattia Cadamuro, Marco Giacon], [17/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/32")[\#32]],
     [A3], [Stesura verbale interno odierno], [Roberto Piovesan], [13/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/42")[\#42]],

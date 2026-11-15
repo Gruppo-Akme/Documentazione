@@ -6,7 +6,7 @@ SRC_DIR="src"
 OUT_DIR="output"
 SCRIPTS_DIR="scripts"
 
-# File specifico passato come argomento opzionale (es. ./compile.sh "src/Candidatura/Verbali Interni/2026-10-15.typ")
+# File specifico passato come argomento opzionale (es. ./compile.sh "src/RTB/Verbali Interni/2026-11-15.typ")
 TARGET_FILE="$1"
 
 echo "=========================================================="

@@ -3,7 +3,7 @@
 #show: report.with(
   titolo: "Piano di Progetto",
   stato: "Bozza",
-  versione: "0.1.0",
+  versione: "1.0.0",
   distribuzione: (
     "Akme Group",
     "Ergon Informatica S.r.l.",
@@ -12,6 +12,7 @@
   ),
   tipo-documento: "Documento esterno",
   registro-modifiche: (
+    ("1.0.0", "15/11/2026", "Davide Loparco", "-", "Approvazione e prima pubblicazione"),
     ("0.2.0", "14/11/2026", "Davide Loparco", "DaXin Chen", "Assegnazione ruoli e calcolo preventivo Sprint 1"),
     ("0.1.0", "14/11/2026", "Pietro Giulio Bassi", "DaXin Chen", "Prima stesura del Piano di Progetto: Introduzione, Analisi dei Rischi, Pianificazione a lungo termine"),
   ),

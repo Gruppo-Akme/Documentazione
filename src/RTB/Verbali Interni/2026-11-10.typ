@@ -7,10 +7,12 @@
   ora-inizio: "18:00",
   ora-fine: "19:30",
   registro-modifiche: (
+    ("1.0.0", "15/11/2026", "Davide Loparco", "-", "Rilascio ufficiale del documento"),
+    ("0.2.0", "15/11/2026", "Roberto Piovesan", "Marco Giacon", "Correzioni ortografiche e verifica finale del documento"),
     ("0.1.0", "12/11/2026", "Roberto Piovesan", "Chen DaXin", "Prima stesura del documento"),
   ),
   odg: (
-    "Assegnazione ruoli per lo Sprint", 
+    "Assegnazione ruoli per lo sprint", 
     "Contatto con l'azienda Ergon",
     "Preparazione teorica e studio individuale", 
     "Suddivisione dei compiti per la stesura dei nuovi documenti",
@@ -35,13 +37,13 @@
 )
 
 = Informazioni generali
-Con il presente verbale si certifica che Akme Group si è riunito in data 10/11/2026 dalle 18:00 alle 19:30 con l'intento di discutere l'assegnazione dei ruoli per il primo Sprint, delineare le modalità di studio individuale per prepararci all'incontro con l'azienda Ergon, e definire la suddivisione dei compiti per la stesura dei nuovi documenti di progetto. Inoltre, il gruppo ha affrontato la questione dell'allineamento sulla modalità di redazione delle Norme di Progetto, decidendo anche come apportare le correzioni finali ai registri delle modifiche, a seguito delle osservazioni ricevute dal Prof. Vardanega.
+Con il presente verbale si certifica che Akme Group si è riunito in data 10/11/2026 dalle 18:00 alle 19:30 con l'intento di discutere l'assegnazione dei ruoli per il primo sprint, delineare le modalità di studio individuale per prepararci all'incontro con l'azienda Ergon, e definire la suddivisione dei compiti per la stesura dei nuovi documenti di progetto. Inoltre, il gruppo ha affrontato la questione dell'allineamento sulla modalità di redazione delle Norme di Progetto, decidendo anche come apportare le correzioni finali ai registri delle modifiche, a seguito delle osservazioni ricevute dal Prof. Vardanega.
 
 = Resoconto
 
-== Assegnazione ruoli per lo Sprint
+== Assegnazione ruoli per lo sprint
 La distribuzione dei ruoli per questo ciclo è stata definita valutando la disponibilità di ciascun componente del gruppo. È prevista una nuova rotazione degli incarichi trascorse due settimane dalla data del verbale.
-La stesura e l'impostazione dei documenti è stata affidata agli analisti, mentre la revisione è stata affidata a un verificatore.
+La stesura e l'impostazione dei documenti è stata affidata a tre analisti, mentre la revisione è stata affidata a due verificatori.
 I ruoli assegnati sono i seguenti:
 
 #figure(
@@ -56,14 +58,14 @@ I ruoli assegnati sono i seguenti:
 
       [*Ruolo*], [*Incaricato*],
       [Responsabile], [Davide Loparco],
-      [Analista], [Marco Giacon],
+      [Analista], [Roberto Piovesan],
       [Analista], [Mattia Cadamuro],
       [Analista], [Pietro Giulio Bassi],
-      [Analista], [Roberto Piovesan],
+      [Verificatore], [Marco Giacon],
       [Verificatore], [Chen Daxin],
     ),
   ),
-  caption: [Ruoli assegnati per lo Sprint in corso],
+  caption: [Ruoli assegnati per lo sprint in corso],
 ) <tab-ruoli>
 
 == Contatto con l'azienda Ergon
@@ -75,21 +77,21 @@ In vista dell'incontro programmato con l'azienda Ergon, il gruppo ha delineato l
 È stato infine concordato di creare un documento condiviso per raccogliere le informazioni e le domande da porre all'azienda, in modo da arrivare all'incontro con una base di conoscenze comune e una lista di quesiti da discutere.
 
 == Suddivisione dei compiti per la stesura dei nuovi documenti
-Con l'avvio della fase di RTB, è stato stabilito che gli analisti dedicheranno la maggior parte del loro impegno alla stesura della documentazione, ripartendo il carico di lavoro tra Norme di Progetto, Analisi dei Requisiti e Piano di Progetto. Trattandosi dei primi passi di questo percorso, l'attività fungerà soprattutto da palestra formativa, in particolare per l'Analisi dei Requisiti, che richiede una chiara comprensione e formalizzazione dei casi d'uso, argomento che verrà inizialmente trattato assieme all'azienda Ergon proprio nell'incontro programmato.
+Con l'avvio della fase di *RTB*, è stato stabilito che gli analisti dedicheranno la maggior parte del loro impegno alla stesura della documentazione, ripartendo il carico di lavoro tra Norme di Progetto, Analisi dei Requisiti e Piano di Progetto. Trattandosi dei primi passi di questo percorso, l'attività fungerà soprattutto da palestra formativa, in particolare per l'Analisi dei Requisiti, che richiede una chiara comprensione e formalizzazione dei casi d'uso, argomento che verrà inizialmente trattato assieme all'azienda Ergon proprio nell'incontro programmato.
 
 Per rendere la produzione dei documenti più fluida ed evitare conflitti o sovrapposizioni sui file, i componenti del team incaricati della redazione hanno deciso di coordinarsi adottando un flusso di lavoro prevalentemente asincrono.
 
 Infine, è stato stabilito che il sito di riferimento della repository automatizzata dovrà essere aggiornato con il passaggio a RTB, in modo da rendere disponibili i nuovi documenti e a oscurare quelli obsoleti.
 
 == Allineamento sulle Norme di Progetto
-La discussione si è successivamente concentrata sul documento delle Norme di Progetto, che definisce il *way of working* del gruppo. Per iniziarne la stesura si è deciso di focalizzarsi sui canali di comunicazione utilizzati, le GitHub Actions della repository automatizzata, la sua organizzazione generale e i flussi di lavoro operativi. 
+La discussione si è successivamente concentrata sul documento delle Norme di Progetto, che definisce il *way of working* del gruppo. Per continuare la stesura si è deciso di focalizzarsi sui canali di comunicazione utilizzati, le GitHub Actions della repository automatizzata, la sua organizzazione generale e i flussi di lavoro operativi. 
 
-In particolare, confrontandosi con gli analisti Mattia Cadamuro e Marco Giacon in vista dell'avvio della stesura, è emersa la necessità di integrare un aggiornamento fondamentale del registro delle modifiche, recependo le osservazioni del professor Vardanega: l'ultima versione di ogni documento deve corrispondere al rilascio ufficiale effettuato dal responsabile, il quale agisce e firma su un prodotto precedentemente verificato. Di conseguenza, salvo eccezioni documentate, la penultima versione dovrà riportare esplicitamente nell'oggetto la dicitura "verifica finale del documento", redatta dal verificatore attivo nello sprint in corso. 
+In particolare, confrontandosi con l'analista Mattia Cadamuro in vista dell'avvio della stesura, è emersa la necessità di integrare un aggiornamento fondamentale del registro delle modifiche, recependo le osservazioni del professor Vardanega: l'ultima versione di ogni documento deve corrispondere al rilascio ufficiale effettuato dal responsabile, il quale agisce e firma su un prodotto precedentemente verificato. Di conseguenza, salvo eccezioni documentate, la penultima versione dovrà riportare esplicitamente nell'oggetto la dicitura "verifica finale del documento", redatta dal verificatore attivo nello sprint in corso. 
 
 Infine, è stato concordato di inserire nelle norme anche le linee guida per la generazione locale dei file PDF tramite Typst all'interno di VS Code, formalizzando questo ulteriore flusso di lavoro utilizzato per la visualizzazione in tempo reale e la sperimentazione delle modifiche prima di procedere con il commit e il push.
 
 = Decisioni e attività
-In data 17/11/2026 alle ore 18:00 è prevista una nuova riunione interna per valutare l'andamento del primo Sprint.
+In data 17/11/2026 alle ore 18:00 è prevista una nuova riunione interna per valutare l'andamento del primo sprint con la sprint retrospective.
 
 A seguire, la suddivisione dello svolgimento delle attività di questa settimana.
 
@@ -103,7 +105,7 @@ A seguire, la suddivisione dello svolgimento delle attività di questa settimana
 
     [*ID*], [*Azione*], [*Incaricato*], [*Scadenza*], [*Issue*],
     [A1], [Studio individuale tecnologie azienda e Diagrammi d'Uso], [Tutti], [13/11/2026], [-],
-    [A2], [Continuazione Prima stesura Norme di progetto (verbali e generazione PDF da Typst)], [Mattia Cadamuro, Marco Giacon], [17/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/32")[\#32]],
+    [A2], [Continuazione stesura Norme di progetto (verbali e generazione PDF da Typst)], [Mattia Cadamuro, Marco Giacon], [17/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/32")[\#32]],
     [A3], [Stesura verbale interno odierno], [Roberto Piovesan], [13/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/42")[\#42]],
     [A4], [Prima stesura Piano di progetto e suddivisione ruoli/sprint], [Chen DaXin, Pietro Giulio Bassi], [17/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/43")[\#43]],
     [A5], [Aggiornamento sito passaggio a RTB], [Chen DaXin], [17/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/44")[\#44]],

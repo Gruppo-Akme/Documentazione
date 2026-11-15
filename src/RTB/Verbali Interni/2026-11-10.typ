@@ -91,8 +91,7 @@ In particolare, confrontandosi con l'analista Mattia Cadamuro in vista dell'avvi
 Infine, è stato concordato di inserire nelle norme anche le linee guida per la generazione locale dei file PDF tramite Typst all'interno di VS Code, formalizzando questo ulteriore flusso di lavoro utilizzato per la visualizzazione in tempo reale e la sperimentazione delle modifiche prima di procedere con il commit e il push.
 
 = Decisioni e attività
-In data 17/11/2026 alle ore 18:00 è prevista una nuova riunione interna per valutare l'andamento del primo sprint con la sprint retrospective.
-
+In data 17/11/2026 alle ore 18:00 è prevista una nuova riunione interna per valutare l'andamento del primo sprint e discutere dell'incontro programmato con Ergon.
 A seguire, la suddivisione dello svolgimento delle attività di questa settimana.
 
 #figure(

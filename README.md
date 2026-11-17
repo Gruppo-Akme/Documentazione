@@ -11,7 +11,7 @@ Repository ufficiale per la gestione e la redazione della documentazione di prog
 | **Roberto** | Piovesan | `2101065` | [roberto.piovesan@studenti.unipd.it](mailto:roberto.piovesan@studenti.unipd.it) |
 | **Marco** | Giacon | `2123537` | [marco.giacon.4@studenti.unipd.it](mailto:marco.giacon.4@studenti.unipd.it) |
 | **Pietro Giulio** | Bassi | `2137999` | [pietrogiulio.bassi@studenti.unipd.it](mailto:pietrogiulio.bassi@studenti.unipd.it) |
-| **DaXin** | Chen | `2148627` | [chendaxin04@gmail.com](mailto:chendaxin04@gmail.com) |
+| **DaXin** | Chen | `2148627` | [chendaxin04@gmail.com](daxin.chen@studenti.unipd.it) |
 | **Mattia** | Cadamuro | `2111534` | [mattia.cadamuro.2@studenti.unipd.it](mailto:mattia.cadamuro.2@studenti.unipd.it) |
 | **Davide** | Loparco | `2101088` | [davide.loparco@studenti.unipd.it](mailto:davide.loparco@studenti.unipd.it) |
 

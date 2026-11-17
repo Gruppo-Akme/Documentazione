@@ -1,9 +1,11 @@
 #import "../../Templates/templateDocumentiGenerici.typ": report
 
+#set outline(depth: 3)
+
 #show: report.with(
   titolo: "Piano di Progetto",
   stato: "Bozza",
-  versione: "0.1.0",
+  versione: "0.3.0",
   distribuzione: (
     "Akme Group",
     "Ergon Informatica S.r.l.",
@@ -12,11 +14,63 @@
   ),
   tipo-documento: "Documento esterno",
   registro-modifiche: (
+    ("0.3.0", "17/11/2026", "Pietro Giulio Bassi", "DaXin Chen", "Aggiunta diagramma PERT, grafici di ripartizione ore/costi e diagramma di Gantt per lo Sprint 1; estensione profondità indice"),
     ("0.2.0", "14/11/2026", "Davide Loparco", "DaXin Chen", "Assegnazione ruoli e calcolo preventivo Sprint 1"),
     ("0.1.0", "14/11/2026", "Pietro Giulio Bassi", "DaXin Chen", "Prima stesura del Piano di Progetto: Introduzione, Analisi dei Rischi, Pianificazione a lungo termine"),
   ),
   mostra-indice: true,
 )
+
+#let gantt-sprint(titolo-sprint, giorni, attivita) = {
+  let num-giorni = giorni.len()
+  let cols = (36%,) + (1fr,) * num-giorni
+  align(center)[
+    #block(
+      fill: rgb("#f8f9fa"),
+      inset: 12pt,
+      radius: 6pt,
+      stroke: 0.5pt + luma(200),
+      [
+        #align(left)[
+          #text(weight: "bold", size: 10.5pt, fill: rgb("#1a2a3a"))[#titolo-sprint]
+        ]
+        #v(6pt)
+        #table(
+          columns: cols,
+          align: (left + horizon,) + (center + horizon,) * num-giorni,
+          stroke: 0.4pt + luma(210),
+          inset: (x: 2pt, y: 4pt),
+          fill: (x, y) => if y == 0 { rgb("#e9ecef") } else { white },
+          [*Attività / Task*],
+          ..giorni.map(g => text(size: 6.5pt, weight: "bold")[#g]),
+          ..attivita.map(item => {
+            let (nome, inizio, fine, colore) = item
+            (
+              text(size: 7.5pt)[#nome],
+              ..range(num-giorni).map(i => {
+                let giorno-corrente = i + 1
+                if giorno-corrente >= inizio and giorno-corrente <= fine {
+                  rect(width: 100%, height: 8pt, fill: colore, radius: 1.5pt)
+                } else {
+                  []
+                }
+              })
+            )
+          }).flatten()
+        )
+        #v(6pt)
+        #grid(
+          columns: (auto, auto, auto),
+          column-gutter: 1.5em,
+          align: horizon,
+          [#box(square(size: 7pt, fill: rgb("#9013FE"), radius: 1.5pt)) #text(7.5pt)[Coordinamento / Resp.]],
+          [#box(square(size: 7pt, fill: rgb("#B8E986"), radius: 1.5pt)) #text(7.5pt)[Analisi e Stesura]],
+          [#box(square(size: 7pt, fill: rgb("#50E3C2"), radius: 1.5pt)) #text(7.5pt)[Verifica e Automazione]],
+        )
+      ]
+    )
+  ]
+}
 
 = Introduzione
 
@@ -214,10 +268,66 @@ Applicando i costi orari ufficiali previsti dal regolamento del corso, il preven
   [*Totale Preventivo*], [*558*], [—], [*11.130,00 €*],
 )
 
-== Calendario e milestone di progetto
+== Calendario, milestone e Diagramma PERT
 Il percorso di sviluppo è scandito dalle due revisioni di avanzamento principali previste dal corso di Ingegneria del Software:
 - *Requirements and Technology Baseline (RTB)* — consegna prevista entro il *20/01/2027*: consolidamento dell'analisi dei requisiti, definizione completa delle norme e delle metriche di qualità, e realizzazione di un Proof of Concept (PoC#super[G]) volto a dimostrare la fattibilità tecnica dell'integrazione tra ingestion/ETL (Polars), motore analitico (DuckDB), web application (React) e layer AI;
 - *Product Baseline (PB)* — consegna finale prevista entro il *30/03/2027*: completamento della progettazione architetturale, implementazione del Minimum Viable Product (MVP#super[G]) comprensivo di pipeline BI end-to-end, dashboard builder drag & drop e assistente AI conversazionale, validato tramite suite di test automatizzati e corredato dalla documentazione completa.
+
+Di seguito viene illustrata la rete delle dipendenze logiche e temporali tra le macro-attività di progetto tramite il Diagramma PERT definito in fase di pianificazione:
+
+#align(center)[
+  #block(
+    fill: rgb("#f8f9fa"),
+    inset: 16pt,
+    radius: 8pt,
+    stroke: 0.5pt + luma(180),
+    [
+      #text(weight: "bold", size: 12pt, fill: rgb("#1a2a3a"))[Diagramma PERT delle Attività - Capitolato C7]
+      #v(0.8em)
+      
+      #let nodeTask(num, textLabel) = block(
+        fill: rgb("#4A90E2"),
+        inset: (x: 8pt, y: 6pt),
+        radius: 6pt,
+        stroke: 1pt + rgb("#2A52BE"),
+        align(center)[#text(fill: white, weight: "bold", size: 9pt)[#num] \ #text(fill: white, size: 8pt)[#textLabel]]
+      )
+      
+      #let nodeMilestone(num, textLabel) = block(
+        fill: rgb("#E94B3C"),
+        inset: (x: 8pt, y: 6pt),
+        radius: 12pt,
+        stroke: 1pt + rgb("#B22222"),
+        align(center)[#text(fill: white, weight: "bold", size: 9pt)[#num] \ #text(fill: white, size: 8pt)[#textLabel]]
+      )
+
+      #grid(
+        columns: (1fr, auto, 1fr, auto, 1fr),
+        align: center + horizon,
+        row-gutter: 1.2em,
+        
+        nodeTask("01", "Avvio & WoW Setup"), [#text(12pt)[$-->$]], nodeTask("02", "Analisi ETL & DWH"), [#text(12pt)[$-->$]], nodeTask("03", "Studio Tech DuckDB"),
+        grid.cell(colspan: 5)[#v(-0.2em)],
+        nodeTask("04", "Progettazione P.o.C."), [#text(12pt)[$-->$]], nodeTask("05", "Sviluppo Pipeline BI"), [#text(12pt)[$-->$]], nodeMilestone("RTB", "Milestone#super[G] RTB"),
+        
+        grid.cell(colspan: 5)[#v(0.5em) #line(length: 80%, stroke: 0.5pt + luma(200)) #v(0.5em)],
+        
+        nodeTask("06", "Design Web App & UI"), [#text(12pt)[$-->$]], nodeTask("07", "Drag & Drop Builder"), [#text(12pt)[$-->$]], nodeTask("08", "Testing BI & Widget"),
+        grid.cell(colspan: 5)[#v(-0.2em)],
+        nodeTask("09", "Integrazione LLM/AI"), [#text(12pt)[$-->$]], nodeTask("10", "Validazione Finale"), [#text(12pt)[$-->$]], nodeMilestone("PB", "MVP Finale")
+      )
+      
+      #v(0.8em)
+      #grid(
+        columns: (auto, auto),
+        column-gutter: 1.5em,
+        align: horizon,
+        [#box(square(size: 8pt, fill: rgb("#4A90E2"), radius: 2pt)) #text(8pt)[Attività Progetto]],
+        [#box(square(size: 8pt, fill: rgb("#E94B3C"), radius: 4pt)) #text(8pt)[Milestone di Rilascio]]
+      )
+    ]
+  )
+]
 
 == Attività previste per la RTB
 Nella fase di *Requirements and Technology Baseline*, gli sforzi del team si concentrano sulla definizione metodologica, sull'analisi puntuale del dominio SmartDashboard e sulla validazione tecnologica:
@@ -278,6 +388,25 @@ Nel dettaglio, le attività pianificate per lo Sprint 1 sono:
 - avvio dell'*Analisi dei Requisiti*, fungendo da palestra formativa per la formalizzazione dei casi d'uso da approfondire poi con Ergon;
 - aggiornamento del sito web di riferimento della repository automatizzata per il passaggio alla fase RTB, rendendo disponibili i nuovi documenti e oscurando quelli obsoleti della candidatura (Issue #link("https://github.com/Gruppo-Akme/Documentazione/issues/44")[\#44]), oltre alla stesura e verifica dei verbali interni (Issue #link("https://github.com/Gruppo-Akme/Documentazione/issues/42")[\#42]).
 
+==== Diagramma di Gantt — Sprint 1
+Di seguito viene riportata la pianificazione temporale delle attività previste lungo le due settimane dello Sprint 1 (dal 10/11/2026 al 24/11/2026):
+
+#gantt-sprint(
+  "Diagramma di Gantt — Sprint 1 (10/11/2026 – 24/11/2026)",
+  ("10/11", "11/11", "12/11", "13/11", "14/11", "15/11", "16/11", "17/11", "18/11", "19/11", "20/11", "21/11", "22/11", "23/11", "24/11"),
+  (
+    ("Contatto Ergon e org. colloquio (#45)", 1, 4, rgb("#9013FE")),
+    ("Studio tech C7 e diagrammi casi d'uso", 1, 5, rgb("#B8E986")),
+    ("Stesura verbale interno 10/11 (#42)", 1, 4, rgb("#B8E986")),
+    ("Prima stesura Norme di Progetto (#32)", 2, 12, rgb("#B8E986")),
+    ("Prima stesura Piano di Progetto (#43)", 2, 12, rgb("#B8E986")),
+    ("Avvio Analisi dei Requisiti", 5, 13, rgb("#B8E986")),
+    ("Aggiornamento sito passaggio RTB (#44)", 3, 8, rgb("#50E3C2")),
+    ("Riunione intermedia di allineamento", 8, 8, rgb("#9013FE")),
+    ("Verifica documenti e chiusura Sprint", 11, 15, rgb("#50E3C2")),
+  )
+)
+
 ==== Rischi attesi
 Per questo primo periodo di lavoro si ritengono particolarmente rilevanti i seguenti rischi:
 - *RO1 (Sottostima o sovrastima dell'impegno orario)*: trattandosi del primo Sprint operativo della fase RTB, la taratura delle ore produttive necessarie per lo studio delle tecnologie e l'impostazione dei nuovi documenti può presentare margini di incertezza;
@@ -286,7 +415,7 @@ Per questo primo periodo di lavoro si ritengono particolarmente rilevanti i segu
 - *RP3 (Incomprensioni operative)*: l'adozione di un flusso di lavoro prevalentemente asincrono per la redazione simultanea di più documenti in Typst richiede il rigoroso rispetto delle nuove convenzioni sulle Norme di Progetto per evitare sovrapposizioni sui file e difformità nei registri delle modifiche.
 
 ==== Preventivo
-Come stabilito durante la riunione di pianificazione del 10/11/2026, per lo Sprint 1 i ruoli sono stati assegnati concentrando le risorse sulle figure di *Responsabile* (Davide Loparco), *Analista* (Marco Giacon, Mattia Cadamuro, Pietro Giulio Bassi, Roberto Piovesan) e *Verificatore* (DaXin Chen). Nessuna ora è allocata ai ruoli di Amministratore, Progettista e Programmatore, in quanto l'impegno del periodo è interamente rivolto all'impostazione documentale, allo studio preliminare e al coordinamento con il proponente.
+Come stabilito durante la riunione di pianificazione del 10/11/2026, per lo Sprint 1 i ruoli sono stati assegnati concentrando le risorse sulle figure di *Responsabile* (Davide Loparco), *Analista* (Pietro Giulio Bassi, Roberto Piovesan, Mattia Cadamuro) e *Verificatore* (Marco Giacon, DaXin Chen). Nessuna ora è allocata ai ruoli di Amministratore, Progettista e Programmatore, in quanto l'impegno del periodo è interamente rivolto all'impostazione documentale, allo studio preliminare e al coordinamento con il proponente.
 
 #table(
   columns: (28%, 10%, 10%, 10%, 10%, 11%, 10%, 11%),
@@ -308,3 +437,94 @@ Il costo totale preventivato per lo Sprint 1 ammonta a *675,00 €*, così ripar
 - *Progettista*: 0 ore × 25,00 €/h = 0,00 €
 - *Programmatore*: 0 ore × 15,00 €/h = 0,00 €
 - *Verificatore*: 10 ore × 15,00 €/h = 150,00 €
+
+===== Grafico della Suddivisione Oraria per Ruolo — Sprint 1
+Di seguito viene illustrata la distribuzione visiva delle ore preventivate per lo Sprint 1 ($30h$ complessive):
+
+#align(center)[
+  #block(
+    fill: rgb("#f8f9fa"),
+    inset: 14pt,
+    radius: 6pt,
+    stroke: 0.5pt + luma(200),
+    [
+      #grid(
+        columns: (1fr, auto),
+        align: (left, right),
+        [*Distribuzione Ore Ruoli — Sprint 1*], [*Totale: 100%*]
+      )
+      #v(6pt)
+      #stack(
+        dir: ltr,
+        rect(width: 50.0%, height: 12pt, fill: rgb("#B8E986")), // Analista (15h)
+        rect(width: 33.3%, height: 12pt, fill: rgb("#50E3C2")), // Verificatore (10h)
+        rect(width: 16.7%, height: 12pt, fill: rgb("#9013FE")), // Responsabile (5h)
+      )
+      #v(10pt)
+      #grid(
+        columns: (1fr, 1fr),
+        gutter: 15pt,
+        [
+          #align(left)[
+            #box(square(size: 8pt, fill: rgb("#B8E986"))) *Analista:* 15h (50.0%) \
+            #box(square(size: 8pt, fill: rgb("#50E3C2"))) *Verificatore:* 10h (33.3%) \
+            #box(square(size: 8pt, fill: rgb("#9013FE"))) *Responsabile:* 5h (16.7%)
+          ]
+        ],
+        [
+          #align(left)[
+            #box(square(size: 8pt, fill: rgb("#BD10E0"))) *Amministratore:* 0h (0.0%) \
+            #box(square(size: 8pt, fill: rgb("#F5A623"))) *Progettista:* 0h (0.0%) \
+            #box(square(size: 8pt, fill: rgb("#4A90E2"))) *Programmatore:* 0h (0.0%)
+          ]
+        ]
+      )
+    ]
+  )
+]
+
+===== Grafico della Distribuzione dei Costi — Sprint 1
+Di seguito viene illustrata la ripartizione percentuale dei costi preventivati per lo Sprint 1 ($675,00€$ complessivi):
+
+#align(center)[
+  #block(
+    fill: rgb("#f8f9fa"),
+    inset: 14pt,
+    radius: 6pt,
+    stroke: 0.5pt + luma(200),
+    [
+      #grid(
+        columns: (1fr, auto),
+        align: (left, right),
+        [*Distribuzione Costi per Ruolo — Sprint 1*], [*Totale: 100%*]
+      )
+      #v(6pt)
+      #stack(
+        dir: ltr,
+        rect(width: 55.6%, height: 12pt, fill: rgb("#B8E986")), // Analista (375,00 €)
+        rect(width: 22.2%, height: 12pt, fill: rgb("#9013FE")), // Responsabile (150,00 €)
+        rect(width: 22.2%, height: 12pt, fill: rgb("#50E3C2")), // Verificatore (150,00 €)
+      )
+      #v(10pt)
+      #grid(
+        columns: (1fr, 1fr),
+        gutter: 15pt,
+        [
+          #align(left)[
+            #box(square(size: 8pt, fill: rgb("#B8E986"))) *Analista:* 375,00 € (55.6%) \
+            #box(square(size: 8pt, fill: rgb("#9013FE"))) *Responsabile:* 150,00 € (22.2%) \
+            #box(square(size: 8pt, fill: rgb("#50E3C2"))) *Verificatore:* 150,00 € (22.2%)
+          ]
+        ],
+        [
+          #align(left)[
+            #box(square(size: 8pt, fill: rgb("#BD10E0"))) *Amministratore:* 0,00 € (0.0%) \
+            #box(square(size: 8pt, fill: rgb("#F5A623"))) *Progettista:* 0,00 € (0.0%) \
+            #box(square(size: 8pt, fill: rgb("#4A90E2"))) *Programmatore:* 0,00 € (0.0%)
+          ]
+        ]
+      )
+    ]
+  )
+]
+

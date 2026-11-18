@@ -3,10 +3,11 @@
 #show: report.with(
   titolo: "Verbale esterno 16/11/2026",
   stato: "Bozza",
-  versione: "0.1.0",
+  versione: "0.2.0",
   ora-inizio: "15:00",
   ora-fine: "15:30",
   registro-modifiche: (
+    ("0.2.0", "18/11/2026", "Roberto Piovesan", "Chen Daxin", "Correzioni minori"),
     ("0.1.0", "16/11/2026", "Roberto Piovesan", "Chen Daxin", "Prima stesura del documento"),
   ),
 
@@ -35,7 +36,7 @@ distribuzione: (
   verificatore-interno: "Davide Loparco",
   left-signature: "firma-Loparco.jpeg",
   verificatore-esterno: "Gianluca Carlesso",
-  right-signature: "firma-Carlesso.png",
+  right-signature: "blank.png",
   tipo-verbale: "esterno",
 )
 

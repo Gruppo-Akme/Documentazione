@@ -59,22 +59,22 @@ Di seguito viene fornita la rendicontazione puntuale dei quesiti trattati e dei 
 
 == Pianificazione degli incontri periodici e canali di comunicazione
 - *Quesito / Domanda Posta:* \
-  _"È possibile fissare fin da subito un giorno e un orario ricorrente a calendario per gli incontri quindicinali? Inoltre, confermate la creazione di un gruppo WhatsApp o Telegram per le comunicazioni rapide?"_
+  _"È possibile fissare fin da subito un giorno e un orario ricorrente a calendario per gli incontri quindicinali? Inoltre, confermate la creazione di un gruppo WhatsApp#super[G] o Telegram per le comunicazioni rapide?"_
 - *Sintesi della Risposta (Ergon Informatica S.r.l.):*
  - Si conferma la cadenza quindicinale per gli incontri di allineamento (con possibilità di infittirla in base alle necessità), indicando il venerdì come giorno preferenziale, anche in fascia pausa pranzo o tardo pomeriggio (entro le 17:30). Il team invierà all'azienda alcune finestre di disponibilità per fissare lo slot definitivo. Per le comunicazioni rapide, l'azienda approva la creazione di un gruppo WhatsApp a cura del team; il referente fornirà il proprio contatto telefonico via email.
 
 
 == Identificazione del target di utenti e dei casi d'uso principali
 - *Quesito / Domanda Posta:*\
- _"Chi sono gli utenti finali principali della Smart Dashboard e quali sono i casi d'uso più rilevanti su cui concentrare l'Analisi dei Requisiti?"_
+ _"Chi sono gli utenti finali principali della Smart Dashboard#super[G] e quali sono i casi d'uso più rilevanti su cui concentrare l'Analisi dei Requisiti?"_
 - *Sintesi della Risposta (Ergon Informatica S.r.l.):*
- - Il prodotto è destinato ad aziende italiane (non è quindi richiesto il supporto multilingua) operanti prevalentemente nel settore food & beverage. Gli utenti finali non sono profili tecnici ma figure aziendali già abituate a leggere i dati provenienti dai gestionali ERP, tra cui responsabili amministrativi, area commerciale (analisi vendite e margini) e area logistica/responsabili di magazzino (monitoraggio spedizioni, tempi di sosta/percorrenza e stato del magazzino). Lo scopo del sistema è offrire una visione d'insieme immediata e semplificare l'estrazione dei dati tramite linguaggio naturale, evitando agli utenti la scrittura manuale di query SQL.
+ - Il prodotto è destinato ad aziende italiane (non è quindi richiesto il supporto multilingua) operanti prevalentemente nel settore food & beverage. Gli utenti finali non sono profili tecnici ma figure aziendali già abituate a leggere i dati provenienti dai gestionali ERP#super[G], tra cui responsabili amministrativi, area commerciale (analisi vendite e margini) e area logistica/responsabili di magazzino (monitoraggio spedizioni, tempi di sosta/percorrenza e stato del magazzino). Lo scopo del sistema è offrire una visione d'insieme immediata e semplificare l'estrazione dei dati tramite linguaggio naturale, evitando agli utenti la scrittura manuale di query SQL.
 
-== Scelte tecnologiche, repository GitHub e gestione dei dataset di test
+== Scelte tecnologiche, repository GitHub#super[G] e gestione dei dataset di test
 - *Quesito / Domanda Posta:*\
  _"Ci sono vincoli specifici sulle tecnologie da adottare per frontend e backend? Inoltre, come dobbiamo gestire la condivisione del repository GitHub e la sicurezza dei dataset e delle chiavi API che ci fornirete?"_
 - *Sintesi della Risposta (Ergon Informatica S.r.l.):*
- - Il team ha libertà di scelta sullo stack tecnologico; per il backend e le API viene suggerito l'uso di Python con FastAPI, appoggiandosi a un database relazionale (es. PostgreSQL) per ospitare i dati grezzi. L'azienda fornirà un dataset di esempio anonimizzato con relativi casi d'uso e le chiavi API per i test. È necessario condividere l'accesso al repository GitHub con il referente aziendale, assicurandosi però di non caricare mai pubblicamente né il dataset né le chiavi API (mantenendo il repository privato o escludendo tali file dal tracciamento).
+ - Il team ha libertà di scelta sullo stack tecnologico; per il backend e le API viene suggerito l'uso di Python#super[G] con FastAPI, appoggiandosi a un database relazionale (es. PostgreSQL#super[G]) per ospitare i dati grezzi. L'azienda fornirà un dataset di esempio anonimizzato con relativi casi d'uso e le chiavi API per i test. È necessario condividere l'accesso al repository GitHub con il referente aziendale, assicurandosi però di non caricare mai pubblicamente né il dataset né le chiavi API (mantenendo il repository privato o escludendo tali file dal tracciamento).
 
 == Modalità di interazione dell'assistente AI nella generazione dei widget della dashboard
 - *Quesito / Domanda Posta:*\

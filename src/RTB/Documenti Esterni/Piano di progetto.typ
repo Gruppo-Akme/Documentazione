@@ -384,9 +384,10 @@ Nel dettaglio, le attività pianificate per lo Sprint 1 sono:
 - contatto via mail con l'azienda proponente *Ergon Informatica S.r.l.* per fissare il primo incontro conoscitivo e tecnico, definire i canali di comunicazione e la cadenza degli appuntamenti periodici (Issue#super[G] #link("https://github.com/Gruppo-Akme/Documentazione/issues/45")[\#45]);
 - preparazione teorica e studio individuale delle tecnologie proposte nel capitolato C7 e dei diagrammi dei casi d'uso, accompagnata dalla creazione di un documento condiviso per raccogliere quesiti e informazioni in vista del colloquio con il proponente;
 - avvio della prima stesura delle *Norme di Progetto*, con focus sul Way of Working, sui canali di comunicazione, sull'organizzazione della repository automatizzata, sulle GitHub Actions#super[G], sulle linee guida per la compilazione locale dei PDF tramite Typst in VS Code e sulle regole di gestione dei registri delle modifiche secondo le indicazioni del Prof. Vardanega (Issue #link("https://github.com/Gruppo-Akme/Documentazione/issues/32")[\#32]);
+- avvio della prima stesura del *Piano di Qualifica* (Issue #link("https://github.com/Gruppo-Akme/Documentazione/issues/56")[\#56]);
 - avvio della prima stesura del *Piano di Progetto* e definizione della suddivisione dei ruoli e della pianificazione degli Sprint (Issue #link("https://github.com/Gruppo-Akme/Documentazione/issues/43")[\#43]);
-- avvio dell'*Analisi dei Requisiti*, fungendo da palestra formativa per la formalizzazione dei casi d'uso da approfondire poi con Ergon;
-- aggiornamento del sito web di riferimento della repository automatizzata per il passaggio alla fase RTB, rendendo disponibili i nuovi documenti e oscurando quelli obsoleti della candidatura (Issue #link("https://github.com/Gruppo-Akme/Documentazione/issues/44")[\#44]), oltre alla stesura e verifica dei verbali interni (Issue #link("https://github.com/Gruppo-Akme/Documentazione/issues/42")[\#42]).
+- avvio dell'*Analisi dei Requisiti*, fungendo da palestra formativa per la formalizzazione dei casi d'uso da approfondire poi con Ergon (Issue #link("https://github.com/Gruppo-Akme/Documentazione/issues/52")[\#52]);
+- aggiornamento del sito web di riferimento della repository automatizzata per il passaggio alla fase RTB, rendendo disponibili i nuovi documenti e oscurando quelli obsoleti della candidatura (Issue #link("https://github.com/Gruppo-Akme/Documentazione/issues/44")[\#44]), oltre alla stesura e verifica dei verbali interni (Issue #link("https://github.com/Gruppo-Akme/Documentazione/issues/42")[\#42] e #link("https://github.com/Gruppo-Akme/Documentazione/issues/53")[\#53]).
 
 ==== Diagramma di Gantt — Sprint 1
 Di seguito viene riportata la pianificazione temporale delle attività previste lungo le due settimane dello Sprint 1 (dal 10/11/2026 al 24/11/2026):
@@ -398,12 +399,14 @@ Di seguito viene riportata la pianificazione temporale delle attività previste 
     ("Contatto Ergon e org. colloquio (#45)", 1, 4, rgb("#9013FE")),
     ("Studio tech C7 e diagrammi casi d'uso", 1, 5, rgb("#B8E986")),
     ("Stesura verbale interno 10/11 (#42)", 1, 4, rgb("#B8E986")),
+    ("Stesura verbale interno 10/11 (#53)", 8, 11, rgb("#B8E986")),
+    ("Prima stesura Piano di Qualifica (#56)", 1, 8, rgb("#B8E986")),
     ("Prima stesura Norme di Progetto (#32)", 2, 12, rgb("#B8E986")),
     ("Prima stesura Piano di Progetto (#43)", 2, 12, rgb("#B8E986")),
-    ("Avvio Analisi dei Requisiti", 5, 13, rgb("#B8E986")),
+    ("Avvio Analisi dei Requisiti (#52)", 5, 13, rgb("#B8E986")),
     ("Aggiornamento sito passaggio RTB (#44)", 3, 8, rgb("#50E3C2")),
     ("Riunione intermedia di allineamento", 8, 8, rgb("#9013FE")),
-    ("Verifica documenti e chiusura Sprint", 11, 15, rgb("#50E3C2")),
+    ("Verifica documenti e chiusura Sprint (#54)", 11, 15, rgb("#50E3C2")),
   )
 )
 

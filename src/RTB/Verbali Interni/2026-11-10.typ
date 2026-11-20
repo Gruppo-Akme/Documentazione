@@ -77,7 +77,7 @@ In vista dell'incontro programmato con l'azienda Ergon, il gruppo ha delineato l
 È stato infine concordato di creare un documento condiviso per raccogliere le informazioni e le domande da porre all'azienda, in modo da arrivare all'incontro con una base di conoscenze comune e una lista di quesiti da discutere.
 
 == Suddivisione dei compiti per la stesura dei nuovi documenti
-Con l'avvio della fase di *RTB#super[G]*, è stato stabilito che gli analisti dedicheranno la maggior parte del loro impegno alla stesura della documentazione, ripartendo il carico di lavoro tra Norme di Progetto, Piano di Progetto e Analisi dei Requisiti. Trattandosi dei primi passi di questo percorso, l'attività fungerà soprattutto da palestra formativa, in particolare per l'Analisi dei Requisiti, che richiede una chiara comprensione e formalizzazione dei casi d'uso, argomento che verrà inizialmente trattato assieme all'azienda Ergon proprio nell'incontro programmato.
+Con l'avvio della fase di *RTB#super[G]*, è stato stabilito che gli analisti dedicheranno la maggior parte del loro impegno alla stesura della documentazione, ripartendo il carico di lavoro tra Norme di Progetto, Piano di Progetto, Piano di Qualifica e Analisi dei Requisiti. Trattandosi dei primi passi di questo percorso, l'attività fungerà soprattutto da palestra formativa, in particolare per l'Analisi dei Requisiti, che richiede una chiara comprensione e formalizzazione dei casi d'uso, argomento che verrà inizialmente trattato assieme all'azienda Ergon proprio nell'incontro programmato.
 
 Per rendere la produzione dei documenti più fluida ed evitare conflitti o sovrapposizioni sui file, i componenti del team incaricati della redazione hanno deciso di coordinarsi adottando un flusso di lavoro prevalentemente asincrono.
 
@@ -108,7 +108,8 @@ A seguire, la suddivisione dello svolgimento delle attività di questa settimana
     [A3], [Stesura verbale interno odierno], [Roberto Piovesan], [13/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/42")[\#42]],
     [A4], [Prima stesura Piano di progetto e suddivisione ruoli/sprint], [Chen DaXin, Pietro Giulio Bassi], [17/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/43")[\#43]],
     [A5], [Aggiornamento sito passaggio a RTB], [Chen DaXin], [17/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/44")[\#44]],
-    [A6], [Contattare l'azienda Ergon], [Davide Loparco], [13/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/45")[\#45]]
+    [A6], [Contattare l'azienda Ergon], [Davide Loparco], [13/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/45")[\#45]],
+    [A7], [Prima Stesura Piano di Qualifica], [Pietro Giulio Bassi], [13/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/56")[\#56]]
   ),
   caption: [Decisioni intraprese e attività conseguenti],
 ) <tab-decisioni>

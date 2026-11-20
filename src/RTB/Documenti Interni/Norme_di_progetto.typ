@@ -13,6 +13,10 @@
 #let url-analisi_requisiti = "manca"
 #let url-piano_progetto = "manca"
 #let url-piano_qualifica = "manca"
+#let url-templateDiarioDiBordo = "https://canva.link/hbcmth8yheox1ep"
+#let url-templateDocumentiGenerici = "https://github.com/Gruppo-Akme/Documentazione/blob/main/src/Templates/templateDocumentiGenerici.typ"
+#let url-templateLettera = "https://github.com/Gruppo-Akme/Documentazione/blob/main/src/Templates/templateLettera.typ"
+#let url-templateVerbali = "https://github.com/Gruppo-Akme/Documentazione/blob/main/src/Templates/templateVerbali.typ"
 
 #show outline: it => { 
   if it.depth == 4 { 
@@ -30,11 +34,11 @@
   titolo: "Norme di progetto",
   tipo-documento: "RTB - Documento interno",
   stato: "Bozza",
-  versione: "0.2.1",
+  versione: "0.3.1",
   registro-modifiche: (
-    ("0.2.1", "13/11/2026", "Marco Giacon", "", "Aggiunta indici oltre x.y, correzioni versione precedente e aggiornamento glossario"),
+    ("0.3.1", "20/11/2026", "Mattia Cadamuro", "Marco Giacon", "Correzione paragrafo 3.1.3.1 e 3.1.3.3"),
+    ("0.3.0", "19/11/2026", "Mattia Cadamuro", "Marco Giacon", "Aggiunta capitolo 3 e indici di 3° e 4° profondità"),
     ("0.2.0", "12/11/2026", "Mattia Cadamuro", "Marco Giacon", "Aggiunta capitolo 2 e aggiunta link"),
-    ("0.1.1", "11/11/2026", "Marco Giacon", "", "Correzioni minori versione precedente"),
     ("0.1.0", "10/11/2026", "Mattia Cadamuro", "Marco Giacon", "Creazione e prima stesura documento"),
   ),
   verificatore-interno: "",
@@ -60,7 +64,7 @@ L'obiettivo è svincolare i dati aziendali dai sistemi ERP#super[G], rendendoli 
 == Glossario#super[G]
 La stesura della documentazione e la scrittura del codice richiedono l'uso di una terminologia precisa e condivisa. Al fine di evitare incomprensioni o ambiguità di dominio, il gruppo ha raccolto i termini tecnici e gli acronimi all'interno del documento glossario. 
 
-Per rendere immediata l'individuazione di tali termini, ogni parola afferente al glossario è contrassegnata all'interno del testo aggiungendo una lettera "G" ad apice, tramite l'apposita formattazione tipografica: parola.
+Per rendere immediata l'individuazione di tali termini, ogni parola afferente al glossario è contrassegnata all'interno del testo aggiungendo una lettera "G" ad apice, tramite l'apposita formattazione tipografica: parola#super[G].
 
 == Riferimenti
 
@@ -76,7 +80,7 @@ Per rendere immediata l'individuazione di tali termini, ogni parola afferente al
 - Glossario\
   #link(url-Gloss)
 
-= Processi primari
+= *Processi primari*
 I processi primari definiti dallo standard *ISO/IEC 12207:1995* racchiudono le attività principali del Ciclo di vita#super[G] del software: acquisizione, fornitura, sviluppo, operazione e manutenzione. Il loro scopo è garantire che i prodotti realizzati rispettino i requisiti e gli obiettivi di qualità prefissati.
 
 Nel contesto del progetto didattico, il gruppo applica i seguenti processi primari:
@@ -229,3 +233,186 @@ Per lo sviluppo delle pipeline ETL, del backend e dell'integrazione con *DuckDB*
 - *Classi ed Eccezioni*: formato `PascalCase` (es. `StarSchemaBuilder`, `QueryValidationError`);
 - *Funzioni, Metodi e Variabili*: formato `snake_case` (es. `validate_sql_query`, `raw_data_df`);
 - *Costanti*: formato `UPPER_SNAKE_CASE` definite a livello di modulo (es. `DEFAULT_TIMEOUT_SECONDS`).
+
+= *Processi di supporto*
+Tra i processi di supporto applicati nel progetto si distinguono:
+
+== Documentazione
+Il processo di produzione della documentazione consente di tracciare e storicizzare le decisioni prese da *Akme Group*, permettendo a tutti i membri di rimanere allineati in modalità asincrona sulle scelte architetturali, tecnologiche e sull'organizzazione del lavoro.
+
+Una decisione viene documentata esclusivamente se si traduce in un'azione tracciabile e concreta, con un impatto sul ciclo di vita della piattaforma software.
+
+Il processo copre la pianificazione, la progettazione, lo sviluppo e la modifica dei documenti necessari al gruppo per mantenere una metodologia condivisa, oltre a quelli richiesti dall'azienda proponente *Ergon Informatica Srl* e dai committenti per valutare regolarmente l'avanzamento dei lavori su *SmartDashboard*.
+
+=== Strumenti a supporto 
+- *Typst#super[G]*: sistema di composizione tipografica digitale adottato per redigere documenti tramite un linguaggio di markup pulito. Offre un sistema di scripting e templating nativo che semplifica la gestione della formattazione dinamica e un caricamento in tempo reale utile per accelerare la stesura dei testi.
+- *GitHub*: infrastruttura centrale per il versionamento del codice sorgente della documentazione.
+  - *GitHub Issues*: impiegate per assegnare i task di redazione e tracciare le necessità di aggiornamento dei documenti.
+  - *GitHub Projects*: utilizzato per visualizzare tramite board Kanban lo stato di avanzamento delle attività di scrittura.
+  - *GitHub Pages#super[G]*: servizio per l'hosting e la pubblicazione automatizzata della documentazione stabile tramite il sito web di progetto.
+- *Discord*: per il confronto sincrono e le chiamate di allineamento organizzativo durante le fasi di scrittura collettiva.
+
+=== Attività previste
+Le attività previste per la gestione documentale si suddividono in:
+- *Produzione*: copre le procedure di stesura e verifica applicate dal gruppo, descritte nella @doc-produzione;
+- *Manutenzione*: stabilisce i flussi per l'aggiornamento e la correzione di un documento già rilasciato (stato *Verificato*), dettagliate nella @doc-manutenzione.
+
+=== Caratteristiche e struttura dei documenti
+Ogni tipologia di documento possiede peculiarità strutturali legate alla propria funzione. Per garantire un'identità visiva coerente ed eliminare le tempistiche di formattazione manuale, il gruppo impiega specifici template Typst.
+
+Tutti i documenti formali (ad eccezione dei diari di bordo) dispongono di un frontespizio contenente:
+- Il logo dell'Università di Padova e il logo del gruppo *Akme Group*;
+- Il titolo del documento;
+- L'identificativo di versione e lo stato di avanzamento (dettagliato nella @doc-stato);
+- L'elenco dei destinatari all'interno della voce "Distribuzione".
+
+Le pagine successive includono il *Registro delle modifiche*, una tabella dove ogni riga traccia:
+- Il codice della *Versione* rilasciata (vd. @doc-versionamento);
+- La *Data* di stesura o verifica;
+- Il nome dell'*Autore* (o degli autori) delle modifiche;
+- Il nome del *Verificatore#super[G]* che ha controllato il documento;
+- Una sintetica *Descrizione* dei cambiamenti apportati.
+
+A seguire figura l'indice del documento e, posizionata nell'ultima pagina, la firma del revisore interno.
+
+==== Documenti incrementali
+I documenti come le _Norme di Progetto_, il _Piano di Qualifica_ e il _Piano di Progetto_ possiedono natura *incrementale*, espandendosi parallelamente all'avanzamento tecnologico e organizzativo del progetto. Nelle fasi iniziali, alcune sezioni risultano inevitabilmente incomplete in quanto legate a concetti e metriche non ancora definiti.
+Il gruppo considera una versione pubblicabile come stabile e idonea alla fase di pull request (PR) quando le sezioni effettivamente compilate risultano complete e sottoposte a verifica incrociata (vd. @doc-verifica), ignorando temporaneamente le porzioni vuote.
+
+==== Verbali <caratteristiche-struttura-verbali>
+I verbali si basano su una variante del frontespizio principale a cui viene aggiunto:
+- L'orario di svolgimento della riunione.
+- L'elenco formale dei *partecipanti*.
+- L'*ordine del giorno*, riportato in forma di elenco numerato;
+
+La struttura interna si suddivide in:
+- *Introduzione* : riporta la data, la fascia oraria, la piattaforma e l'obiettivo generale dell'incontro;
+- *Resoconto*: suddiviso in sottosezioni dedicate ciascuna a un punto specifico dell'ordine del giorno;
+- *Decisioni e attività*: contiene la tabella formale degli *Action Items* assegnati per lo sprint successivo (con ID, Azione, Incaricato, Scadenza e link alla Issue#super[G] su GitHub).
+Il file di riferimento per l'impaginazione è #link(url-templateVerbali)[templateVerbali] consultabile nel repository di riferimento.
+
+==== Diari di bordo
+I diari di bordo costituiscono presentazioni visive utilizzate in aula per sintetizzare lo stato del gruppo. Rinunciano alla struttura documentale classica in favore di diapositive focalizzate su:
+- *Resoconto*: avanzamento delle attività svolte nello sprint appena concluso;
+- *To Do*: attività da svolgere nel prossimo sprint;
+- *Criticità*: ostacoli tecnici o metodologici incontrati nel periodo appena trascorso.
+Il file di riferimento per l'impaginazione è #link(url-templateDiarioDiBordo)[templateDiarioDiBordo].
+
+==== Altri documenti
+I restanti elaborati, come l'Analisi dei Requisiti o il piano di progetto, presentano un'articolazione logica dettata dai contenuti. Questi vengono generati attraverso l'infrastruttura fornita dal file #link(url-templateDocumentiGenerici)[templateDocumentiGenerici], che raccoglie le macro necessarie alla formattazione.
+
+=== Convenzioni
+Per assicurare un'archiviazione strutturata e metodologica, il gruppo segue regole rigorose e condivise durante l'intero ciclo redazionale.
+
+==== Stato di un documento <doc-stato>
+Un elaborato attraversa tre fasi sequenziali:
+- *Bozza*: il file è in fase di stesura iniziale o profonda riscrittura. I contenuti sono da ritenersi parziali, non stabili e in lavorazione attiva da parte dell'autore designato.
+- *Da verificare*: la scrittura e le modifiche previste per il ticket assegnato sono ultimate. L'autore segnala la conclusione della propria fase e il file entra in attesa di ispezione.
+- *Verificato*: l'elaborato è stato controllato da un membro distinto dall'autore (revisore). Viene garantita la fluidità concettuale, l'assenza di refusi e il pieno allineamento con gli standard fissati dal gruppo.
+- *Approvato*: l'elaborato è stato controllato e approvato da un membro distinto dall'autore (responsabile). Il responsabile e incaricato di verificare che il documento sia valido e di rilasciarlo come documento x.0.0.
+
+==== Versionamento <doc-versionamento>
+La catalogazione delle modifiche segue lo standard Semantic Versioning#super[G] (SemVer), strutturato sul triplo indice *`MAJOR.MINOR.PATCH`*:
+- *`MAJOR`*: indica stravolgimenti strutturali o rilasci ufficiali di fase. Vale `0` se l'elaborato è una bozza in evoluzione senza una prima validazione. Assume valore `1` in concomitanza del primo rilascio stabile approvato;
+- *`MINOR`*: si incrementa per l'aggiunta di interi paragrafi o sezioni (es. un nuovo macro-requisito o un nuovo processo) che non alterano l'impalcatura preesistente del documento;
+- *`PATCH`*: viene utilizzato per tracciare interventi marginali come la correzione di errori di battitura, aggiornamenti grammaticali o fix legati all'impaginazione Typst.
+L'avanzamento di un livello azzera i contatori subordinati posti alla sua destra.
+
+==== Denominazione e locazione file
+Sorgenti Typst e output PDF seguono una chiara gerarchia all'interno della repository web:
+#align(center, [`/output/`*`[FASE]`*`/`*`[TIPO_DOCUMENTO]`*`/`*`[NOME_DOCUMENTO]`*`.pdf`])
+
+Dove:
+- *`[FASE]`*: cartella relativa al momento progettuale (`Candidatura`, `RTB`, `PB`);
+- *`[TIPO_DOCUMENTO]`*: classificazione funzionale (`VerbaliInterni`, `VerbaliEsterni`, `Generale`);
+- *`[NOME_DOCUMENTO]`*: 
+  - I verbali riportano la data in formato rigido `YYYY-MM-DD` (es. `2026-11-04`);
+  - I documenti generici impiegano il CamelCase, con o senza preposizioni mantenute costanti (es. `PianoDiQualifica`, `NormeDiProgetto`).
+
+==== Metadati
+I template in uso dipendono dall'assegnazione corretta di metadati nel sorgente.
+- `htmlId`: Questa variabile mappa l'elaborato a uno specifico ID nel codice sorgente HTML#super[G] del sito web. Un valore errato o mancante disabilita le ancore di navigazione sulla pagina pubblica.
+
+=== Produzione <doc-produzione>
+Il ciclo di vita di un documento si struttura nei tre passaggi descritti a seguire.
+
+==== Scrittura
+1. Sulla repository documentale viene aperta una issue dedicata che definisce lo scopo e il perimetro delle modifiche, assegnandole a un autore.
+2. Viene staccato un nuovo branch dal ramo principale `main`, utilizzando la convezione `docs/[nome-attività]`, in modo da isolare il lavoro in corso.
+3. L'autore procede con la redazione su Visual Studio Code, sfruttando l'estensione Tinymist Typst per l'anteprima in tempo reale e seguendo le linee guida stilistiche.
+4. Conclusa la stesura, l'autore effettua il push sul branch e apre una pull request, designando i revisori scelti e spostando virtualmente il documento in stato "Da verificare".
+
+==== Verifica#super[G] <doc-verifica>
+Per preservare la massima qualità formale, nessun componente può ispezionare il materiale che ha redatto in prima persona.
+- Il verificatore incaricato legge il documento ricercando difetti di ortografia, logica, formattazione e violazioni delle convenzioni di stile.
+- Qualora riscontri criticità, richiede esplicitamente le correzioni tramite review comment sulla pull request, restituendo il carico di lavoro all'autore in modo ciclico finché ogni anomalia non risulta sanata.
+- Raggiunta l'idoneità, il verificatore approva in modo definitivo la pull request, ratificando lo stato del documento a "Verificato".
+
+==== Pubblicazione
+Una volta approvata dal revisore, la pull request viene unita (merge) al branch principale `main`. Tale operazione aziona un workflow automatizzato basato su GitHub Actions#super[G] che si occupa di compilare tutti i file sorgente Typst aggiornati, estrarre i PDF corrispondenti e procedere istantaneamente con il deploy sulla pagina web ufficiale del gruppo.
+
+=== Manutenzione <doc-manutenzione>
+Ogni file approvato è da considerarsi stabile ma mai definitivo. Se un componente identifica successivamente imprecisioni formali, omissioni o informazioni divenute obsolete a seguito di nuove scelte infrastrutturali o di design (es. l'inclusione di nuovi widget su *SmartDashboard*), ha la responsabilità di aprire un ticket di segnalazione. Questo darà il via a un nuovo ciclo di manutenzione che porterà all'avanzamento della versione e a una successiva fase di ispezione.
+
+== Gestione delle configurazioni <gestione-configurazioni>
+Secondo lo standard ISO/IEC 12207:1995, la gestione delle configurazioni è il processo di applicazione di procedure tecniche e amministrative per l'intera durata del ciclo di vita del software. I suoi obiettivi principali sono:
+- Identificare e definire le parti che compongono il prodotto software, associandole a specifiche baseline;
+- Controllare sistematicamente le modifiche e il rilascio di tali componenti;
+- Registrare lo stato di configurazione e le richieste di modifica;
+- Assicurare completezza, coerenza e correttezza dei prodotti di progetto.
+
+=== Strumenti a supporto
+Il principale strumento a supporto del processo di gestione delle configurazioni è *GitHub*, che permette di gestire in modo centralizzato e sicuro il versionamento del codice di *SmartDashboard* e della relativa documentazione. Attraverso l'integrazione del sistema di *issue tracking* (*GitHub Issues*) e delle *project board* (*GitHub Projects*), il gruppo pianifica le attività, ne monitora costantemente l'avanzamento e mantiene un controllo rigoroso sulla qualità e sulla tracciabilità dell'intero ciclo di sviluppo.
+
+=== Attività previste
+Le attività previste da questo processo sono:
+- *Identificazione della configurazione*
+- *Controllo della configurazione*
+- *Registrazione dello stato di configurazione*
+- *Valutazione della configurazione*
+
+=== Identificazione della configurazione
+L'identificazione della configurazione consiste nell'individuare in modo univoco tutte le componenti documentali e di codice che formeranno il sistema software. 
+
+È necessario stabilire per ogni prodotto software e per le sue versioni:
+- La documentazione che ne sancisce la baseline;
+- I riferimenti univoci alla versione;
+- Altri dettagli utili all'identificazione.
+Questa attività trova il suo culmine durante la progettazione architetturale, in cui vengono definiti i moduli del sistema (es. Raw Data Store, Data Warehouse, Web App e modulo AI) che i programmatori dovranno implementare.
+
+=== Controllo della configurazione <controllo-configurazione>
+Il principale strumento a supporto del processo di gestione delle configurazioni è *GitHub*, che permette di gestire in modo centralizzato e sicuro il versionamento del codice di *SmartDashboard* e della relativa documentazione. A questo scopo, il gruppo sfrutta l'ecosistema *GitHub* e i suoi moduli integrati (*GitHub Issues* per l'issue tracking e *GitHub Projects* per le board di avanzamento).
+- *GitHub Issues*: utilizzate per descrivere le modifiche da apportare. Ogni issue viene assegnata a un membro specifico che ne assume la responsabilità. Una issue standard è composta da:
+  - Un identificativo numerico univoco;
+  - Un titolo descrittivo della modifica;
+  - Una descrizione dettagliata del compito;
+  - L'assegnatario (assignee);
+  - Le etichette (labels) per classificare l'intervento;
+  - Il collegamento a una milestone e al GitHub Project.
+
+- *GitHub Projects*: collegato alle repository del gruppo, permette di organizzare le attività all'interno degli sprint, favorendo la parallelizzazione del lavoro. Consente la visualizzazione del backlog tramite board Kanban e diagrammi di Gantt.
+
+- *Pull Request (PR) e branch protection*: il branch principale (`main`) di tutte le repository è protetto. L'unico modo per integrarvi delle modifiche è l'apertura di una Pull Request, che impone la revisione obbligatoria e l'approvazione del codice o del testo da parte di un verificatore indipendente (Reviewer).
+
+=== Registrazione dello stato di configurazione
+Consiste nel tracciare la cronologia e lo stato di tutte le componenti. Il gruppo adotta il Semantic Versioning (SemVer) descritto in dettaglio nella @doc-versionamento.
+- Le versioni in bozza partono da `0.0.1`;
+- Le prime stesure complete ma non verificate assumono la forma `0.1.0`;
+- Le stesure verificate e stabili raggiungono la versione `1.0.0`;
+Ogni documento è inoltre provvisto di un registro delle modifiche per storicizzare sistematicamente gli interventi effettuati.
+
+=== Valutazione della configurazione <valutazione-configurazione>
+Consiste nel verificare che il software prodotto possieda una completezza funzionale coerente con i requisiti delineati.
+Nel documento di Analisi dei Requisiti è presente una matrice di tracciamento, costantemente aggiornata per garantire che il prodotto sviluppato risponda in modo accurato e verificabile alle aspettative dell'azienda proponente *Ergon Informatica Srl*.
+
+== Accertamento della qualità <accertamento-qualita>
+L'accertamento della qualità, basato sullo standard ISO/IEC 12207:1995, mira a garantire oggettivamente che i processi e i prodotti software siano conformi ai requisiti prefissati.
+Per prevenire conflitti d'interesse, le attività di ispezione e validazione vengono condotte in modo indipendente dai membri che hanno sviluppato il componente o eseguito il processo sotto esame.
+
+=== Attività previste
+Il processo di accertamento della qualità comprende:
+- *Implementazione del processo*: definizione di procedure di controllo su misura per le dinamiche e le tecnologie di *SmartDashboard*, al fine di assicurare che i risultati rispettino le attese della proponente.
+- *Accertamento della qualità di prodotto*: verifica empirica che il software sviluppato soddisfi i requisiti tramite i test redatti dai verificatori e il calcolo periodico delle metriche di prodotto (es. code coverage, test success rate).
+- *Accertamento della qualità di processo*: misurazione sistematica delle metriche di processo per assicurare che le metodologie adottate rimangano efficaci, conformi agli standard interni e rispettino il budget allocato.
+
+I risultati di queste misurazioni e i relativi obiettivi (soglie accettabili e ottimali) sono documentati nel Piano di Qualifica. Il documento include un cruscotto di valutazione, aggiornato al termine di ogni sprint, per fornire una visione storica e oggettiva sull'andamento qualitativo del progetto.

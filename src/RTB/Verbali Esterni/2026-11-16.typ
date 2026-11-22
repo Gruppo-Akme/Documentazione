@@ -37,7 +37,7 @@ distribuzione: (
   verificatore-interno: "Davide Loparco",
   left-signature: "firma-Loparco.jpeg",
   verificatore-esterno: "Gianluca Carlesso",
-  right-signature: "blank.png",
+  right-signature: "firma-Carlesso.png",
   tipo-verbale: "esterno",
 )
 

@@ -7,7 +7,7 @@
   ora-inizio: "18:00",
   ora-fine: "19:15",
   registro-modifiche: (
-    ("1.0.1", "20/11/2026", "Roberto Piovesan", "Marco Giacon", "Fix minori"),
+    ("1.0.1", "23/11/2026", "Roberto Piovesan", "Marco Giacon", "Fix minori"),
     ("1.0.0", "20/11/2026", "Davide Loparco", "-", "Rilascio ufficiale del documento"),
     ("0.2.0", "20/11/2026", "Pietro Giulio Bassi", "Marco Giacon", "Correzioni ortografiche e verifica finale del documento"),
     ("0.1.0", "17/11/2026", "Pietro Giulio Bassi", "Chen DaXin", "Prima stesura del documento"),

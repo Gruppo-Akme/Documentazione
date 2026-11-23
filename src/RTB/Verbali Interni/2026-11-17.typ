@@ -7,6 +7,7 @@
   ora-inizio: "18:00",
   ora-fine: "19:15",
   registro-modifiche: (
+    ("1.0.1", "20/11/2026", "Roberto Piovesan", "Marco Giacon", "Fix minori"),
     ("1.0.0", "20/11/2026", "Davide Loparco", "-", "Rilascio ufficiale del documento"),
     ("0.2.0", "20/11/2026", "Pietro Giulio Bassi", "Marco Giacon", "Correzioni ortografiche e verifica finale del documento"),
     ("0.1.0", "17/11/2026", "Pietro Giulio Bassi", "Chen DaXin", "Prima stesura del documento"),
@@ -70,11 +71,11 @@ A seguire, la suddivisione dello svolgimento delle attività di questa settimana
     inset: (y: 7pt, x: 6pt),
 
     [*ID*], [*Azione*], [*Incaricato*], [*Scadenza*], [*Issue#super[G]*],
-    [A1], [Studio individuale tecnologie azienda e Diagrammi d'Uso], [Tutti], [17/11/2026], [-],
-    [A2], [Continuazione stesura Norme di progetto (verbali e generazione PDF da Typst#super[G])], [Mattia Cadamuro, Marco Giacon], [17/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/32")[\#32]],
-    [A3], [Stesura verbale interno odierno], [Pietro Giulio Bassi], [17/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/53")[\#53]],
-    [A4], [Termine stesura primo sprint del Piano di Progetto], [Davide Loparco], [17/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/43")[\#54]],
-    [A5], [Prima Stesura Piano di Qualifica], [Pietro Giulio Bassi], [13/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/56")[\#56]]
+    [A1], [Studio individuale tecnologie azienda e Diagrammi d'Uso], [Tutti], [20/11/2026], [-],
+    [A2], [Continuazione stesura Norme di progetto (verbali e generazione PDF da Typst#super[G])], [Mattia Cadamuro, Marco Giacon], [24/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/32")[\#32]],
+    [A3], [Stesura verbale interno odierno], [Pietro Giulio Bassi], [20/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/53")[\#53]],
+    [A4], [Termine stesura primo sprint del Piano di Progetto], [Davide Loparco], [24/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/43")[\#54]],
+    [A5], [Prima Stesura Piano di Qualifica], [Pietro Giulio Bassi], [24/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/56")[\#56]]
   ),
   caption: [Decisioni intraprese e attività conseguenti],
 ) <tab-decisioni>

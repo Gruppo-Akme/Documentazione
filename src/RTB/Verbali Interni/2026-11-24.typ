@@ -102,12 +102,11 @@ A seguire, la suddivisione dello svolgimento delle attività di questa settimana
     [A1], [Chiusura Sprint 1], [Davide Loparco], [27/11/2026], [],
     [A2], [Stesura verbale odierno], [Davide Loparco], [25/11/2026], [],
     [A3], [Stesura inizio Sprint 2 nel Piano di Progetto], [Pietro Giulio Bassi], [30/11/2026], [],
-    [A4], [Aggiornamento Norme di Progetto (Problema issues)], [Roberto Piovesan], [30/11/2026], [],
-    [A5], [Aggiornamento Norme di Progetto (Ruolo Responsabile)], [Roberto Piovesan], [30/11/2026], [],
-    [A6], [Aggiornamento Norme di Progetto (Ruolo Verificatore)], [Roberto Piovesan], [30/11/2026],[],
-    [A7], [Individuazione User Case per il ruolo di Amministratore], [Chen DaXin], [30/11/2026], [],
-    [A8], [Individuazione User Case per il ruolo di utente viewer], [Davide Loparco], [30/11/2026], [],
-    [A9], [Individuazione User Case per gli utenti con capacità di modificare la dashboard], [Marco Giacon], [30/11/2026], []
+    [A4], [Aggiornamento Norme di Progetto (Ruolo Responsabile)], [Roberto Piovesan], [30/11/2026], [],
+    [A5], [Aggiornamento Norme di Progetto (Ruolo Verificatore)], [Roberto Piovesan], [30/11/2026],[],
+    [A6], [Individuazione User Case per il ruolo di Amministratore], [Chen DaXin], [30/11/2026], [],
+    [A7], [Individuazione User Case per il ruolo di utente viewer], [Davide Loparco], [30/11/2026], [],
+    [A8], [Individuazione User Case per gli utenti con capacità di modificare la dashboard], [Marco Giacon], [30/11/2026], []
   ),
   caption: [Decisioni intraprese e attività conseguenti],
 ) <tab-decisioni>

@@ -44,6 +44,8 @@ Sarà possibile visualizzare nel dettaglio la retrospettiva dello sprint all'int
 
 == Chiarimenti sul ruolo del Responsabile
 
+A seguito di alcuni dubbi sorti durante lo Sprint 1, il gruppo ha concordato le modalità di lavoro del responsabile, concordando in particolare sul rilascio ufficiale dei documenti: avverrà esclusivamente con la versione 1.0.0 (e così via) a seguito dell' approvazione finale con firma da parte del responsabile.
+
 == Chiarimenti sul ruolo del Verificatore
 
 == Assegnazione ruoli Sprint 2

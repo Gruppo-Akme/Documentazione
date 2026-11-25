@@ -27,7 +27,7 @@
     "Prof. Vardanega Tullio",
   ),
   verificatore-interno: "Pietro Giulio Bassi",
-  left-signature: "",
+  left-signature: "blank.png",
   tipo-verbale: "Interno",
 )
 
@@ -82,11 +82,13 @@ Basandosi sulle disponibilità dei vari membri e cercando di assicurare varietà
 Per approfondire le motivazioni dietro le assegnazioni dei ruoli, si invita alla lettura del paragrafo del Piano di Progetto dedicato allo Sprint 2.
 
 == Discussione del To-Do dello Sprint 2
+Dopo una prima stesura dei vari documenti da presentare alla consegna di RTB durante il primo Sprint, il team ha deciso di concentrare le risorse di questo sprint nello studio e nell'individuazione dei casi d'uso per l'applicativo. 
 
+In particolare, ci si aspetta di individuare un numero sufficiente di casi d'uso da portare all'incontro con Ergon (datato 01/12/2026) in modo da direzionare al meglio il lavoro nella seconda metà dello sprint.
 
 = Decisioni e attività
-In data 24/11/2026 alle ore 18:00 è prevista una nuova riunione interna per determinare i nuovi ruoli dello sprint.
-A seguire, la suddivisione dello svolgimento delle attività di questa settimana. Vengono riportare tutte le attività in corso, anche se già presenti nel precedente verbale.
+In data 30/11/2026 alle ore 18:00 è prevista una nuova riunione interna per discutere l'andamento dello Sprint e allinearsi in previsione dell'incontro con Ergon il giorno seguente.
+A seguire, la suddivisione dello svolgimento delle attività di questa settimana. 
 
 #figure(
   table(
@@ -97,11 +99,15 @@ A seguire, la suddivisione dello svolgimento delle attività di questa settimana
     inset: (y: 7pt, x: 6pt),
 
     [*ID*], [*Azione*], [*Incaricato*], [*Scadenza*], [*Issue#super[G]*],
-    [A1], [Studio individuale tecnologie azienda e Diagrammi d'Uso], [Tutti], [20/11/2026], [-],
-    [A2], [Continuazione stesura Norme di progetto (verbali e generazione PDF da Typst#super[G])], [Mattia Cadamuro, Marco Giacon], [24/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/32")[\#32]],
-    [A3], [Stesura verbale interno odierno], [Pietro Giulio Bassi], [20/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/53")[\#53]],
-    [A4], [Termine stesura primo sprint del Piano di Progetto], [Davide Loparco], [24/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/43")[\#54]],
-    [A5], [Prima Stesura Piano di Qualifica], [Pietro Giulio Bassi], [24/11/2026], [#link("https://github.com/Gruppo-Akme/Documentazione/issues/56")[\#56]]
+    [A1], [Chiusura Sprint 1], [Davide Loparco], [27/11/2026], [],
+    [A2], [Stesura verbale odierno], [Davide Loparco], [25/11/2026], [],
+    [A3], [Stesura inizio Sprint 2 nel Piano di Progetto], [Pietro Giulio Bassi], [30/11/2026], [],
+    [A4], [Aggiornamento Norme di Progetto (Problema issues)], [Roberto Piovesan], [30/11/2026], [],
+    [A5], [Aggiornamento Norme di Progetto (Ruolo Responsabile)], [Roberto Piovesan], [30/11/2026], [],
+    [A6], [Aggiornamento Norme di Progetto (Ruolo Verificatore)], [Roberto Piovesan], [30/11/2026],[],
+    [A7], [Individuazione User Case per il ruolo di Amministratore], [Chen DaXin], [30/11/2026], [],
+    [A8], [Individuazione User Case per il ruolo di utente viewer], [Davide Loparco], [30/11/2026], [],
+    [A9], [Individuazione User Case per gli utenti con capacità di modificare la dashboard], [Marco Giacon], [30/11/2026], []
   ),
   caption: [Decisioni intraprese e attività conseguenti],
 ) <tab-decisioni>

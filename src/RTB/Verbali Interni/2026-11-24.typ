@@ -44,9 +44,14 @@ Sarà possibile visualizzare nel dettaglio la retrospettiva dello sprint all'int
 
 == Chiarimenti sul ruolo del Responsabile
 
-A seguito di alcuni dubbi sorti durante lo Sprint 1, il gruppo ha concordato le modalità di lavoro del responsabile, concordando in particolare sul rilascio ufficiale dei documenti: avverrà esclusivamente con la versione 1.0.0 (e così via) a seguito dell' approvazione finale con firma da parte del responsabile.
+A seguito di alcuni dubbi sorti durante lo Sprint 1, il gruppo ha concordato le modalità di lavoro del Responsabile, concordando in particolare sui seguenti aspetti:
+
+ - Il rilascio dei documenti avverrà esclusivamente con la versione x.0.0 a seguito dell' approvazione finale con firma da parte del Responsabile;
+ - Il Responsabile di uno sprint si occupa sia della sua apertura (con assegnazione dei ruoli concordata con gli altri membri), che della sua chiusura con annessa retrospettiva riportata nel Piano di Progetto.
 
 == Chiarimenti sul ruolo del Verificatore
+Il ruolo del Verificatore è stato il più ambiguo nello Sprint passato, principalmente per la difficoltà nel definire quali fossero le attività di sua competenza durante questa fase perlopiù documentale. La riunione odierna ha portato il gruppo a riflettere e stabilire ufficialmente che il registro delle modifiche verrà aggiornato personalmente dal Verificatore (nella rispettiva colonna) nel momento in cui avrà verificato la validità di quanto prodotto.
+
 
 == Assegnazione ruoli Sprint 2
 

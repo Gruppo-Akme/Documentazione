@@ -7,7 +7,7 @@
   ora-inizio: "18:00",
   ora-fine: "19:15",
   registro-modifiche: (
-    ("0.1.0", "24/11/2026", "Davide Loparco", "", "Prima stesura del documento"),
+    ("0.1.0", "24/11/2026", "Davide Loparco", "Mattia Cadamuro", "Prima stesura del documento"),
   ),
   odg: (
     "Retrospettiva Sprint 1 ",

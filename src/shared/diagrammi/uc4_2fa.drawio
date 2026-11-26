@@ -1,0 +1,22 @@
+<mxfile host="app.diagrams.net" modified="2026-11-26T17:25:00.000Z" agent="Antigravity" version="24.0.0" type="device">
+  <diagram id="uc4_2fa" name="uc4_2fa">
+    <mxGraphModel dx="720" dy="300" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="720" pageHeight="300" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sys" value="Piattaforma SmartDashboard" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=center;fontStyle=1;fillColor=none;strokeColor=#000000;fontSize=12;spacingTop=6;" vertex="1" parent="1"><mxGeometry x="145" y="15" width="555" height="270" as="geometry" /></mxCell>
+        <mxCell id="actor" value="Utente non autenticato" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;fontSize=11;" vertex="1" parent="1"><mxGeometry x="45" y="120" width="30" height="60" as="geometry" /></mxCell>
+        <mxCell id="uc4" value="UC4 - Autenticazione a due fattori (2FA)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="185" y="115" width="200" height="68" as="geometry" /></mxCell>
+        <mxCell id="uc5" value="UC5 - Codice 2FA errato" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="470" y="40" width="190" height="60" as="geometry" /></mxCell>
+        <mxCell id="uc6" value="UC6 - Codice 2FA scaduto" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="470" y="120" width="190" height="60" as="geometry" /></mxCell>
+        <mxCell id="uc7" value="UC7 - Re-invio codice 2FA" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="470" y="205" width="190" height="60" as="geometry" /></mxCell>
+        <mxCell id="n1" value="Condizione: Codice 2FA non valido o scaduto" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;size=14;align=left;spacingLeft=6;spacingRight=6;fillColor=#ffffff;strokeColor=#000000;fontSize=10;" vertex="1" parent="1"><mxGeometry x="185" y="38" width="175" height="48" as="geometry" /></mxCell>
+        <mxCell id="edge_0" value="" style="endArrow=none;html=1;strokeColor=#000000;" edge="1" parent="1" source="actor" target="uc4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="edge_1" value="«extend»" style="endArrow=open;endSize=10;dashed=1;html=1;strokeColor=#000000;fontSize=10;" edge="1" parent="1" source="uc5" target="uc4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="edge_2" value="«extend»" style="endArrow=open;endSize=10;dashed=1;html=1;strokeColor=#000000;fontSize=10;" edge="1" parent="1" source="uc6" target="uc4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="edge_3" value="«extend»" style="endArrow=open;endSize=10;dashed=1;html=1;strokeColor=#000000;fontSize=10;" edge="1" parent="1" source="uc7" target="uc4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="edge_4" value="" style="endArrow=none;dashed=1;html=1;strokeColor=#000000;" edge="1" parent="1" source="n1" target="uc5"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

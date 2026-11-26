@@ -7,7 +7,8 @@
   ora-inizio: "18:00",
   ora-fine: "19:15",
   registro-modifiche: (
-    ("0.1.0", "24/11/2026", "Davide Loparco", "Mattia Cadamuro", "Prima stesura del documento"),
+    ("0.2.0", "26/11/2026", "Davide Loparco", "", "Fix minori"),
+    ("0.1.0", "24/11/2026", "Davide Loparco", "Mattia Cadamuro", "Prima stesura del documento")
   ),
   odg: (
     "Retrospettiva Sprint 1 ",
@@ -104,8 +105,8 @@ A seguire, la suddivisione dello svolgimento delle attività di questa settimana
     [A3], [Stesura inizio Sprint 2 nel Piano di Progetto], [Pietro Giulio Bassi], [30/11/2026], [],
     [A4], [Aggiornamento Norme di Progetto (Ruolo Responsabile)], [Roberto Piovesan], [30/11/2026], [],
     [A5], [Aggiornamento Norme di Progetto (Ruolo Verificatore)], [Roberto Piovesan], [30/11/2026],[],
-    [A6], [Individuazione User Case per il ruolo di Amministratore], [Chen DaXin], [30/11/2026], [],
-    [A7], [Individuazione User Case per il ruolo di utente viewer], [Davide Loparco], [30/11/2026], [],
+    [A6], [Individuazione Use Case per il ruolo di Amministratore], [Chen DaXin], [30/11/2026], [],
+    [A7], [Individuazione Use Case per il ruolo di utente viewer], [Davide Loparco], [30/11/2026], [],
     [A8], [Individuazione User Case per gli utenti con capacità di modificare la dashboard], [Marco Giacon], [30/11/2026], []
   ),
   caption: [Decisioni intraprese e attività conseguenti],
